@@ -17,5 +17,7 @@ class HomeViewController: UIViewController {
         
         scrollView.contentSize = homeImageView.frame.size
     }
+    
+    // Devon's comment
 
 }
