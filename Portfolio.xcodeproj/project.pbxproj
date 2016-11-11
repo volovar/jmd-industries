@@ -203,7 +203,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0810;
-				ORGANIZATIONNAME = "Michael Volovar";
+				ORGANIZATIONNAME = "JMD Industries";
 				TargetAttributes = {
 					4C4D13311DD430690023C9F2 = {
 						CreatedOnToolsVersion = 8.1;
@@ -519,6 +519,7 @@
 				4C4D135C1DD430690023C9F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C4D135D1DD430690023C9F2 /* Build configuration list for PBXNativeTarget "PortfolioTests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +528,7 @@
 				4C4D135F1DD430690023C9F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C4D13601DD430690023C9F2 /* Build configuration list for PBXNativeTarget "PortfolioUITests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +537,7 @@
 				4C4D13621DD430690023C9F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
