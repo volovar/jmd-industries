@@ -17,6 +17,9 @@ class ProjectDetailViewController: UIViewController {
         super.viewDidLoad()
         
         scrollView.contentSize = detailsImageView.frame.size
+        
+        
+        //testing new comments in main File
     }
     
     @IBAction func didPressBack(_ sender: Any) {
