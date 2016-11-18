@@ -1,4 +1,4 @@
-# Portfolio App
+# Iceberg
 
 An app for visual professionals to create and present a digital portfolio.
 
