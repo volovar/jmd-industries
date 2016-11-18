@@ -53,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="87.5" y="154"/>
+            <point key="canvasLocation" x="120" y="154"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="laH-YE-Kab">
@@ -149,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TaR-g9-GNk" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1157.5" y="632"/>
+            <point key="canvasLocation" x="1094" y="632"/>
         </scene>
     </scenes>
     <resources>
@@ -162,6 +162,6 @@
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ARB-AZ-YBs"/>
+        <segue reference="vCM-8p-M56"/>
     </inferredMetricsTieBreakers>
 </document>
