@@ -36,16 +36,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4C4D13321DD430690023C9F2 /* Portfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Portfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C4D13321DD430690023C9F2 /* Iceberg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iceberg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4D13351DD430690023C9F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C4D133A1DD430690023C9F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C4D133C1DD430690023C9F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C4D133F1DD430690023C9F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C4D13411DD430690023C9F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C4D13461DD430690023C9F2 /* PortfolioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PortfolioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C4D13461DD430690023C9F2 /* IcebergTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IcebergTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4D134A1DD430690023C9F2 /* PortfolioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioTests.swift; sourceTree = "<group>"; };
 		4C4D134C1DD430690023C9F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C4D13511DD430690023C9F2 /* PortfolioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PortfolioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C4D13511DD430690023C9F2 /* IcebergUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IcebergUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4D13551DD430690023C9F2 /* PortfolioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioUITests.swift; sourceTree = "<group>"; };
 		4C4D13571DD430690023C9F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C4D13631DD4326C0023C9F2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -91,9 +91,9 @@
 		4C4D13331DD430690023C9F2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4C4D13321DD430690023C9F2 /* Portfolio.app */,
-				4C4D13461DD430690023C9F2 /* PortfolioTests.xctest */,
-				4C4D13511DD430690023C9F2 /* PortfolioUITests.xctest */,
+				4C4D13321DD430690023C9F2 /* Iceberg.app */,
+				4C4D13461DD430690023C9F2 /* IcebergTests.xctest */,
+				4C4D13511DD430690023C9F2 /* IcebergUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,9 +142,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4C4D13311DD430690023C9F2 /* Portfolio */ = {
+		4C4D13311DD430690023C9F2 /* Iceberg */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C4D135A1DD430690023C9F2 /* Build configuration list for PBXNativeTarget "Portfolio" */;
+			buildConfigurationList = 4C4D135A1DD430690023C9F2 /* Build configuration list for PBXNativeTarget "Iceberg" */;
 			buildPhases = (
 				4C4D132E1DD430690023C9F2 /* Sources */,
 				4C4D132F1DD430690023C9F2 /* Frameworks */,
@@ -154,14 +154,14 @@
 			);
 			dependencies = (
 			);
-			name = Portfolio;
+			name = Iceberg;
 			productName = Portfolio;
-			productReference = 4C4D13321DD430690023C9F2 /* Portfolio.app */;
+			productReference = 4C4D13321DD430690023C9F2 /* Iceberg.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4C4D13451DD430690023C9F2 /* PortfolioTests */ = {
+		4C4D13451DD430690023C9F2 /* IcebergTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C4D135D1DD430690023C9F2 /* Build configuration list for PBXNativeTarget "PortfolioTests" */;
+			buildConfigurationList = 4C4D135D1DD430690023C9F2 /* Build configuration list for PBXNativeTarget "IcebergTests" */;
 			buildPhases = (
 				4C4D13421DD430690023C9F2 /* Sources */,
 				4C4D13431DD430690023C9F2 /* Frameworks */,
@@ -172,14 +172,14 @@
 			dependencies = (
 				4C4D13481DD430690023C9F2 /* PBXTargetDependency */,
 			);
-			name = PortfolioTests;
+			name = IcebergTests;
 			productName = PortfolioTests;
-			productReference = 4C4D13461DD430690023C9F2 /* PortfolioTests.xctest */;
+			productReference = 4C4D13461DD430690023C9F2 /* IcebergTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4C4D13501DD430690023C9F2 /* PortfolioUITests */ = {
+		4C4D13501DD430690023C9F2 /* IcebergUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C4D13601DD430690023C9F2 /* Build configuration list for PBXNativeTarget "PortfolioUITests" */;
+			buildConfigurationList = 4C4D13601DD430690023C9F2 /* Build configuration list for PBXNativeTarget "IcebergUITests" */;
 			buildPhases = (
 				4C4D134D1DD430690023C9F2 /* Sources */,
 				4C4D134E1DD430690023C9F2 /* Frameworks */,
@@ -190,9 +190,9 @@
 			dependencies = (
 				4C4D13531DD430690023C9F2 /* PBXTargetDependency */,
 			);
-			name = PortfolioUITests;
+			name = IcebergUITests;
 			productName = PortfolioUITests;
-			productReference = 4C4D13511DD430690023C9F2 /* PortfolioUITests.xctest */;
+			productReference = 4C4D13511DD430690023C9F2 /* IcebergUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -221,7 +221,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4C4D132D1DD430690023C9F2 /* Build configuration list for PBXProject "Portfolio" */;
+			buildConfigurationList = 4C4D132D1DD430690023C9F2 /* Build configuration list for PBXProject "Iceberg" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -234,9 +234,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4C4D13311DD430690023C9F2 /* Portfolio */,
-				4C4D13451DD430690023C9F2 /* PortfolioTests */,
-				4C4D13501DD430690023C9F2 /* PortfolioUITests */,
+				4C4D13311DD430690023C9F2 /* Iceberg */,
+				4C4D13451DD430690023C9F2 /* IcebergTests */,
+				4C4D13501DD430690023C9F2 /* IcebergUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -301,12 +301,12 @@
 /* Begin PBXTargetDependency section */
 		4C4D13481DD430690023C9F2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4C4D13311DD430690023C9F2 /* Portfolio */;
+			target = 4C4D13311DD430690023C9F2 /* Iceberg */;
 			targetProxy = 4C4D13471DD430690023C9F2 /* PBXContainerItemProxy */;
 		};
 		4C4D13531DD430690023C9F2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4C4D13311DD430690023C9F2 /* Portfolio */;
+			target = 4C4D13311DD430690023C9F2 /* Iceberg */;
 			targetProxy = 4C4D13521DD430690023C9F2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -428,7 +428,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Portfolio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jmd-industries.Portfolio";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jmd-industries.Iceberg";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -440,7 +440,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Portfolio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jmd-industries.Portfolio";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jmd-industries.Iceberg";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -456,7 +456,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jmd-industries.PortfolioTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Portfolio.app/Portfolio";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Iceberg.app/Iceberg";
 			};
 			name = Debug;
 		};
@@ -470,7 +470,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jmd-industries.PortfolioTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Portfolio.app/Portfolio";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Iceberg.app/Iceberg";
 			};
 			name = Release;
 		};
@@ -503,7 +503,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4C4D132D1DD430690023C9F2 /* Build configuration list for PBXProject "Portfolio" */ = {
+		4C4D132D1DD430690023C9F2 /* Build configuration list for PBXProject "Iceberg" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C4D13581DD430690023C9F2 /* Debug */,
@@ -512,7 +512,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C4D135A1DD430690023C9F2 /* Build configuration list for PBXNativeTarget "Portfolio" */ = {
+		4C4D135A1DD430690023C9F2 /* Build configuration list for PBXNativeTarget "Iceberg" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C4D135B1DD430690023C9F2 /* Debug */,
@@ -521,7 +521,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C4D135D1DD430690023C9F2 /* Build configuration list for PBXNativeTarget "PortfolioTests" */ = {
+		4C4D135D1DD430690023C9F2 /* Build configuration list for PBXNativeTarget "IcebergTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C4D135E1DD430690023C9F2 /* Debug */,
@@ -530,7 +530,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C4D13601DD430690023C9F2 /* Build configuration list for PBXNativeTarget "PortfolioUITests" */ = {
+		4C4D13601DD430690023C9F2 /* Build configuration list for PBXNativeTarget "IcebergUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C4D13611DD430690023C9F2 /* Debug */,
