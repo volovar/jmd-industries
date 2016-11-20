@@ -13,10 +13,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    @IBAction func didPressLogin(_ sender: Any) {
-        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let initialView = mainStoryboard.instantiateInitialViewController()
+    
+    @IBAction func didPressSignUp(_ sender: UIButton) {
+        let onboardingStoryboard = UIStoryboard(name: "Onboarding", bundle: nil)
+        let initialView = onboardingStoryboard.instantiateInitialViewController()
         
         present(initialView!, animated: true, completion: nil)
     }

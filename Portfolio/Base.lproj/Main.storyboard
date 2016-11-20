@@ -164,6 +164,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="texturedBG" id="OzN-uj-MLR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="666"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ICEBERG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lEj-TH-TNZ">
                                 <rect key="frame" x="117" y="80" width="141" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -197,7 +201,6 @@
                                             <color key="titleShadowColor" red="0.047281901039999998" green="0.049967447919999998" blue="0.27362738720000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="didPressLogin:" destination="86E-Vp-yuU" eventType="touchUpInside" id="ivm-8J-dgc"/>
                                             <segue destination="BYZ-38-t0r" kind="modal" modalTransitionStyle="crossDissolve" id="LQ4-5F-1xl"/>
                                         </connections>
                                     </button>
@@ -207,6 +210,9 @@
                                         <state key="normal" title="or Sign Up">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="didPressSignUp:" destination="86E-Vp-yuU" eventType="touchUpInside" id="KXG-nb-Vy8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </view>
@@ -220,6 +226,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="texturedBG" width="375" height="666"/>
         <image name="wireframe_resume_homeTimeLine_v1.0" width="375" height="2172"/>
         <image name="wireframe_resume_projectDetail_v1.0" width="375" height="3128"/>
     </resources>

@@ -12,6 +12,7 @@
 		4C0479901DE22778009E47DF /* Mosk Light 300.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C04798C1DE22778009E47DF /* Mosk Light 300.ttf */; };
 		4C0479911DE22778009E47DF /* Mosk Medium 500.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C04798D1DE22778009E47DF /* Mosk Medium 500.ttf */; };
 		4C0479921DE22778009E47DF /* Mosk Normal 400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C04798E1DE22778009E47DF /* Mosk Normal 400.ttf */; };
+		4C0479951DE22DFC009E47DF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0479941DE22DFC009E47DF /* SignUpViewController.swift */; };
 		4C4D13361DD430690023C9F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13351DD430690023C9F2 /* AppDelegate.swift */; };
 		4C4D133B1DD430690023C9F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4D13391DD430690023C9F2 /* Main.storyboard */; };
 		4C4D133D1DD430690023C9F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4D133C1DD430690023C9F2 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		4C04798C1DE22778009E47DF /* Mosk Light 300.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Light 300.ttf"; sourceTree = "<group>"; };
 		4C04798D1DE22778009E47DF /* Mosk Medium 500.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Medium 500.ttf"; sourceTree = "<group>"; };
 		4C04798E1DE22778009E47DF /* Mosk Normal 400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Normal 400.ttf"; sourceTree = "<group>"; };
+		4C0479941DE22DFC009E47DF /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4C4D13321DD430690023C9F2 /* Iceberg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iceberg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4D13351DD430690023C9F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C4D133A1DD430690023C9F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				4C4D13661DD432F80023C9F2 /* ProjectDetailViewController.swift */,
 				4C4D13681DD433600023C9F2 /* InfoViewController.swift */,
 				4CC260761DDEF81A00726930 /* LoginViewController.swift */,
+				4C0479941DE22DFC009E47DF /* SignUpViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C0479951DE22DFC009E47DF /* SignUpViewController.swift in Sources */,
 				4C4D13361DD430690023C9F2 /* AppDelegate.swift in Sources */,
 				4C4D13671DD432F80023C9F2 /* ProjectDetailViewController.swift in Sources */,
 				4C4D13691DD433600023C9F2 /* InfoViewController.swift in Sources */,
