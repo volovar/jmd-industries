@@ -13,6 +13,8 @@
 		4C0479911DE22778009E47DF /* Mosk Medium 500.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C04798D1DE22778009E47DF /* Mosk Medium 500.ttf */; };
 		4C0479921DE22778009E47DF /* Mosk Normal 400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C04798E1DE22778009E47DF /* Mosk Normal 400.ttf */; };
 		4C0479951DE22DFC009E47DF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0479941DE22DFC009E47DF /* SignUpViewController.swift */; };
+		4C0479981DE231D8009E47DF /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0479961DE231D8009E47DF /* BaseTransition.swift */; };
+		4C0479991DE231D8009E47DF /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0479971DE231D8009E47DF /* FadeTransition.swift */; };
 		4C4D13361DD430690023C9F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13351DD430690023C9F2 /* AppDelegate.swift */; };
 		4C4D133B1DD430690023C9F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4D13391DD430690023C9F2 /* Main.storyboard */; };
 		4C4D133D1DD430690023C9F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4D133C1DD430690023C9F2 /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		4C04798D1DE22778009E47DF /* Mosk Medium 500.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Medium 500.ttf"; sourceTree = "<group>"; };
 		4C04798E1DE22778009E47DF /* Mosk Normal 400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Normal 400.ttf"; sourceTree = "<group>"; };
 		4C0479941DE22DFC009E47DF /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		4C0479961DE231D8009E47DF /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
+		4C0479971DE231D8009E47DF /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
 		4C4D13321DD430690023C9F2 /* Iceberg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iceberg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4D13351DD430690023C9F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C4D133A1DD430690023C9F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,6 +110,15 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		4C04799A1DE231DD009E47DF /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				4C0479961DE231D8009E47DF /* BaseTransition.swift */,
+				4C0479971DE231D8009E47DF /* FadeTransition.swift */,
+			);
+			name = Transitions;
+			sourceTree = "<group>";
+		};
 		4C4D13291DD430690023C9F2 = {
 			isa = PBXGroup;
 			children = (
@@ -130,13 +143,14 @@
 			isa = PBXGroup;
 			children = (
 				4C4D13351DD430690023C9F2 /* AppDelegate.swift */,
-				4C4D13651DD432720023C9F2 /* ViewControllers */,
-				4C4D13391DD430690023C9F2 /* Main.storyboard */,
 				4C4D133C1DD430690023C9F2 /* Assets.xcassets */,
 				4C0479931DE2277F009E47DF /* Fonts */,
+				4C04799A1DE231DD009E47DF /* Transitions */,
+				4C4D13651DD432720023C9F2 /* ViewControllers */,
+				4C4D13391DD430690023C9F2 /* Main.storyboard */,
 				4C4D133E1DD430690023C9F2 /* LaunchScreen.storyboard */,
-				4C4D13411DD430690023C9F2 /* Info.plist */,
 				4CC260741DDEF65C00726930 /* Onboarding.storyboard */,
+				4C4D13411DD430690023C9F2 /* Info.plist */,
 			);
 			path = Portfolio;
 			sourceTree = "<group>";
@@ -313,7 +327,9 @@
 			files = (
 				4C0479951DE22DFC009E47DF /* SignUpViewController.swift in Sources */,
 				4C4D13361DD430690023C9F2 /* AppDelegate.swift in Sources */,
+				4C0479991DE231D8009E47DF /* FadeTransition.swift in Sources */,
 				4C4D13671DD432F80023C9F2 /* ProjectDetailViewController.swift in Sources */,
+				4C0479981DE231D8009E47DF /* BaseTransition.swift in Sources */,
 				4C4D13691DD433600023C9F2 /* InfoViewController.swift in Sources */,
 				4CC260771DDEF81A00726930 /* LoginViewController.swift in Sources */,
 				4C4D13641DD4326C0023C9F2 /* HomeViewController.swift in Sources */,
