@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C04798A1DE22755009E47DF /* Borg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C0479891DE22755009E47DF /* Borg.ttf */; };
+		4C04798F1DE22778009E47DF /* Mosk Bold 700.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C04798B1DE22778009E47DF /* Mosk Bold 700.ttf */; };
+		4C0479901DE22778009E47DF /* Mosk Light 300.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C04798C1DE22778009E47DF /* Mosk Light 300.ttf */; };
+		4C0479911DE22778009E47DF /* Mosk Medium 500.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C04798D1DE22778009E47DF /* Mosk Medium 500.ttf */; };
+		4C0479921DE22778009E47DF /* Mosk Normal 400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C04798E1DE22778009E47DF /* Mosk Normal 400.ttf */; };
 		4C4D13361DD430690023C9F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13351DD430690023C9F2 /* AppDelegate.swift */; };
 		4C4D133B1DD430690023C9F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4D13391DD430690023C9F2 /* Main.storyboard */; };
 		4C4D133D1DD430690023C9F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4D133C1DD430690023C9F2 /* Assets.xcassets */; };
@@ -16,6 +21,8 @@
 		4C4D13641DD4326C0023C9F2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13631DD4326C0023C9F2 /* HomeViewController.swift */; };
 		4C4D13671DD432F80023C9F2 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13661DD432F80023C9F2 /* ProjectDetailViewController.swift */; };
 		4C4D13691DD433600023C9F2 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13681DD433600023C9F2 /* InfoViewController.swift */; };
+		4CC260751DDEF65C00726930 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC260741DDEF65C00726930 /* Onboarding.storyboard */; };
+		4CC260771DDEF81A00726930 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC260761DDEF81A00726930 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C0479891DE22755009E47DF /* Borg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Borg.ttf; sourceTree = "<group>"; };
+		4C04798B1DE22778009E47DF /* Mosk Bold 700.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Bold 700.ttf"; sourceTree = "<group>"; };
+		4C04798C1DE22778009E47DF /* Mosk Light 300.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Light 300.ttf"; sourceTree = "<group>"; };
+		4C04798D1DE22778009E47DF /* Mosk Medium 500.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Medium 500.ttf"; sourceTree = "<group>"; };
+		4C04798E1DE22778009E47DF /* Mosk Normal 400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Normal 400.ttf"; sourceTree = "<group>"; };
 		4C4D13321DD430690023C9F2 /* Iceberg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iceberg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4D13351DD430690023C9F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C4D133A1DD430690023C9F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,6 +63,8 @@
 		4C4D13631DD4326C0023C9F2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4C4D13661DD432F80023C9F2 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
 		4C4D13681DD433600023C9F2 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		4CC260741DDEF65C00726930 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		4CC260761DDEF81A00726930 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +92,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C0479931DE2277F009E47DF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4C04798B1DE22778009E47DF /* Mosk Bold 700.ttf */,
+				4C04798C1DE22778009E47DF /* Mosk Light 300.ttf */,
+				4C04798D1DE22778009E47DF /* Mosk Medium 500.ttf */,
+				4C04798E1DE22778009E47DF /* Mosk Normal 400.ttf */,
+				4C0479891DE22755009E47DF /* Borg.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		4C4D13291DD430690023C9F2 = {
 			isa = PBXGroup;
 			children = (
@@ -105,8 +131,10 @@
 				4C4D13651DD432720023C9F2 /* ViewControllers */,
 				4C4D13391DD430690023C9F2 /* Main.storyboard */,
 				4C4D133C1DD430690023C9F2 /* Assets.xcassets */,
+				4C0479931DE2277F009E47DF /* Fonts */,
 				4C4D133E1DD430690023C9F2 /* LaunchScreen.storyboard */,
 				4C4D13411DD430690023C9F2 /* Info.plist */,
+				4CC260741DDEF65C00726930 /* Onboarding.storyboard */,
 			);
 			path = Portfolio;
 			sourceTree = "<group>";
@@ -135,6 +163,7 @@
 				4C4D13631DD4326C0023C9F2 /* HomeViewController.swift */,
 				4C4D13661DD432F80023C9F2 /* ProjectDetailViewController.swift */,
 				4C4D13681DD433600023C9F2 /* InfoViewController.swift */,
+				4CC260761DDEF81A00726930 /* LoginViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -246,9 +275,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C0479921DE22778009E47DF /* Mosk Normal 400.ttf in Resources */,
+				4CC260751DDEF65C00726930 /* Onboarding.storyboard in Resources */,
+				4C04798A1DE22755009E47DF /* Borg.ttf in Resources */,
 				4C4D13401DD430690023C9F2 /* LaunchScreen.storyboard in Resources */,
+				4C04798F1DE22778009E47DF /* Mosk Bold 700.ttf in Resources */,
 				4C4D133D1DD430690023C9F2 /* Assets.xcassets in Resources */,
 				4C4D133B1DD430690023C9F2 /* Main.storyboard in Resources */,
+				4C0479901DE22778009E47DF /* Mosk Light 300.ttf in Resources */,
+				4C0479911DE22778009E47DF /* Mosk Medium 500.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +311,7 @@
 				4C4D13361DD430690023C9F2 /* AppDelegate.swift in Sources */,
 				4C4D13671DD432F80023C9F2 /* ProjectDetailViewController.swift in Sources */,
 				4C4D13691DD433600023C9F2 /* InfoViewController.swift in Sources */,
+				4CC260771DDEF81A00726930 /* LoginViewController.swift in Sources */,
 				4C4D13641DD4326C0023C9F2 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

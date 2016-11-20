@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Mosk Medium 500.ttf</string>
+		<string>Mosk Light 300.ttf</string>
+		<string>Mosk Normal 400.ttf</string>
+		<string>Mosk Bold 700.ttf</string>
+		<string>Borg.ttf</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
