@@ -15,6 +15,8 @@
 		4C0479951DE22DFC009E47DF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0479941DE22DFC009E47DF /* SignUpViewController.swift */; };
 		4C0479981DE231D8009E47DF /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0479961DE231D8009E47DF /* BaseTransition.swift */; };
 		4C0479991DE231D8009E47DF /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0479971DE231D8009E47DF /* FadeTransition.swift */; };
+		4C04799C1DE4A652009E47DF /* Layout1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C04799B1DE4A652009E47DF /* Layout1ViewController.swift */; };
+		4C04799E1DE4A65D009E47DF /* Layout2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C04799D1DE4A65D009E47DF /* Layout2ViewController.swift */; };
 		4C4D13361DD430690023C9F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13351DD430690023C9F2 /* AppDelegate.swift */; };
 		4C4D133B1DD430690023C9F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4D13391DD430690023C9F2 /* Main.storyboard */; };
 		4C4D133D1DD430690023C9F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4D133C1DD430690023C9F2 /* Assets.xcassets */; };
@@ -26,6 +28,9 @@
 		4C4D13691DD433600023C9F2 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13681DD433600023C9F2 /* InfoViewController.swift */; };
 		4CC260751DDEF65C00726930 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC260741DDEF65C00726930 /* Onboarding.storyboard */; };
 		4CC260771DDEF81A00726930 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC260761DDEF81A00726930 /* LoginViewController.swift */; };
+		861E0FB0C93A0AD811BDA083 /* Pods_IcebergUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74BD51C0FA226BC599CBA20C /* Pods_IcebergUITests.framework */; };
+		B4B56B187F807CA0B43F1C69 /* Pods_Iceberg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B91198FAE9969FED1D9CB0F /* Pods_Iceberg.framework */; };
+		C930D88DCA50E49B0D7BEEF2 /* Pods_IcebergTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA1991395F70913B3891DC34 /* Pods_IcebergTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35C1290D55BD27D1D1667FFB /* Pods-IcebergUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IcebergUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IcebergUITests/Pods-IcebergUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C0479891DE22755009E47DF /* Borg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Borg.ttf; sourceTree = "<group>"; };
 		4C04798B1DE22778009E47DF /* Mosk-Bold-700.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk-Bold-700.ttf"; sourceTree = "<group>"; };
 		4C04798C1DE22778009E47DF /* Mosk-Light-300.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk-Light-300.ttf"; sourceTree = "<group>"; };
@@ -54,6 +60,8 @@
 		4C0479941DE22DFC009E47DF /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4C0479961DE231D8009E47DF /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
 		4C0479971DE231D8009E47DF /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		4C04799B1DE4A652009E47DF /* Layout1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout1ViewController.swift; sourceTree = "<group>"; };
+		4C04799D1DE4A65D009E47DF /* Layout2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout2ViewController.swift; sourceTree = "<group>"; };
 		4C4D13321DD430690023C9F2 /* Iceberg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iceberg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4D13351DD430690023C9F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C4D133A1DD430690023C9F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,6 +79,14 @@
 		4C4D13681DD433600023C9F2 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		4CC260741DDEF65C00726930 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		4CC260761DDEF81A00726930 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5DE4672E09FC255CA1C932F8 /* Pods-IcebergTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IcebergTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IcebergTests/Pods-IcebergTests.debug.xcconfig"; sourceTree = "<group>"; };
+		74BD51C0FA226BC599CBA20C /* Pods_IcebergUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IcebergUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88A52097021B7C8316F08C06 /* Pods-IcebergUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IcebergUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IcebergUITests/Pods-IcebergUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9B91198FAE9969FED1D9CB0F /* Pods_Iceberg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Iceberg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF5B520012001077D15B80B9 /* Pods-Iceberg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iceberg.release.xcconfig"; path = "Pods/Target Support Files/Pods-Iceberg/Pods-Iceberg.release.xcconfig"; sourceTree = "<group>"; };
+		C7D223E861A7E84470D95742 /* Pods-IcebergTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IcebergTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IcebergTests/Pods-IcebergTests.release.xcconfig"; sourceTree = "<group>"; };
+		CA1991395F70913B3891DC34 /* Pods_IcebergTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IcebergTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D706B931E10FB0317EE70FF4 /* Pods-Iceberg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iceberg.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Iceberg/Pods-Iceberg.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4B56B187F807CA0B43F1C69 /* Pods_Iceberg.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C930D88DCA50E49B0D7BEEF2 /* Pods_IcebergTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,12 +110,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				861E0FB0C93A0AD811BDA083 /* Pods_IcebergUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2630EE542DE973A959D1BDD3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D706B931E10FB0317EE70FF4 /* Pods-Iceberg.debug.xcconfig */,
+				AF5B520012001077D15B80B9 /* Pods-Iceberg.release.xcconfig */,
+				5DE4672E09FC255CA1C932F8 /* Pods-IcebergTests.debug.xcconfig */,
+				C7D223E861A7E84470D95742 /* Pods-IcebergTests.release.xcconfig */,
+				35C1290D55BD27D1D1667FFB /* Pods-IcebergUITests.debug.xcconfig */,
+				88A52097021B7C8316F08C06 /* Pods-IcebergUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4C0479931DE2277F009E47DF /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +158,8 @@
 				4C4D13491DD430690023C9F2 /* PortfolioTests */,
 				4C4D13541DD430690023C9F2 /* PortfolioUITests */,
 				4C4D13331DD430690023C9F2 /* Products */,
+				2630EE542DE973A959D1BDD3 /* Pods */,
+				81F2F99988CD828AEEB9838E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,8 +215,20 @@
 				4C4D13681DD433600023C9F2 /* InfoViewController.swift */,
 				4CC260761DDEF81A00726930 /* LoginViewController.swift */,
 				4C0479941DE22DFC009E47DF /* SignUpViewController.swift */,
+				4C04799B1DE4A652009E47DF /* Layout1ViewController.swift */,
+				4C04799D1DE4A65D009E47DF /* Layout2ViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		81F2F99988CD828AEEB9838E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B91198FAE9969FED1D9CB0F /* Pods_Iceberg.framework */,
+				CA1991395F70913B3891DC34 /* Pods_IcebergTests.framework */,
+				74BD51C0FA226BC599CBA20C /* Pods_IcebergUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,9 +238,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C4D135A1DD430690023C9F2 /* Build configuration list for PBXNativeTarget "Iceberg" */;
 			buildPhases = (
+				74075829910A288C069D7BEF /* [CP] Check Pods Manifest.lock */,
 				4C4D132E1DD430690023C9F2 /* Sources */,
 				4C4D132F1DD430690023C9F2 /* Frameworks */,
 				4C4D13301DD430690023C9F2 /* Resources */,
+				168D8D7BFD797119235DEF19 /* [CP] Embed Pods Frameworks */,
+				E358267F7795B561D7624FE4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,9 +258,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C4D135D1DD430690023C9F2 /* Build configuration list for PBXNativeTarget "IcebergTests" */;
 			buildPhases = (
+				2B020B6C4B8AA67DD4724E7E /* [CP] Check Pods Manifest.lock */,
 				4C4D13421DD430690023C9F2 /* Sources */,
 				4C4D13431DD430690023C9F2 /* Frameworks */,
 				4C4D13441DD430690023C9F2 /* Resources */,
+				B662746AA761197094AD543C /* [CP] Embed Pods Frameworks */,
+				10B83565E9C99A457C9D6BFD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -227,9 +279,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C4D13601DD430690023C9F2 /* Build configuration list for PBXNativeTarget "IcebergUITests" */;
 			buildPhases = (
+				64542335595472EE65ABADCF /* [CP] Check Pods Manifest.lock */,
 				4C4D134D1DD430690023C9F2 /* Sources */,
 				4C4D134E1DD430690023C9F2 /* Frameworks */,
 				4C4D134F1DD430690023C9F2 /* Resources */,
+				A75CAA79F36729139460AEE3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -321,6 +375,129 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10B83565E9C99A457C9D6BFD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IcebergTests/Pods-IcebergTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		168D8D7BFD797119235DEF19 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Iceberg/Pods-Iceberg-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B020B6C4B8AA67DD4724E7E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		64542335595472EE65ABADCF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		74075829910A288C069D7BEF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A75CAA79F36729139460AEE3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IcebergUITests/Pods-IcebergUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B662746AA761197094AD543C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IcebergTests/Pods-IcebergTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E358267F7795B561D7624FE4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Iceberg/Pods-Iceberg-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4C4D132E1DD430690023C9F2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -331,8 +508,10 @@
 				4C0479991DE231D8009E47DF /* FadeTransition.swift in Sources */,
 				4C4D13671DD432F80023C9F2 /* ProjectDetailViewController.swift in Sources */,
 				4C0479981DE231D8009E47DF /* BaseTransition.swift in Sources */,
+				4C04799E1DE4A65D009E47DF /* Layout2ViewController.swift in Sources */,
 				4C4D13691DD433600023C9F2 /* InfoViewController.swift in Sources */,
 				4CC260771DDEF81A00726930 /* LoginViewController.swift in Sources */,
+				4C04799C1DE4A652009E47DF /* Layout1ViewController.swift in Sources */,
 				4C4D13641DD4326C0023C9F2 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,6 +660,7 @@
 		};
 		4C4D135B1DD430690023C9F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D706B931E10FB0317EE70FF4 /* Pods-Iceberg.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -495,6 +675,7 @@
 		};
 		4C4D135C1DD430690023C9F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF5B520012001077D15B80B9 /* Pods-Iceberg.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CS2CDPZ474;
@@ -508,6 +689,7 @@
 		};
 		4C4D135E1DD430690023C9F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DE4672E09FC255CA1C932F8 /* Pods-IcebergTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -522,6 +704,7 @@
 		};
 		4C4D135F1DD430690023C9F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7D223E861A7E84470D95742 /* Pods-IcebergTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -536,6 +719,7 @@
 		};
 		4C4D13611DD430690023C9F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35C1290D55BD27D1D1667FFB /* Pods-IcebergUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = PortfolioUITests/Info.plist;
@@ -549,6 +733,7 @@
 		};
 		4C4D13621DD430690023C9F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88A52097021B7C8316F08C06 /* Pods-IcebergUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = PortfolioUITests/Info.plist;
