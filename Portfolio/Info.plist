@@ -22,10 +22,10 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Mosk Medium 500.ttf</string>
-		<string>Mosk Light 300.ttf</string>
-		<string>Mosk Normal 400.ttf</string>
-		<string>Mosk Bold 700.ttf</string>
+		<string>Mosk-Medium-500.ttf</string>
+		<string>Mosk-Light-300.ttf</string>
+		<string>Mosk-Normal-400.ttf</string>
+		<string>Mosk-Bold-700.ttf</string>
 		<string>Borg.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>

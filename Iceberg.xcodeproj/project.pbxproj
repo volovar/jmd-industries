@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4C04798A1DE22755009E47DF /* Borg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C0479891DE22755009E47DF /* Borg.ttf */; };
-		4C04798F1DE22778009E47DF /* Mosk Bold 700.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C04798B1DE22778009E47DF /* Mosk Bold 700.ttf */; };
-		4C0479901DE22778009E47DF /* Mosk Light 300.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C04798C1DE22778009E47DF /* Mosk Light 300.ttf */; };
-		4C0479911DE22778009E47DF /* Mosk Medium 500.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C04798D1DE22778009E47DF /* Mosk Medium 500.ttf */; };
-		4C0479921DE22778009E47DF /* Mosk Normal 400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C04798E1DE22778009E47DF /* Mosk Normal 400.ttf */; };
+		4C04798F1DE22778009E47DF /* Mosk-Bold-700.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C04798B1DE22778009E47DF /* Mosk-Bold-700.ttf */; };
+		4C0479901DE22778009E47DF /* Mosk-Light-300.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C04798C1DE22778009E47DF /* Mosk-Light-300.ttf */; };
+		4C0479911DE22778009E47DF /* Mosk-Medium-500.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C04798D1DE22778009E47DF /* Mosk-Medium-500.ttf */; };
+		4C0479921DE22778009E47DF /* Mosk-Normal-400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C04798E1DE22778009E47DF /* Mosk-Normal-400.ttf */; };
 		4C0479951DE22DFC009E47DF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0479941DE22DFC009E47DF /* SignUpViewController.swift */; };
 		4C0479981DE231D8009E47DF /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0479961DE231D8009E47DF /* BaseTransition.swift */; };
 		4C0479991DE231D8009E47DF /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0479971DE231D8009E47DF /* FadeTransition.swift */; };
@@ -47,10 +47,10 @@
 
 /* Begin PBXFileReference section */
 		4C0479891DE22755009E47DF /* Borg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Borg.ttf; sourceTree = "<group>"; };
-		4C04798B1DE22778009E47DF /* Mosk Bold 700.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Bold 700.ttf"; sourceTree = "<group>"; };
-		4C04798C1DE22778009E47DF /* Mosk Light 300.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Light 300.ttf"; sourceTree = "<group>"; };
-		4C04798D1DE22778009E47DF /* Mosk Medium 500.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Medium 500.ttf"; sourceTree = "<group>"; };
-		4C04798E1DE22778009E47DF /* Mosk Normal 400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Normal 400.ttf"; sourceTree = "<group>"; };
+		4C04798B1DE22778009E47DF /* Mosk-Bold-700.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk-Bold-700.ttf"; sourceTree = "<group>"; };
+		4C04798C1DE22778009E47DF /* Mosk-Light-300.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk-Light-300.ttf"; sourceTree = "<group>"; };
+		4C04798D1DE22778009E47DF /* Mosk-Medium-500.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk-Medium-500.ttf"; sourceTree = "<group>"; };
+		4C04798E1DE22778009E47DF /* Mosk-Normal-400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk-Normal-400.ttf"; sourceTree = "<group>"; };
 		4C0479941DE22DFC009E47DF /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4C0479961DE231D8009E47DF /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
 		4C0479971DE231D8009E47DF /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
@@ -101,10 +101,10 @@
 		4C0479931DE2277F009E47DF /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				4C04798B1DE22778009E47DF /* Mosk Bold 700.ttf */,
-				4C04798C1DE22778009E47DF /* Mosk Light 300.ttf */,
-				4C04798D1DE22778009E47DF /* Mosk Medium 500.ttf */,
-				4C04798E1DE22778009E47DF /* Mosk Normal 400.ttf */,
+				4C04798B1DE22778009E47DF /* Mosk-Bold-700.ttf */,
+				4C04798C1DE22778009E47DF /* Mosk-Light-300.ttf */,
+				4C04798D1DE22778009E47DF /* Mosk-Medium-500.ttf */,
+				4C04798E1DE22778009E47DF /* Mosk-Normal-400.ttf */,
 				4C0479891DE22755009E47DF /* Borg.ttf */,
 			);
 			name = Fonts;
@@ -293,15 +293,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C0479921DE22778009E47DF /* Mosk Normal 400.ttf in Resources */,
+				4C0479921DE22778009E47DF /* Mosk-Normal-400.ttf in Resources */,
 				4CC260751DDEF65C00726930 /* Onboarding.storyboard in Resources */,
 				4C04798A1DE22755009E47DF /* Borg.ttf in Resources */,
 				4C4D13401DD430690023C9F2 /* LaunchScreen.storyboard in Resources */,
-				4C04798F1DE22778009E47DF /* Mosk Bold 700.ttf in Resources */,
+				4C04798F1DE22778009E47DF /* Mosk-Bold-700.ttf in Resources */,
 				4C4D133D1DD430690023C9F2 /* Assets.xcassets in Resources */,
 				4C4D133B1DD430690023C9F2 /* Main.storyboard in Resources */,
-				4C0479901DE22778009E47DF /* Mosk Light 300.ttf in Resources */,
-				4C0479911DE22778009E47DF /* Mosk Medium 500.ttf in Resources */,
+				4C0479901DE22778009E47DF /* Mosk-Light-300.ttf in Resources */,
+				4C0479911DE22778009E47DF /* Mosk-Medium-500.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
