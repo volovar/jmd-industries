@@ -138,6 +138,12 @@ class HomeViewController: UIViewController {
         
     }
     
-    // Devon's comment
-
+    // Set navigation bar to hidden or visible on appear / disappear
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
 }
