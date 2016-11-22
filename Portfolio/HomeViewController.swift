@@ -84,13 +84,13 @@ class HomeViewController: UIViewController {
         
         // Author title/description styling
         
-        var authorDescriptionParagraphStyle = NSMutableParagraphStyle()
+        let authorDescriptionParagraphStyle = NSMutableParagraphStyle()
         authorDescriptionParagraphStyle.lineSpacing = 1.2
         authorDescriptionParagraphStyle.alignment = NSTextAlignment.center
         
         let authorDescriptionAttributes = [NSParagraphStyleAttributeName: authorDescriptionParagraphStyle]
     
-        var authorTitleText = "Product Designer"
+        let authorTitleText = "Product Designer"
         
         authorTitle.attributedText = NSAttributedString(string: authorTitleText, attributes: authorDescriptionAttributes)
         authorTitle.textColor = midGrey
@@ -112,7 +112,7 @@ class HomeViewController: UIViewController {
         
         let companyDescriptionAttributes = [NSParagraphStyleAttributeName: companyDescriptionStyle]
         
-        var facebookDescriptionText = "Helped design Facebook Live. Led a team of 3 designers on a 3-month expedition to research global usage of the Like button. Worked with top-level executives to create an in-house design educational series."
+        let facebookDescriptionText = "Helped design Facebook Live. Led a team of 3 designers on a 3-month expedition to research global usage of the Like button. Worked with top-level executives to create an in-house design educational series."
         
         facebookDescription.attributedText = NSAttributedString(string: facebookDescriptionText, attributes: companyDescriptionAttributes)
         
