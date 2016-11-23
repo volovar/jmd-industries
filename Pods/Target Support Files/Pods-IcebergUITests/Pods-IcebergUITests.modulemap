@@ -1,0 +1,6 @@
+framework module Pods_IcebergUITests {
+  umbrella header "Pods-IcebergUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,6 +1,6 @@
 //
 //  ProjectDetailViewController.swift
-//  Portfolio
+//  Iceberg
 //
 //  Created by Michael Volovar on 11/9/16.
 //  Copyright © 2016 Michael Volovar. All rights reserved.
@@ -8,22 +8,54 @@
 
 import UIKit
 
-class ProjectDetailViewController: UIViewController {
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var detailsImageView: UIImageView!
-    
+class ProjectDetailViewController: UIPageViewController {
+    var pages = [UIViewController]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("inside page view controller")
+        dataSource = self
+        let page1: UIViewController! = storyboard?.instantiateViewController(withIdentifier: "pageLayout")
+        let page2: UIViewController! = storyboard?.instantiateViewController(withIdentifier: "pageLayout2")
         
-        scrollView.contentSize = detailsImageView.frame.size
+        pages.append(page1)
+        pages.append(page2)
         
-        
-        //testing new comments in main File
-        // testing again
+        setViewControllers([page1], direction: .forward, animated: false, completion: nil)
     }
     
-    @IBAction func didPressBack(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+}
+
+extension ProjectDetailViewController: UIPageViewControllerDataSource {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        
+        let currentIndex = pages.index(of: viewController)!
+        
+        // prevents page wrap around
+        guard currentIndex > 0 else {
+            return nil
+        }
+        
+        return pages[currentIndex - 1]
     }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        
+        let currentIndex = pages.index(of: viewController)!
+        
+        guard currentIndex < pages.count - 1 else {
+            return nil
+        }
+        
+        return pages[currentIndex + 1]
+    }
+    
+    func presentationCount(for pageViewController: UIPageViewController) -> Int {
+        return pages.count
+    }
+    
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+        return 0
+    }
+    
 }

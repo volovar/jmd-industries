@@ -15,7 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // app page control style
+        let pageControl = UIPageControl.appearance()
+        pageControl.pageIndicatorTintColor = #colorLiteral(red: 0.5882352941, green: 0.6117647059, blue: 0.6, alpha: 1)
+        pageControl.currentPageIndicatorTintColor = #colorLiteral(red: 0.3882352941, green: 0.7882352941, blue: 0.8431372549, alpha: 1)
+        
+        // app nav bar style
+        let navBar = UINavigationBar.appearance()
+        navBar.barTintColor = #colorLiteral(red: 0.1568627451, green: 0.1725490196, blue: 0.231372549, alpha: 0)
+        navBar.backgroundColor = #colorLiteral(red: 0.1568627451, green: 0.1725490196, blue: 0.231372549, alpha: 0)
+        navBar.tintColor = UIColor.white
+        
         return true
     }
 
