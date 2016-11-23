@@ -10,9 +10,11 @@ import UIKit
 import AFNetworking
 
 class InfoViewController: UIViewController {
+    @IBOutlet weak var titleLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleLabel.textColor = UIColor.white
     }
     
     @IBAction func didPressBack(_ sender: Any) {
