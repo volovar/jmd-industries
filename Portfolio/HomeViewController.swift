@@ -210,7 +210,7 @@ class HomeViewController: UIViewController {
     func styleCompanyParagraphs (companyDescription: UITextView!, companyDescriptionText: String!) {
             
             companyDescription.attributedText = NSAttributedString(string: companyDescriptionText, attributes: companyDescriptionAttributes)
-            companyDescription.font = companyDescription.font?.withSize(18)
+            companyDescription.font = companyDescription.font?.withSize(16)
             companyDescription.textColor = darkGrey
         
     } // end styleCompanyDescriptionText
@@ -224,7 +224,7 @@ class HomeViewController: UIViewController {
         imageView.contentMode = UIViewContentMode.scaleAspectFill
         imageView.clipsToBounds = true
         
-        imageView.layer.cornerRadius = 0
+        imageView.layer.cornerRadius = 8
         
     } // end setImage
     
