@@ -44,20 +44,30 @@ class HomeViewController: UIViewController {
     // Facebook
     @IBOutlet weak var facebookTitle: UILabel!
     @IBOutlet weak var facebookDescription: UITextView!
+    
+    @IBOutlet weak var facebookLiveSuperView: UIView!
     @IBOutlet weak var facebookLive: UIImageView!
     @IBOutlet weak var facebookLiveLabel: UILabel!
+    
+    @IBOutlet weak var educationSeriesSuperView: UIView!
     @IBOutlet weak var educationSeries: UIImageView!
     @IBOutlet weak var facebookEducationSeries: UILabel!
     
     // Yahoo!
     @IBOutlet weak var yahooTitle: UILabel!
     @IBOutlet weak var yahooDescription: UITextView!
+    
+    
+    @IBOutlet weak var yahooProjectSuperView: UIView!
     @IBOutlet weak var yahooProject: UIImageView!
     @IBOutlet weak var yahooProjectTitle: UILabel!
     
     // Moovly
     @IBOutlet weak var moovlyTitle: UILabel!
     @IBOutlet weak var moovlyDescription: UITextView!
+    
+    
+    @IBOutlet weak var moovlySuperView: UIView!
     @IBOutlet weak var moovlyProject: UIImageView!
     @IBOutlet weak var moovlyProjectLabel: UILabel!
     
@@ -66,6 +76,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print ("viewDidLoad has executed")
         
         /////////////////////////////////
         ///// Author Images Section /////
@@ -149,15 +161,11 @@ class HomeViewController: UIViewController {
         
         styleCompanyParagraphs(companyDescription: facebookDescription, companyDescriptionText: facebookDescriptionText)
         
-        facebookLive.image = #imageLiteral(resourceName: "facebook_live")
-        educationSeries.image = #imageLiteral(resourceName: "education_series")
+        setImage(imageView: facebookLive, image: #imageLiteral(resourceName: "facebook_live"))
+        addImageShadow(imageSuperView: facebookLiveSuperView)
         
-        facebookLive.contentMode = UIViewContentMode.scaleAspectFill
-        facebookLive.clipsToBounds = true
-        
-        educationSeries.contentMode = UIViewContentMode.scaleAspectFill
-        educationSeries.clipsToBounds = true
-
+        setImage(imageView: educationSeries, image: #imageLiteral(resourceName: "education_series"))
+        addImageShadow(imageSuperView: educationSeriesSuperView)
         
         // Yahoo
         
@@ -165,7 +173,8 @@ class HomeViewController: UIViewController {
         
         styleCompanyParagraphs(companyDescription: yahooDescription, companyDescriptionText: yahooDescriptionText)
         
-        yahooProject.image = #imageLiteral(resourceName: "sleep_tracker")
+        setImage(imageView: yahooProject, image: #imageLiteral(resourceName: "sleep_tracker"))
+        addImageShadow(imageSuperView: yahooProjectSuperView)
         
         
         // Moovly
@@ -174,13 +183,18 @@ class HomeViewController: UIViewController {
         
         styleCompanyParagraphs(companyDescription: moovlyDescription, companyDescriptionText: moovlyDescriptionText)
         
+        setImage(imageView: moovlyProject, image: #imageLiteral(resourceName: "moovly"))
+        addImageShadow(imageSuperView: moovlySuperView)
+        
         
         // Scroll view
         
         scrollView.contentSize = CGSize(width: 375, height: 2500)
         
         
-    }
+    } // end viewDidLoad
+    
+    
     
     // Set navigation bar to hidden or visible on appear / disappear
     override func viewWillAppear(_ animated: Bool) {
@@ -190,6 +204,7 @@ class HomeViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
+    
     
     
     // Style text in the company descriptions
@@ -202,6 +217,7 @@ class HomeViewController: UIViewController {
     } // end styleCompanyDescriptionText
     
     
+    
     func setImage (imageView: UIImageView, image: UIImage) {
         
         imageView.image = image
@@ -209,9 +225,20 @@ class HomeViewController: UIViewController {
         imageView.contentMode = UIViewContentMode.scaleAspectFill
         imageView.clipsToBounds = true
         
-    }
-
+        imageView.layer.cornerRadius = 6
+        
+    } // end setImage
     
+    
+
+    func addImageShadow (imageSuperView: UIView!) {
+        
+        imageSuperView.layer.shadowColor = UIColor.black.cgColor
+        imageSuperView.layer.shadowOpacity = 0.4
+        imageSuperView.layer.shadowOffset = CGSize(width: 0, height: 12)
+        imageSuperView.layer.shadowRadius = 12
+        
+    } // end addImageShadow
     
     
     
