@@ -12,7 +12,6 @@ class HomeViewController: UIViewController {
     
     //Wireframe items
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var homeImageView: UIImageView!
     
     // Actual app items
 
@@ -179,7 +178,7 @@ class HomeViewController: UIViewController {
         
         // Moovly
         
-        let moovlyDescriptionText = "Built a mobile app to summon bovine relocation services trucks to any spot in the world. Adoption was nearly 100% in Central California. Incporporated tag-tracking and hoof-print ID to ensure cows were never lost."
+        let moovlyDescriptionText = "Built an app for bovine relocation services. App summons relocator trucks to any spot in the world, inlcuding Antarctica. Adoption was nearly 100% in Central California. Incporporated tag-tracking and hoof-print ID to ensure cows were never lost."
         
         styleCompanyParagraphs(companyDescription: moovlyDescription, companyDescriptionText: moovlyDescriptionText)
         
@@ -189,7 +188,7 @@ class HomeViewController: UIViewController {
         
         // Scroll view
         
-        scrollView.contentSize = CGSize(width: 375, height: 2500)
+        scrollView.contentSize = CGSize(width: 375, height: 2050)
         
         
     } // end viewDidLoad
