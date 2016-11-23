@@ -188,7 +188,7 @@ class HomeViewController: UIViewController {
         
         // Scroll view
         
-        scrollView.contentSize = CGSize(width: 375, height: 2050)
+        scrollView.contentSize = CGSize(width: 375, height: 3600)
         
         
     } // end viewDidLoad
@@ -224,7 +224,7 @@ class HomeViewController: UIViewController {
         imageView.contentMode = UIViewContentMode.scaleAspectFill
         imageView.clipsToBounds = true
         
-        imageView.layer.cornerRadius = 6
+        imageView.layer.cornerRadius = 0
         
     } // end setImage
     
