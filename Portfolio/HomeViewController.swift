@@ -9,6 +9,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
     //Wireframe items
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var homeImageView: UIImageView!
@@ -22,7 +23,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var authorNameLabel: UILabel!
     @IBOutlet weak var authorTitle: UILabel!
     
-    @IBOutlet weak var authorDescriptionTextView: UITextView!
+    @IBOutlet weak var authorDescription: UITextView!
     
     // Colors
     
@@ -30,22 +31,45 @@ class HomeViewController: UIViewController {
     let midGrey = UIColor(red:90/255.0, green:90/255.0, blue:120/255.0, alpha: 1.0)
     let darkGrey = UIColor(red:50/255.0, green:50/255.0, blue:50/255.0, alpha: 1.0)
     
+    // Generic text styling items
+    
+    var authorDescriptionAttributes: [String : Any]!
+    
+    var companyDescriptionStyle: NSMutableParagraphStyle!
+    var companyDescriptionAttributes: [String : Any]!
+    
     
     // Author work history
     
+    // Facebook
     @IBOutlet weak var facebookTitle: UILabel!
     @IBOutlet weak var facebookDescription: UITextView!
-    
-    // Work history images
-    
     @IBOutlet weak var facebookLive: UIImageView!
+    @IBOutlet weak var facebookLiveLabel: UILabel!
     @IBOutlet weak var educationSeries: UIImageView!
+    @IBOutlet weak var facebookEducationSeries: UILabel!
+    
+    // Yahoo!
+    @IBOutlet weak var yahooTitle: UILabel!
+    @IBOutlet weak var yahooDescription: UITextView!
+    @IBOutlet weak var yahooProject: UIImageView!
+    @IBOutlet weak var yahooProjectTitle: UILabel!
+    
+    // Moovly
+    @IBOutlet weak var moovlyTitle: UILabel!
+    @IBOutlet weak var moovlyDescription: UITextView!
+    @IBOutlet weak var moovlyProject: UIImageView!
+    @IBOutlet weak var moovlyProjectLabel: UILabel!
     
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /////////////////////////////////
+        ///// Author Images Section /////
+        /////////////////////////////////
         
         // Assign hero image
         
@@ -71,6 +95,10 @@ class HomeViewController: UIViewController {
         authorProfileImageView.layer.borderColor = lightGrey.cgColor
         
         
+        ///////////////////////////////
+        ///// Author Info Section /////
+        ///////////////////////////////
+        
         // Author name styling
         
         let authorNameAttributedString = NSMutableAttributedString(string: authorNameLabel.text!)
@@ -84,40 +112,42 @@ class HomeViewController: UIViewController {
         
         // Author title/description styling
         
+        // Multi-use styling
         let authorDescriptionParagraphStyle = NSMutableParagraphStyle()
         authorDescriptionParagraphStyle.lineSpacing = 1.2
         authorDescriptionParagraphStyle.alignment = NSTextAlignment.center
         
-        let authorDescriptionAttributes = [NSParagraphStyleAttributeName: authorDescriptionParagraphStyle]
+        authorDescriptionAttributes = [NSParagraphStyleAttributeName: authorDescriptionParagraphStyle]
     
         let authorTitleText = "Product Designer"
         
         authorTitle.attributedText = NSAttributedString(string: authorTitleText, attributes: authorDescriptionAttributes)
-        authorTitle.textColor = midGrey
         authorTitle.font = authorTitle.font?.withSize(18)
-
+        authorTitle.textColor = midGrey
         
-        // Author description stying
+        let authorDescriptionText = "Senior mobile designer, specializing in new feature development. Research, prototype, learn, build. Formerly at Facebook, Yahoo!, and Moovly."
         
-        let authorDescription = "Senior mobile designer, specializing in new feature development. Research, prototype, learn, build. Formerly at Facebook, Yahoo!, and Moovly."
-        authorDescriptionTextView.attributedText = NSAttributedString(string: authorDescription, attributes: authorDescriptionAttributes)
+        authorDescription.attributedText = NSAttributedString(string: authorDescriptionText, attributes: authorDescriptionAttributes)
+        authorDescription.font = authorDescription.font?.withSize(18)
+        authorDescription.textColor = midGrey
         
-        authorDescriptionTextView.font = authorDescriptionTextView.font?.withSize(18)
-        authorDescriptionTextView.textColor = midGrey
         
-        // Work history section
+        ///////////////////////////////
+        ///// Work history section/////
+        ///////////////////////////////
         
-        let companyDescriptionStyle = NSMutableParagraphStyle()
+        // Global line spacing for company desriptions
+        
+        companyDescriptionStyle = NSMutableParagraphStyle()
         companyDescriptionStyle.lineSpacing = 1.5
+        companyDescriptionAttributes = [NSParagraphStyleAttributeName: companyDescriptionStyle]
         
-        let companyDescriptionAttributes = [NSParagraphStyleAttributeName: companyDescriptionStyle]
+        
+        // Facebook
         
         let facebookDescriptionText = "Helped design Facebook Live. Led a team of 3 designers on a 3-month expedition to research global usage of the Like button. Worked with top-level executives to create an in-house design educational series."
         
-        facebookDescription.attributedText = NSAttributedString(string: facebookDescriptionText, attributes: companyDescriptionAttributes)
-        
-        facebookDescription.font = authorDescriptionTextView.font?.withSize(18)
-        facebookDescription.textColor = darkGrey
+        styleCompanyParagraphs(companyDescription: facebookDescription, companyDescriptionText: facebookDescriptionText)
         
         facebookLive.image = #imageLiteral(resourceName: "facebook_live")
         educationSeries.image = #imageLiteral(resourceName: "education_series")
@@ -128,12 +158,26 @@ class HomeViewController: UIViewController {
         educationSeries.contentMode = UIViewContentMode.scaleAspectFill
         educationSeries.clipsToBounds = true
 
-
+        
+        // Yahoo
+        
+        let yahooDescriptionText = "Worked with VP of Product to design a new sleep tracker feature. Updated large portions of Yahoo! Answers to conform with modern design principles. Increased overall engagement by 6% through implementing cutting-edge information architecture techniques."
+        
+        styleCompanyParagraphs(companyDescription: yahooDescription, companyDescriptionText: yahooDescriptionText)
+        
+        yahooProject.image = #imageLiteral(resourceName: "sleep_tracker")
+        
+        
+        // Moovly
+        
+        let moovlyDescriptionText = "Built a mobile app to summon bovine relocation services trucks to any spot in the world. Adoption was nearly 100% in Central California. Incporporated tag-tracking and hoof-print ID to ensure cows were never lost."
+        
+        styleCompanyParagraphs(companyDescription: moovlyDescription, companyDescriptionText: moovlyDescriptionText)
         
         
         // Scroll view
         
-        scrollView.contentSize = CGSize(width: 375, height: 2000)
+        scrollView.contentSize = CGSize(width: 375, height: 2500)
         
         
     }
@@ -146,4 +190,31 @@ class HomeViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
-}
+    
+    
+    // Style text in the company descriptions
+    func styleCompanyParagraphs (companyDescription: UITextView!, companyDescriptionText: String!) {
+            
+            companyDescription.attributedText = NSAttributedString(string: companyDescriptionText, attributes: companyDescriptionAttributes)
+            companyDescription.font = companyDescription.font?.withSize(18)
+            companyDescription.textColor = darkGrey
+        
+    } // end styleCompanyDescriptionText
+    
+    
+    func setImage (imageView: UIImageView, image: UIImage) {
+        
+        imageView.image = image
+        
+        imageView.contentMode = UIViewContentMode.scaleAspectFill
+        imageView.clipsToBounds = true
+        
+    }
+
+    
+    
+    
+    
+    
+    
+} // end class
