@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="623-jl-gPH">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="86E-Vp-yuU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,18 +12,15 @@
         <array key="Borg.ttf">
             <string>Borg</string>
         </array>
-        <array key="Mosk-Medium-500.ttf">
-            <string>MoskMedium500</string>
-        </array>
         <array key="Mosk-Normal-400.ttf">
             <string>MoskNormal400</string>
         </array>
     </customFonts>
     <scenes>
-        <!--Portfolio View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="PortfolioViewController" customModule="Iceberg" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Iceberg" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="2172"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,7 +203,7 @@
                                             <fragment>
                                                 <string key="content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed.Nemo enim ipsam voluptatem quia voluptas...</string>
                                                 <attributes>
-                                                    <font key="NSFont" metaFont="cellTitle"/>
+                                                    <font key="NSFont" size="12" name="MoskNormal400"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -230,7 +227,7 @@
                                         <attributedString key="attributedText">
                                             <fragment content="design | UI | swift">
                                                 <attributes>
-                                                    <font key="NSFont" metaFont="cellTitle"/>
+                                                    <font key="NSFont" size="12" name="MoskLight300"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -244,7 +241,7 @@
                                         <attributedString key="attributedText">
                                             <fragment content="User Acquisition Funnel">
                                                 <attributes>
-                                                    <font key="NSFont" metaFont="system" size="21"/>
+                                                    <font key="NSFont" size="21" name="MoskMedium500"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -306,7 +303,7 @@
                                         <attributedString key="attributedText">
                                             <fragment content="Facebook">
                                                 <attributes>
-                                                    <font key="NSFont" metaFont="system" size="50"/>
+                                                    <font key="NSFont" size="50" name="MoskBold700"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -320,7 +317,7 @@
                                         <attributedString key="attributedText">
                                             <fragment content="featuring projects from 2013-2015">
                                                 <attributes>
-                                                    <font key="NSFont" metaFont="system" size="15"/>
+                                                    <font key="NSFont" size="15" name="MoskLight300"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -446,33 +443,6 @@
             </objects>
             <point key="canvasLocation" x="1767" y="-600"/>
         </scene>
-        <!--Home View Controller-->
-        <scene sceneID="G9y-AK-RSB">
-            <objects>
-                <viewController id="623-jl-gPH" customClass="HomeViewController" customModule="Iceberg" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kKi-Ty-TfS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="texturedBG" id="zzt-sU-bgD">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" id="kUB-sM-GnO">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            </containerView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="viewContainer" destination="kUB-sM-GnO" id="2ad-hb-u9C"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b7U-so-F4B" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-330" y="-1425"/>
-        </scene>
         <!--Login View Controller-->
         <scene sceneID="auR-l5-yHF">
             <objects>
@@ -519,7 +489,7 @@
                                             <color key="titleShadowColor" red="0.047281901039999998" green="0.049967447919999998" blue="0.27362738720000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="623-jl-gPH" kind="modal" modalTransitionStyle="crossDissolve" id="7aU-ZM-Qn5"/>
+                                            <segue destination="wTS-Zt-iSH" kind="modal" identifier="toMainPageSegue" modalTransitionStyle="crossDissolve" id="LQ4-5F-1xl"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3o8-AA-kFb">
@@ -540,7 +510,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yn6-Xm-Q8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-992" y="155"/>
+            <point key="canvasLocation" x="-428.5" y="154.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xeU-pC-904">
@@ -559,99 +529,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DIk-98-Rat" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="119.5" y="153.5"/>
-        </scene>
-        <!--Portfolio Home View Controller-->
-        <scene sceneID="eeb-4d-Nyi">
-            <objects>
-                <viewController storyboardIdentifier="portfolioHomeView" id="2TG-u4-JwK" customClass="PortfolioHomeViewController" customModule="Iceberg" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Cs6-a4-fCt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" id="ZWx-04-77k">
-                                <rect key="frame" x="18" y="264" width="339" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UzC-X0-kFi">
-                                <rect key="frame" x="107" y="130" width="160" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.40000000000000002" green="0.72941176470588232" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="View"/>
-                                <connections>
-                                    <segue destination="wTS-Zt-iSH" kind="modal" modalTransitionStyle="crossDissolve" id="94C-Nx-qLX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CaB-td-AaH">
-                                <rect key="frame" x="107" y="186" width="160" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.79153299330000004" green="0.48941904310000001" blue="0.63329821829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Edit"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Your Portfolio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qst-q7-8TX">
-                                <rect key="frame" x="16" y="60" width="343" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MoskMedium500" family="Mosk" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                    </view>
-                    <connections>
-                        <outlet property="mainText" destination="ZWx-04-77k" id="RE2-y2-DOY"/>
-                        <outlet property="mainTitle" destination="qst-q7-8TX" id="wfu-VM-f40"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mk2-RW-qFb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="120" y="-654"/>
-        </scene>
-        <!--Empty Portfolio Home View Controller-->
-        <scene sceneID="akv-eg-Hhm">
-            <objects>
-                <viewController storyboardIdentifier="emptyPortfolioHomeView" id="3lu-WY-zCb" customClass="EmptyPortfolioHomeViewController" customModule="Iceberg" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="g2i-Ek-yDh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="Iceberg lets you create and present your portfolio. Get started by clicking the button below." selectable="NO" id="lxz-ib-EiJ">
-                                <rect key="frame" x="16" y="113" width="343" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="MoskNormal400" family="Mosk Normal 400" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to Iceberg!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ucK-x6-kJ7">
-                                <rect key="frame" x="16" y="60" width="343" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MoskMedium500" family="Mosk" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gQ6-Qb-Woh">
-                                <rect key="frame" x="94" y="231" width="187" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.79153299331665039" green="0.48941904306411743" blue="0.63329821825027466" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Create Portfolio"/>
-                                <connections>
-                                    <action selector="didPressCreate:" destination="3lu-WY-zCb" eventType="touchUpInside" id="cmM-C5-KJH"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                    </view>
-                    <connections>
-                        <outlet property="mainText" destination="lxz-ib-EiJ" id="SRN-c9-JN1"/>
-                        <outlet property="mainTitle" destination="ucK-x6-kJ7" id="vMG-tP-hKs"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EkL-w0-shf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-330" y="-655"/>
         </scene>
     </scenes>
     <resources>
@@ -673,10 +550,6 @@
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
         <segue reference="5FL-fd-yMh"/>
-=======
-        <segue reference="cnA-Tw-bSY"/>
->>>>>>> origin/projectsInfoView_animation
     </inferredMetricsTieBreakers>
 </document>
