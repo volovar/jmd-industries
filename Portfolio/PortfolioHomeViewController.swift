@@ -10,7 +10,6 @@ import UIKit
 
 class PortfolioHomeViewController: UIViewController {
     @IBOutlet weak var mainTitle: UILabel!
-    @IBOutlet weak var mainText: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +20,5 @@ class PortfolioHomeViewController: UIViewController {
     func setupView() {
         // text colors
         mainTitle.textColor = UIColor.white
-        mainText.textColor = UIColor.white
     }
 }
