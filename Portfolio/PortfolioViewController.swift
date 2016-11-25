@@ -9,11 +9,12 @@
 import UIKit
 
 class PortfolioViewController: UIViewController {
+    
     //Wireframe items
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var homeImageView: UIImageView!
     
     // Actual app items
+    
     // Top: author section
     @IBOutlet weak var heroImageView: UIImageView!
     @IBOutlet weak var authorProfileImageView: UIImageView!
@@ -21,7 +22,7 @@ class PortfolioViewController: UIViewController {
     @IBOutlet weak var authorNameLabel: UILabel!
     @IBOutlet weak var authorTitle: UILabel!
     
-    @IBOutlet weak var authorDescriptionTextView: UITextView!
+    @IBOutlet weak var authorDescription: UITextView!
     
     // Colors
     
@@ -29,22 +30,57 @@ class PortfolioViewController: UIViewController {
     let midGrey = UIColor(red:90/255.0, green:90/255.0, blue:120/255.0, alpha: 1.0)
     let darkGrey = UIColor(red:50/255.0, green:50/255.0, blue:50/255.0, alpha: 1.0)
     
+    // Generic text styling items
+    
+    var authorDescriptionAttributes: [String : Any]!
+    
+    var companyDescriptionStyle: NSMutableParagraphStyle!
+    var companyDescriptionAttributes: [String : Any]!
+    
     
     // Author work history
     
+    // Facebook
     @IBOutlet weak var facebookTitle: UILabel!
     @IBOutlet weak var facebookDescription: UITextView!
     
-    // Work history images
-    
+    @IBOutlet weak var facebookLiveSuperView: UIView!
     @IBOutlet weak var facebookLive: UIImageView!
+    @IBOutlet weak var facebookLiveLabel: UILabel!
+    
+    @IBOutlet weak var educationSeriesSuperView: UIView!
     @IBOutlet weak var educationSeries: UIImageView!
+    @IBOutlet weak var facebookEducationSeries: UILabel!
+    
+    // Yahoo!
+    @IBOutlet weak var yahooTitle: UILabel!
+    @IBOutlet weak var yahooDescription: UITextView!
+    
+    
+    @IBOutlet weak var yahooProjectSuperView: UIView!
+    @IBOutlet weak var yahooProject: UIImageView!
+    @IBOutlet weak var yahooProjectTitle: UILabel!
+    
+    // Moovly
+    @IBOutlet weak var moovlyTitle: UILabel!
+    @IBOutlet weak var moovlyDescription: UITextView!
+    
+    
+    @IBOutlet weak var moovlySuperView: UIView!
+    @IBOutlet weak var moovlyProject: UIImageView!
+    @IBOutlet weak var moovlyProjectLabel: UILabel!
     
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print ("viewDidLoad has executed")
+        
+        /////////////////////////////////
+        ///// Author Images Section /////
+        /////////////////////////////////
         
         // Assign hero image
         
@@ -70,6 +106,10 @@ class PortfolioViewController: UIViewController {
         authorProfileImageView.layer.borderColor = lightGrey.cgColor
         
         
+        ///////////////////////////////
+        ///// Author Info Section /////
+        ///////////////////////////////
+        
         // Author name styling
         
         let authorNameAttributedString = NSMutableAttributedString(string: authorNameLabel.text!)
@@ -83,59 +123,77 @@ class PortfolioViewController: UIViewController {
         
         // Author title/description styling
         
+        // Multi-use styling
         let authorDescriptionParagraphStyle = NSMutableParagraphStyle()
         authorDescriptionParagraphStyle.lineSpacing = 1.2
         authorDescriptionParagraphStyle.alignment = NSTextAlignment.center
         
-        let authorDescriptionAttributes = [NSParagraphStyleAttributeName: authorDescriptionParagraphStyle]
+        authorDescriptionAttributes = [NSParagraphStyleAttributeName: authorDescriptionParagraphStyle]
         
         let authorTitleText = "Product Designer"
         
         authorTitle.attributedText = NSAttributedString(string: authorTitleText, attributes: authorDescriptionAttributes)
-        authorTitle.textColor = midGrey
         authorTitle.font = authorTitle.font?.withSize(18)
+        authorTitle.textColor = midGrey
+        
+        let authorDescriptionText = "Senior mobile designer, specializing in new feature development. Research, prototype, learn, build. Formerly at Facebook, Yahoo!, and Moovly."
+        
+        authorDescription.attributedText = NSAttributedString(string: authorDescriptionText, attributes: authorDescriptionAttributes)
+        authorDescription.font = authorDescription.font?.withSize(18)
+        authorDescription.textColor = midGrey
         
         
-        // Author description stying
+        ///////////////////////////////
+        ///// Work history section/////
+        ///////////////////////////////
         
-        let authorDescription = "Senior mobile designer, specializing in new feature development. Research, prototype, learn, build. Formerly at Facebook, Yahoo!, and Moovly."
-        authorDescriptionTextView.attributedText = NSAttributedString(string: authorDescription, attributes: authorDescriptionAttributes)
+        // Global line spacing for company desriptions
         
-        authorDescriptionTextView.font = authorDescriptionTextView.font?.withSize(18)
-        authorDescriptionTextView.textColor = midGrey
-        
-        // Work history section
-        
-        let companyDescriptionStyle = NSMutableParagraphStyle()
+        companyDescriptionStyle = NSMutableParagraphStyle()
         companyDescriptionStyle.lineSpacing = 1.5
+        companyDescriptionAttributes = [NSParagraphStyleAttributeName: companyDescriptionStyle]
         
-        let companyDescriptionAttributes = [NSParagraphStyleAttributeName: companyDescriptionStyle]
+        
+        // Facebook
         
         let facebookDescriptionText = "Helped design Facebook Live. Led a team of 3 designers on a 3-month expedition to research global usage of the Like button. Worked with top-level executives to create an in-house design educational series."
         
-        facebookDescription.attributedText = NSAttributedString(string: facebookDescriptionText, attributes: companyDescriptionAttributes)
+        styleCompanyParagraphs(companyDescription: facebookDescription, companyDescriptionText: facebookDescriptionText)
         
-        facebookDescription.font = authorDescriptionTextView.font?.withSize(18)
-        facebookDescription.textColor = darkGrey
+        setImage(imageView: facebookLive, image: #imageLiteral(resourceName: "facebook_live"))
+        addImageShadow(imageSuperView: facebookLiveSuperView)
         
-        facebookLive.image = #imageLiteral(resourceName: "facebook_live")
-        educationSeries.image = #imageLiteral(resourceName: "education_series")
+        setImage(imageView: educationSeries, image: #imageLiteral(resourceName: "education_series"))
+        addImageShadow(imageSuperView: educationSeriesSuperView)
         
-        facebookLive.contentMode = UIViewContentMode.scaleAspectFill
-        facebookLive.clipsToBounds = true
+        // Yahoo
         
-        educationSeries.contentMode = UIViewContentMode.scaleAspectFill
-        educationSeries.clipsToBounds = true
+        let yahooDescriptionText = "Worked with VP of Product to design a new sleep tracker feature. Updated large portions of Yahoo! Answers to conform with modern design principles. Increased overall engagement by 6% through implementing cutting-edge information architecture techniques."
+        
+        styleCompanyParagraphs(companyDescription: yahooDescription, companyDescriptionText: yahooDescriptionText)
+        
+        setImage(imageView: yahooProject, image: #imageLiteral(resourceName: "sleep_tracker"))
+        addImageShadow(imageSuperView: yahooProjectSuperView)
         
         
+        // Moovly
+        
+        let moovlyDescriptionText = "Built an app for bovine relocation services. App summons relocator trucks to any spot in the world, inlcuding Antarctica. Adoption was nearly 100% in Central California. Incporporated tag-tracking and hoof-print ID to ensure cows were never lost."
+        
+        styleCompanyParagraphs(companyDescription: moovlyDescription, companyDescriptionText: moovlyDescriptionText)
+        
+        setImage(imageView: moovlyProject, image: #imageLiteral(resourceName: "moovly"))
+        addImageShadow(imageSuperView: moovlySuperView)
         
         
         // Scroll view
         
-        scrollView.contentSize = CGSize(width: 375, height: 2000)
+        scrollView.contentSize = CGSize(width: 375, height: 3600)
         
         
-    }
+    } // end viewDidLoad
+        
+        
     
     // Set navigation bar to hidden or visible on appear / disappear
     override func viewWillAppear(_ animated: Bool) {
@@ -144,4 +202,45 @@ class PortfolioViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-    }}
+    }
+    
+    
+    
+    // Style text in the company descriptions
+    func styleCompanyParagraphs (companyDescription: UITextView!, companyDescriptionText: String!) {
+        
+        companyDescription.attributedText = NSAttributedString(string: companyDescriptionText, attributes: companyDescriptionAttributes)
+        companyDescription.font = companyDescription.font?.withSize(16)
+        companyDescription.textColor = darkGrey
+        
+    } // end styleCompanyDescriptionText
+    
+    
+    
+    func setImage (imageView: UIImageView, image: UIImage) {
+        
+        imageView.image = image
+        
+        imageView.contentMode = UIViewContentMode.scaleAspectFill
+        imageView.clipsToBounds = true
+        
+        imageView.layer.cornerRadius = 8
+        
+    } // end setImage
+    
+    
+    
+    func addImageShadow (imageSuperView: UIView!) {
+        
+        imageSuperView.layer.shadowColor = UIColor.black.cgColor
+        imageSuperView.layer.shadowOpacity = 0.4
+        imageSuperView.layer.shadowOffset = CGSize(width: 0, height: 12)
+        imageSuperView.layer.shadowRadius = 12
+        
+    } // end addImageShadow
+    
+    
+    
+    
+    
+} // end class
