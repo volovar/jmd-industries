@@ -31,6 +31,7 @@
 		861E0FB0C93A0AD811BDA083 /* Pods_IcebergUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74BD51C0FA226BC599CBA20C /* Pods_IcebergUITests.framework */; };
 		B4B56B187F807CA0B43F1C69 /* Pods_Iceberg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B91198FAE9969FED1D9CB0F /* Pods_Iceberg.framework */; };
 		C930D88DCA50E49B0D7BEEF2 /* Pods_IcebergTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA1991395F70913B3891DC34 /* Pods_IcebergTests.framework */; };
+		CEB0B7B61DE7B50B00F1E308 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0B7B51DE7B50B00F1E308 /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		AF5B520012001077D15B80B9 /* Pods-Iceberg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iceberg.release.xcconfig"; path = "Pods/Target Support Files/Pods-Iceberg/Pods-Iceberg.release.xcconfig"; sourceTree = "<group>"; };
 		C7D223E861A7E84470D95742 /* Pods-IcebergTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IcebergTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IcebergTests/Pods-IcebergTests.release.xcconfig"; sourceTree = "<group>"; };
 		CA1991395F70913B3891DC34 /* Pods_IcebergTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IcebergTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB0B7B51DE7B50B00F1E308 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		D706B931E10FB0317EE70FF4 /* Pods-Iceberg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iceberg.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Iceberg/Pods-Iceberg.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +147,7 @@
 		4C04799A1DE231DD009E47DF /* Transitions */ = {
 			isa = PBXGroup;
 			children = (
+				CEB0B7B51DE7B50B00F1E308 /* Common.swift */,
 				4C0479961DE231D8009E47DF /* BaseTransition.swift */,
 				4C0479971DE231D8009E47DF /* FadeTransition.swift */,
 			);
@@ -507,6 +510,7 @@
 				4C4D13361DD430690023C9F2 /* AppDelegate.swift in Sources */,
 				4C0479991DE231D8009E47DF /* FadeTransition.swift in Sources */,
 				4C4D13671DD432F80023C9F2 /* ProjectDetailViewController.swift in Sources */,
+				CEB0B7B61DE7B50B00F1E308 /* Common.swift in Sources */,
 				4C0479981DE231D8009E47DF /* BaseTransition.swift in Sources */,
 				4C04799E1DE4A65D009E47DF /* Layout2ViewController.swift in Sources */,
 				4C4D13691DD433600023C9F2 /* InfoViewController.swift in Sources */,

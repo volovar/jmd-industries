@@ -176,29 +176,21 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" id="Oho-BJ-SJj" userLabel="Expanded Project Description">
-                                <rect key="frame" x="26" y="194" width="339" height="264"/>
+                            <view contentMode="scaleToFill" misplaced="YES" id="Oho-BJ-SJj" userLabel="Expanded Project Description">
+                                <rect key="frame" x="45.5" y="-50" width="300" height="225"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" id="Skg-WI-aSg">
-                                        <rect key="frame" x="102" y="202" width="137" height="25"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" id="Skg-WI-aSg" userLabel="buttonBackground">
+                                        <rect key="frame" x="81" y="145" width="140" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.30196078431372547" green="0.69019607843137254" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wdD-QM-VD4">
-                                        <rect key="frame" x="102" y="201" width="137" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="viewProjectButton_Default"/>
-                                        <connections>
-                                            <segue destination="46h-vz-X8a" kind="push" id="8tJ-fL-v4L"/>
-                                        </connections>
-                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="projectExpandedBG" id="iRM-Zr-Ong" userLabel="projectTitleBG">
-                                        <rect key="frame" x="20" y="20" width="299" height="224"/>
+                                        <rect key="frame" x="-0.16576800559369076" y="0.32701421800936714" width="299.99999999999977" height="224.99999999999994"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" id="Cy2-ki-zUB">
-                                        <rect key="frame" x="51" y="70" width="240" height="133"/>
+                                        <rect key="frame" x="30" y="54" width="240" height="133"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <attributedString key="attributedText">
                                             <fragment>
@@ -217,11 +209,6 @@
                                 <rect key="frame" x="19" y="185" width="353" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9nh-Be-uHB">
-                                        <rect key="frame" x="302" y="64" width="15" height="15"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.30196078430000001" green="0.69019607839999997" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="projectTitleBG_1" id="qqa-XU-DIq" userLabel="projectTitleBG">
                                         <rect key="frame" x="20" y="20" width="313" height="71"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -254,18 +241,37 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1Vc-t3-cNo" userLabel="buttonCollapsed">
+                                        <rect key="frame" x="107" y="203" width="140" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="viewProjectButton_Default"/>
+                                        <connections>
+                                            <segue destination="46h-vz-X8a" kind="push" id="MDK-0p-W5l"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9nh-Be-uHB">
+                                        <rect key="frame" x="302" y="65" width="13" height="13"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.63355517387390137" green="0.92972588539123535" blue="0.99934643507003784" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="didPressPlusButton:" destination="U7A-zB-Dyp" eventType="touchUpInside" id="h8M-Te-PLe"/>
+                                        </connections>
+                                    </button>
                                     <view contentMode="scaleToFill" id="Wr1-d9-ofv" userLabel="divisorBlue">
                                         <rect key="frame" x="122" y="63" width="100" height="1"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.30980392156862746" green="0.67843137254901964" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
+                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tJC-Z4-KIe">
+                                        <rect key="frame" x="302" y="65" width="13" height="13"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.30196078431372547" green="0.69411764705882351" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="didPressCollapseButton:" destination="U7A-zB-Dyp" eventType="touchUpInside" id="7Rb-4z-IWL"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1Vc-t3-cNo" userLabel="buttonCollapsed">
-                                <rect key="frame" x="119" y="321" width="137" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="viewProjectButton_Default"/>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="blueGradient" id="aUX-d9-6mD">
                                 <rect key="frame" x="0.0" y="64" width="15" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -318,7 +324,9 @@
                     <navigationItem key="navigationItem" id="aqE-1N-0CG"/>
                     <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="backgroundViewProject" destination="Skg-WI-aSg" id="jQy-Wy-b1J"/>
                         <outlet property="plusButtonBGColor" destination="9nh-Be-uHB" id="ogR-J0-MGp"/>
+                        <outlet property="plusButtonExpanded" destination="tJC-Z4-KIe" id="whj-lY-RyK"/>
                         <outlet property="projectExpandedView" destination="Oho-BJ-SJj" id="OO2-Kp-3fR"/>
                         <outlet property="subtitleLabel" destination="s70-gP-g3p" id="Cd4-fO-fmD"/>
                         <outlet property="titleLabel" destination="2zx-zI-xOA" id="OWy-mT-O3d"/>
@@ -533,6 +541,6 @@
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="8tJ-fL-v4L"/>
+        <segue reference="MDK-0p-W5l"/>
     </inferredMetricsTieBreakers>
 </document>
