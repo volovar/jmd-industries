@@ -11,6 +11,7 @@ import UIKit
 class EmptyPortfolioHomeViewController: UIViewController {
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var mainText: UITextView!
+    @IBOutlet weak var createButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,11 @@ class EmptyPortfolioHomeViewController: UIViewController {
         // text colors
         mainTitle.textColor = UIColor.white
         mainText.textColor = UIColor.white
+        
+        // button styling
+        createButton.layer.cornerRadius = 5
+        createButton.layer.borderWidth = 1
+        createButton.layer.borderColor = UIColor.black.cgColor
     }
 
     @IBAction func didPressCreate(_ sender: Any) {
