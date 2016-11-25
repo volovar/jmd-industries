@@ -24,11 +24,14 @@
 		4C4D13401DD430690023C9F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4D133E1DD430690023C9F2 /* LaunchScreen.storyboard */; };
 		4C4D134B1DD430690023C9F2 /* PortfolioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D134A1DD430690023C9F2 /* PortfolioTests.swift */; };
 		4C4D13561DD430690023C9F2 /* PortfolioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13551DD430690023C9F2 /* PortfolioUITests.swift */; };
-		4C4D13641DD4326C0023C9F2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13631DD4326C0023C9F2 /* HomeViewController.swift */; };
 		4C4D13671DD432F80023C9F2 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13661DD432F80023C9F2 /* ProjectDetailViewController.swift */; };
 		4C4D13691DD433600023C9F2 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13681DD433600023C9F2 /* InfoViewController.swift */; };
 		4CC260751DDEF65C00726930 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC260741DDEF65C00726930 /* Onboarding.storyboard */; };
 		4CC260771DDEF81A00726930 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC260761DDEF81A00726930 /* LoginViewController.swift */; };
+		4CD8AED01DE56EB4001FA131 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8AECF1DE56EB4001FA131 /* HomeViewController.swift */; };
+		4CD8AED21DE57C5F001FA131 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8AED11DE57C5F001FA131 /* PortfolioViewController.swift */; };
+		4CD8AED41DE58154001FA131 /* EmptyPortfolioHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8AED31DE58154001FA131 /* EmptyPortfolioHomeViewController.swift */; };
+		4CD8AED61DE58160001FA131 /* PortfolioHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8AED51DE58160001FA131 /* PortfolioHomeViewController.swift */; };
 		861E0FB0C93A0AD811BDA083 /* Pods_IcebergUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74BD51C0FA226BC599CBA20C /* Pods_IcebergUITests.framework */; };
 		B4B56B187F807CA0B43F1C69 /* Pods_Iceberg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B91198FAE9969FED1D9CB0F /* Pods_Iceberg.framework */; };
 		C930D88DCA50E49B0D7BEEF2 /* Pods_IcebergTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA1991395F70913B3891DC34 /* Pods_IcebergTests.framework */; };
@@ -76,11 +79,14 @@
 		4C4D13511DD430690023C9F2 /* IcebergUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IcebergUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4D13551DD430690023C9F2 /* PortfolioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioUITests.swift; sourceTree = "<group>"; };
 		4C4D13571DD430690023C9F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C4D13631DD4326C0023C9F2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4C4D13661DD432F80023C9F2 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
 		4C4D13681DD433600023C9F2 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		4CC260741DDEF65C00726930 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		4CC260761DDEF81A00726930 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4CD8AECF1DE56EB4001FA131 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4CD8AED11DE57C5F001FA131 /* PortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
+		4CD8AED31DE58154001FA131 /* EmptyPortfolioHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyPortfolioHomeViewController.swift; sourceTree = "<group>"; };
+		4CD8AED51DE58160001FA131 /* PortfolioHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioHomeViewController.swift; sourceTree = "<group>"; };
 		5DE4672E09FC255CA1C932F8 /* Pods-IcebergTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IcebergTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IcebergTests/Pods-IcebergTests.debug.xcconfig"; sourceTree = "<group>"; };
 		74BD51C0FA226BC599CBA20C /* Pods_IcebergUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IcebergUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A52097021B7C8316F08C06 /* Pods-IcebergUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IcebergUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IcebergUITests/Pods-IcebergUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -213,13 +219,16 @@
 		4C4D13651DD432720023C9F2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4C4D13631DD4326C0023C9F2 /* HomeViewController.swift */,
 				4C4D13661DD432F80023C9F2 /* ProjectDetailViewController.swift */,
 				4C4D13681DD433600023C9F2 /* InfoViewController.swift */,
 				4CC260761DDEF81A00726930 /* LoginViewController.swift */,
 				4C0479941DE22DFC009E47DF /* SignUpViewController.swift */,
 				4C04799B1DE4A652009E47DF /* Layout1ViewController.swift */,
 				4C04799D1DE4A65D009E47DF /* Layout2ViewController.swift */,
+				4CD8AECF1DE56EB4001FA131 /* HomeViewController.swift */,
+				4CD8AED11DE57C5F001FA131 /* PortfolioViewController.swift */,
+				4CD8AED31DE58154001FA131 /* EmptyPortfolioHomeViewController.swift */,
+				4CD8AED51DE58160001FA131 /* PortfolioHomeViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -524,15 +533,18 @@
 			files = (
 				4C0479951DE22DFC009E47DF /* SignUpViewController.swift in Sources */,
 				4C4D13361DD430690023C9F2 /* AppDelegate.swift in Sources */,
+				4CD8AED41DE58154001FA131 /* EmptyPortfolioHomeViewController.swift in Sources */,
 				4C0479991DE231D8009E47DF /* FadeTransition.swift in Sources */,
 				4C4D13671DD432F80023C9F2 /* ProjectDetailViewController.swift in Sources */,
 				44C526991DE52D4F008475F2 /* Common.swift in Sources */,
 				4C0479981DE231D8009E47DF /* BaseTransition.swift in Sources */,
+				4CD8AED01DE56EB4001FA131 /* HomeViewController.swift in Sources */,
 				4C04799E1DE4A65D009E47DF /* Layout2ViewController.swift in Sources */,
 				4C4D13691DD433600023C9F2 /* InfoViewController.swift in Sources */,
 				4CC260771DDEF81A00726930 /* LoginViewController.swift in Sources */,
+				4CD8AED21DE57C5F001FA131 /* PortfolioViewController.swift in Sources */,
 				4C04799C1DE4A652009E47DF /* Layout1ViewController.swift in Sources */,
-				4C4D13641DD4326C0023C9F2 /* HomeViewController.swift in Sources */,
+				4CD8AED61DE58160001FA131 /* PortfolioHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
