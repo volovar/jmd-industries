@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44C526991DE52D4F008475F2 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C526981DE52D4F008475F2 /* Common.swift */; };
 		4C04798A1DE22755009E47DF /* Borg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C0479891DE22755009E47DF /* Borg.ttf */; };
 		4C04798F1DE22778009E47DF /* Mosk-Bold-700.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C04798B1DE22778009E47DF /* Mosk-Bold-700.ttf */; };
 		4C0479901DE22778009E47DF /* Mosk-Light-300.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C04798C1DE22778009E47DF /* Mosk-Light-300.ttf */; };
@@ -23,15 +24,17 @@
 		4C4D13401DD430690023C9F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4D133E1DD430690023C9F2 /* LaunchScreen.storyboard */; };
 		4C4D134B1DD430690023C9F2 /* PortfolioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D134A1DD430690023C9F2 /* PortfolioTests.swift */; };
 		4C4D13561DD430690023C9F2 /* PortfolioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13551DD430690023C9F2 /* PortfolioUITests.swift */; };
-		4C4D13641DD4326C0023C9F2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13631DD4326C0023C9F2 /* HomeViewController.swift */; };
 		4C4D13671DD432F80023C9F2 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13661DD432F80023C9F2 /* ProjectDetailViewController.swift */; };
 		4C4D13691DD433600023C9F2 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13681DD433600023C9F2 /* InfoViewController.swift */; };
 		4CC260751DDEF65C00726930 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC260741DDEF65C00726930 /* Onboarding.storyboard */; };
 		4CC260771DDEF81A00726930 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC260761DDEF81A00726930 /* LoginViewController.swift */; };
+		4CD8AED01DE56EB4001FA131 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8AECF1DE56EB4001FA131 /* HomeViewController.swift */; };
+		4CD8AED21DE57C5F001FA131 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8AED11DE57C5F001FA131 /* PortfolioViewController.swift */; };
+		4CD8AED41DE58154001FA131 /* EmptyPortfolioHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8AED31DE58154001FA131 /* EmptyPortfolioHomeViewController.swift */; };
+		4CD8AED61DE58160001FA131 /* PortfolioHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8AED51DE58160001FA131 /* PortfolioHomeViewController.swift */; };
 		861E0FB0C93A0AD811BDA083 /* Pods_IcebergUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74BD51C0FA226BC599CBA20C /* Pods_IcebergUITests.framework */; };
 		B4B56B187F807CA0B43F1C69 /* Pods_Iceberg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B91198FAE9969FED1D9CB0F /* Pods_Iceberg.framework */; };
 		C930D88DCA50E49B0D7BEEF2 /* Pods_IcebergTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA1991395F70913B3891DC34 /* Pods_IcebergTests.framework */; };
-		CEB0B7B61DE7B50B00F1E308 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0B7B51DE7B50B00F1E308 /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		35C1290D55BD27D1D1667FFB /* Pods-IcebergUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IcebergUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IcebergUITests/Pods-IcebergUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		44C526981DE52D4F008475F2 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		4C0479891DE22755009E47DF /* Borg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Borg.ttf; sourceTree = "<group>"; };
 		4C04798B1DE22778009E47DF /* Mosk-Bold-700.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk-Bold-700.ttf"; sourceTree = "<group>"; };
 		4C04798C1DE22778009E47DF /* Mosk-Light-300.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk-Light-300.ttf"; sourceTree = "<group>"; };
@@ -75,11 +79,14 @@
 		4C4D13511DD430690023C9F2 /* IcebergUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IcebergUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4D13551DD430690023C9F2 /* PortfolioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioUITests.swift; sourceTree = "<group>"; };
 		4C4D13571DD430690023C9F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C4D13631DD4326C0023C9F2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4C4D13661DD432F80023C9F2 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
 		4C4D13681DD433600023C9F2 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		4CC260741DDEF65C00726930 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		4CC260761DDEF81A00726930 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4CD8AECF1DE56EB4001FA131 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4CD8AED11DE57C5F001FA131 /* PortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
+		4CD8AED31DE58154001FA131 /* EmptyPortfolioHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyPortfolioHomeViewController.swift; sourceTree = "<group>"; };
+		4CD8AED51DE58160001FA131 /* PortfolioHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioHomeViewController.swift; sourceTree = "<group>"; };
 		5DE4672E09FC255CA1C932F8 /* Pods-IcebergTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IcebergTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IcebergTests/Pods-IcebergTests.debug.xcconfig"; sourceTree = "<group>"; };
 		74BD51C0FA226BC599CBA20C /* Pods_IcebergUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IcebergUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A52097021B7C8316F08C06 /* Pods-IcebergUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IcebergUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IcebergUITests/Pods-IcebergUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,7 +94,6 @@
 		AF5B520012001077D15B80B9 /* Pods-Iceberg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iceberg.release.xcconfig"; path = "Pods/Target Support Files/Pods-Iceberg/Pods-Iceberg.release.xcconfig"; sourceTree = "<group>"; };
 		C7D223E861A7E84470D95742 /* Pods-IcebergTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IcebergTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IcebergTests/Pods-IcebergTests.release.xcconfig"; sourceTree = "<group>"; };
 		CA1991395F70913B3891DC34 /* Pods_IcebergTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IcebergTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEB0B7B51DE7B50B00F1E308 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		D706B931E10FB0317EE70FF4 /* Pods-Iceberg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iceberg.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Iceberg/Pods-Iceberg.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,7 +153,6 @@
 		4C04799A1DE231DD009E47DF /* Transitions */ = {
 			isa = PBXGroup;
 			children = (
-				CEB0B7B51DE7B50B00F1E308 /* Common.swift */,
 				4C0479961DE231D8009E47DF /* BaseTransition.swift */,
 				4C0479971DE231D8009E47DF /* FadeTransition.swift */,
 			);
@@ -188,6 +193,7 @@
 				4C4D133E1DD430690023C9F2 /* LaunchScreen.storyboard */,
 				4CC260741DDEF65C00726930 /* Onboarding.storyboard */,
 				4C4D13411DD430690023C9F2 /* Info.plist */,
+				44C526981DE52D4F008475F2 /* Common.swift */,
 			);
 			path = Portfolio;
 			sourceTree = "<group>";
@@ -213,13 +219,16 @@
 		4C4D13651DD432720023C9F2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4C4D13631DD4326C0023C9F2 /* HomeViewController.swift */,
 				4C4D13661DD432F80023C9F2 /* ProjectDetailViewController.swift */,
 				4C4D13681DD433600023C9F2 /* InfoViewController.swift */,
 				4CC260761DDEF81A00726930 /* LoginViewController.swift */,
 				4C0479941DE22DFC009E47DF /* SignUpViewController.swift */,
 				4C04799B1DE4A652009E47DF /* Layout1ViewController.swift */,
 				4C04799D1DE4A65D009E47DF /* Layout2ViewController.swift */,
+				4CD8AECF1DE56EB4001FA131 /* HomeViewController.swift */,
+				4CD8AED11DE57C5F001FA131 /* PortfolioViewController.swift */,
+				4CD8AED31DE58154001FA131 /* EmptyPortfolioHomeViewController.swift */,
+				4CD8AED51DE58160001FA131 /* PortfolioHomeViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -287,6 +296,7 @@
 				4C4D134E1DD430690023C9F2 /* Frameworks */,
 				4C4D134F1DD430690023C9F2 /* Resources */,
 				A75CAA79F36729139460AEE3 /* [CP] Copy Pods Resources */,
+				56FFA0F46BF86E3702418A57 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -421,7 +431,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		56FFA0F46BF86E3702418A57 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IcebergUITests/Pods-IcebergUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		64542335595472EE65ABADCF /* [CP] Check Pods Manifest.lock */ = {
@@ -436,7 +461,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		74075829910A288C069D7BEF /* [CP] Check Pods Manifest.lock */ = {
@@ -451,7 +476,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A75CAA79F36729139460AEE3 /* [CP] Copy Pods Resources */ = {
@@ -508,15 +533,18 @@
 			files = (
 				4C0479951DE22DFC009E47DF /* SignUpViewController.swift in Sources */,
 				4C4D13361DD430690023C9F2 /* AppDelegate.swift in Sources */,
+				4CD8AED41DE58154001FA131 /* EmptyPortfolioHomeViewController.swift in Sources */,
 				4C0479991DE231D8009E47DF /* FadeTransition.swift in Sources */,
 				4C4D13671DD432F80023C9F2 /* ProjectDetailViewController.swift in Sources */,
-				CEB0B7B61DE7B50B00F1E308 /* Common.swift in Sources */,
+				44C526991DE52D4F008475F2 /* Common.swift in Sources */,
 				4C0479981DE231D8009E47DF /* BaseTransition.swift in Sources */,
+				4CD8AED01DE56EB4001FA131 /* HomeViewController.swift in Sources */,
 				4C04799E1DE4A65D009E47DF /* Layout2ViewController.swift in Sources */,
 				4C4D13691DD433600023C9F2 /* InfoViewController.swift in Sources */,
 				4CC260771DDEF81A00726930 /* LoginViewController.swift in Sources */,
+				4CD8AED21DE57C5F001FA131 /* PortfolioViewController.swift in Sources */,
 				4C04799C1DE4A652009E47DF /* Layout1ViewController.swift in Sources */,
-				4C4D13641DD4326C0023C9F2 /* HomeViewController.swift in Sources */,
+				4CD8AED61DE58160001FA131 /* PortfolioHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
