@@ -14,6 +14,7 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var projectExpandedView: UIView!
     @IBOutlet weak var plusButtonBGColor: UIButton!
+    @IBOutlet weak var photoDarkMask: UIView!
     
     @IBOutlet weak var backgroundViewProject: UIView!
     @IBOutlet weak var plusButtonExpanded: UIButton!
@@ -60,7 +61,10 @@ class InfoViewController: UIViewController {
             self.projectExpandedView.frame.origin.y = self.projectExpandedViewOriginalY + 260
             
             UIView.animate(withDuration: 0.4, delay: 0.2, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations:{
+
                 self.backgroundViewProject.frame.origin.y =  self.backgroundViewProjectOriginalY - self.projectExpandedViewOriginalY - 18
+                self.photoDarkMask.alpha = 0.5
+
                 
             })
             
@@ -90,9 +94,11 @@ class InfoViewController: UIViewController {
             self.plusButtonBGColor.alpha = 0.6
             
             UIView.animate(withDuration: 0.3, delay: 0.1, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations:{
+
                 self.projectExpandedView.frame.origin.y = self.projectExpandedViewOriginalY
 
-                
+                self.photoDarkMask.alpha = 0.25
+
             })
             self.backgroundViewProject.frame.origin.y =  self.backgroundViewProjectOriginalY - 48 - self.projectExpandedViewOriginalY
             
