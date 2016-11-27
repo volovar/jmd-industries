@@ -233,7 +233,7 @@
         <!--Info View Controller-->
         <scene sceneID="laH-YE-Kab">
             <objects>
-                <viewController id="U7A-zB-Dyp" customClass="InfoViewController" customModule="Iceberg" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="U7A-zB-Dyp" customClass="InfoViewController" customModule="Iceberg" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UVQ-W2-edG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -401,14 +401,18 @@
                                     </label>
                                 </subviews>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="250" sectionHeaderHeight="18" sectionFooterHeight="18" id="Un2-sV-JOA">
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="250" sectionHeaderHeight="150" sectionFooterHeight="1" id="Un2-sV-JOA">
                                 <rect key="frame" x="15" y="64" width="360" height="605"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="0.11281169950962067" green="0.23940795660018921" blue="0.30341044068336487" alpha="1" colorSpace="calibratedRGB"/>
+                                <imageView key="tableHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="titleLargeBlueBG" id="WvW-zp-cDU">
+                                    <rect key="frame" x="0.0" y="0.0" width="360" height="116"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </imageView>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="projectsDataCell" rowHeight="250" id="Fnl-Ho-wrk" userLabel="ProjectsDataCell" customClass="ProjectsDataCell" customModule="Iceberg" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="56" width="360" height="250"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="projectsDataCell" rowHeight="250" id="Fnl-Ho-wrk" userLabel="ProjectsDataCell" customClass="ProjectsDataCell" customModule="Iceberg" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="266" width="360" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fnl-Ho-wrk" id="D0i-qa-ZSx">
                                             <rect key="frame" x="0.0" y="0.0" width="360" height="250"/>
@@ -499,12 +503,11 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9nh-Be-uHB">
-                                                                    <rect key="frame" x="282" y="45" width="13" height="13"/>
+                                                                    <rect key="frame" x="281.70075757575796" y="45" width="13" height="13"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <color key="backgroundColor" red="0.63355517387390137" green="0.92972588539123535" blue="0.99934643507003784" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <connections>
                                                                         <action selector="didPressExpand:" destination="Fnl-Ho-wrk" eventType="touchUpInside" id="5sO-B4-K0o"/>
-                                                                        <action selector="didPressPlusButton:" destination="U7A-zB-Dyp" eventType="touchUpInside" id="h8M-Te-PLe"/>
                                                                     </connections>
                                                                 </button>
                                                                 <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tJC-Z4-KIe">
@@ -512,8 +515,7 @@
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <color key="backgroundColor" red="0.30196078431372547" green="0.69411764705882351" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <connections>
-                                                                        <action selector="didPressCollapse:" destination="Fnl-Ho-wrk" eventType="touchUpInside" id="phe-lG-r2u"/>
-                                                                        <action selector="didPressCollapseButton:" destination="U7A-zB-Dyp" eventType="touchUpInside" id="7Rb-4z-IWL"/>
+                                                                        <action selector="didPressCollapse:" destination="Fnl-Ho-wrk" eventType="touchUpInside" id="D14-us-cae"/>
                                                                     </connections>
                                                                 </button>
                                                                 <view contentMode="scaleToFill" id="Wr1-d9-ofv" userLabel="divisorBlue">

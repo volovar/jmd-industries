@@ -49,7 +49,7 @@ class ProjectsDataCell: UITableViewCell {
     
     @IBOutlet weak var projectDescription: UITextView!
     
-    var project: Projects! {
+    var project: SingleProject! {
         didSet {
             self.updateUI()
         }
@@ -59,7 +59,7 @@ class ProjectsDataCell: UITableViewCell {
         projectImageView.image = UIImage(named: project.projectImage)
         projecTitle.text = project.projectTitle
         projectTags.text = project.projectTags
-        projectDescription.text = projectDescription.text
+        projectDescription.text = project.projectDescription
 
         
     }
@@ -105,37 +105,39 @@ class ProjectsDataCell: UITableViewCell {
     }
     
     @IBAction func didPressCollapse(_ sender: Any) {
-                print("collapseButton pressed")
-                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations:{
-                    self.plusButtonExpanded.alpha = 0
-                    self.plusButtonBGColor.alpha = 0.6
         
-                    UIView.animate(withDuration: 0.3, delay: 0.1, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations:{
+        print("collapseButton pressed")
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations:{
+            self.plusButtonExpanded.alpha = 0
+            self.plusButtonBGColor.alpha = 0.6
+            
+            UIView.animate(withDuration: 0.3, delay: 0.1, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations:{
+                
+                self.projectExpandedView.frame.origin.y = self.projectExpandedViewOriginalY
+                
+                self.photoDarkMask.alpha = 0.25
+                
+            })
+            self.backgroundViewProject.frame.origin.y =  self.backgroundViewProjectOriginalY - 48 - self.projectExpandedViewOriginalY
+            
+            
+            
+        })
+        { (Bool) in
+            UIView.animate(withDuration: 0, delay: 0.05, options: [], animations:{
+                
+                self.plusButtonBGColor.isEnabled = true
+                
+                
+                
+                
+                
+            })
+        }
         
-                        self.projectExpandedView.frame.origin.y = self.projectExpandedViewOriginalY
-        
-                        self.photoDarkMask.alpha = 0.25
-        
-                    })
-                    self.backgroundViewProject.frame.origin.y =  self.backgroundViewProjectOriginalY - 48 - self.projectExpandedViewOriginalY
-        
-        
-        
-                })
-                { (Bool) in
-                    UIView.animate(withDuration: 0, delay: 0.05, options: [], animations:{
-        
-                        self.plusButtonBGColor.isEnabled = true
-                        
-                        
-                        
-                        
-                        
-                    })
-                }
 
-        
     }
+   
     
 
 

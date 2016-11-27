@@ -1,37 +1,91 @@
 
 import Foundation
 
-struct Projects {
-    var projectTitle: String
-    var projectTags: String
-    var projectDescription: String
-    var projectImage: String
+class CompanySection
+{
+    // Variables
+    var nameOfSection: String            // name of the product line
+    var projects: [SingleProject]     // all products in the line
     
-}
-
-struct ProjectsMetaData {
-    static func getAllProjects() -> [Projects] {
-        return [
-           Projects(projectTitle: "Education Series", projectTags: "UX design | child development", projectDescription: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo ianventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed.Nemo enim ipsam voluptatem quia voluptas...", projectImage: "education_series"),
-             Projects(projectTitle: "Education Series", projectTags: "UX design | child development", projectDescription: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo ianventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed.Nemo enim ipsam voluptatem quia voluptas...", projectImage: "education_series"),
-             Projects(projectTitle: "Facebook Live", projectTags: "swift | UI design | Illustration", projectDescription: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo ianventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed.Nemo enim ipsam voluptatem quia voluptas...", projectImage: "facebook_live")
-        ]
+    init(named: String, includeProjects: [SingleProject])
+    {
+        nameOfSection = named
+        projects = includeProjects
+        
     }
-}
+    
+    class func companySections() -> [CompanySection]
+    {
+        return [self.facebookProjects(), self.moovlyProjects()]
+    }
+    
+    // Private methods
+    
+    private class func facebookProjects() -> CompanySection {
+        //  (1) iDevices: Apple Watch, iPad, iPhone, iOS
+        var projects = [SingleProject]()
+        
+        projects.append(SingleProject(projectTitle: "Education Series", projectTags: "UX design | child development", projectDescription: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo ianventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed.Nemo enim ipsam voluptatem quia voluptas...", projectImage: "education_series"))
+        projects.append(SingleProject(projectTitle: "Education Series", projectTags: "UX design | child development", projectDescription: "Just something with less text to make use of a custom description and then moving to something else", projectImage: "education_series"))
+     
+        
+        return CompanySection(named: "FacebookProjects", includeProjects: projects)
+    }
+    
+    
+    private class func moovlyProjects() -> CompanySection {
+        //  (1) iDevices: Apple Watch, iPad, iPhone, iOS
+        var projects = [SingleProject]()
+        
+        projects.append(SingleProject(projectTitle: "Moovly Something", projectTags: "Moovly Database | Moovly arghhh", projectDescription: "Just something with less text to make use of a custom description and then moving to something else", projectImage: "sleep_tracker"))
+        projects.append(SingleProject(projectTitle: "Moovly Test", projectTags: "Something | testing new | works", projectDescription: "Just something with less text to make use of a custom description and then moving to something else", projectImage: "moovly"))
+        
+        
+        return CompanySection(named: "MoovlyProjects", includeProjects: projects)
+    }
+  }
 
 
+//struct Project {
+//    
+//    var projectTitle: String
+//    var projectTags: String
+//    var projectDescription: String
+//    var projectImage: String
+//    
+//}
 
-//Project(name: "Online course with video streaming", level: "beginner", imageName: "3"),
-//Project(name: "Online shopping cart app", level: "beginner", imageName: "4"),
-//Project(name: "Photos browser with UITableView", level: "intermediate", imageName: "5"),
-//App(name: "REST API and JSON: Restaurants Explorer", level: "intermediate", imageName: "6"),
-//App(name: "REST API and JSON: weather forecast app", level: "intermediate", imageName: "7"),
-//App(name: "UICollectionView: News Reader", level: "intermediate", imageName: "8"),
-//App(name: "REST API and JSON: Instagram Browser", level: "intermediate", imageName: "9"),
-//App(name: "Journal App with Core Data", level: "advanced", imageName: "10"),
-//App(name: "Build Twitter with Firebase Webinar", level: "advanced", imageName: "11")
+//struct CompanySections {
+//    var FacebookProjects: [String]
+//    var MoovlyProjects: [String]
+//}
+
+//static func allProjects() -> [Projects]
+//{
+//    return [self.FacebookProjects(), self.MoovlyProjects()]
+//}
 //
+//struct ProjectsMetaData {
+////        static func getAllProjects() -> [Projects]
+//    
 //
+//    
+//    
+//    
+//    static func FacebookProjects() -> [Project] {
+//        return [
+//           Project(projectTitle: "Education Series", projectTags: "UX design | child development", projectDescription: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo ianventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed.Nemo enim ipsam voluptatem quia voluptas...", projectImage: "education_series"),
+//             Project(projectTitle: "Education Series", projectTags: "UX design | child development", projectDescription: "Just something with less text to make use of a custom description and then moving to something else", projectImage: "education_series")
 //
-
+//        ]
+//    }
+//    
+//    static func MoovlyProjects() -> [Project] {
+//        return [
+//
+//            Project(projectTitle: "Moovly Something", projectTags: "Moovly Database | Moovly arghhh", projectDescription: "Just something with less text to make use of a custom description and then moving to something else", projectImage: "sleep_tracker"),
+//            Project(projectTitle: "Moovly Test", projectTags: "Something | testing new | works", projectDescription: "Just something with less text to make use of a custom description and then moving to something else", projectImage: "moovly")
+//        ]
+//    }
+//}
 
