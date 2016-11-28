@@ -18,6 +18,7 @@
 		4C0479991DE231D8009E47DF /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0479971DE231D8009E47DF /* FadeTransition.swift */; };
 		4C04799C1DE4A652009E47DF /* Layout1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C04799B1DE4A652009E47DF /* Layout1ViewController.swift */; };
 		4C04799E1DE4A65D009E47DF /* Layout2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C04799D1DE4A65D009E47DF /* Layout2ViewController.swift */; };
+		4C162CAE1DECB61A00D7BF02 /* EditPortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C162CAD1DECB61A00D7BF02 /* EditPortfolioViewController.swift */; };
 		4C4D13361DD430690023C9F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13351DD430690023C9F2 /* AppDelegate.swift */; };
 		4C4D133B1DD430690023C9F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4D13391DD430690023C9F2 /* Main.storyboard */; };
 		4C4D133D1DD430690023C9F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4D133C1DD430690023C9F2 /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		4C0479971DE231D8009E47DF /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
 		4C04799B1DE4A652009E47DF /* Layout1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout1ViewController.swift; sourceTree = "<group>"; };
 		4C04799D1DE4A65D009E47DF /* Layout2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout2ViewController.swift; sourceTree = "<group>"; };
+		4C162CAD1DECB61A00D7BF02 /* EditPortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPortfolioViewController.swift; sourceTree = "<group>"; };
 		4C4D13321DD430690023C9F2 /* Iceberg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iceberg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4D13351DD430690023C9F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C4D133A1DD430690023C9F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				4CD8AED11DE57C5F001FA131 /* PortfolioViewController.swift */,
 				4CD8AED31DE58154001FA131 /* EmptyPortfolioHomeViewController.swift */,
 				4CD8AED51DE58160001FA131 /* PortfolioHomeViewController.swift */,
+				4C162CAD1DECB61A00D7BF02 /* EditPortfolioViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				4CD8AED01DE56EB4001FA131 /* HomeViewController.swift in Sources */,
 				4C04799E1DE4A65D009E47DF /* Layout2ViewController.swift in Sources */,
 				4C4D13691DD433600023C9F2 /* InfoViewController.swift in Sources */,
+				4C162CAE1DECB61A00D7BF02 /* EditPortfolioViewController.swift in Sources */,
 				4CC260771DDEF81A00726930 /* LoginViewController.swift in Sources */,
 				4CD8AED21DE57C5F001FA131 /* PortfolioViewController.swift in Sources */,
 				4C04799C1DE4A652009E47DF /* Layout1ViewController.swift in Sources */,

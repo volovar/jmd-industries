@@ -8,6 +8,7 @@
 import UIKit
 
 var didCreatePortfolio: Bool = true
+var isEditing: Bool = false
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var viewContainer: UIView!
