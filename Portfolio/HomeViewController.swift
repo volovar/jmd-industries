@@ -5,7 +5,6 @@
 //  Created by Michael Volovar on 11/22/16.
 //  Copyright © 2016 JMD Industries. All rights reserved.
 //
-
 import UIKit
 
 var didCreatePortfolio: Bool = true
