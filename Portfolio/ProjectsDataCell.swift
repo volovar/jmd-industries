@@ -30,6 +30,8 @@ class ProjectsDataCell: UITableViewCell {
         backgroundViewProjectOriginalY = backgroundViewProject.frame.origin.y
 
     }
+    
+    @IBOutlet weak var titleSectionBackground: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var projectExpandedView: UIView!
@@ -63,7 +65,17 @@ class ProjectsDataCell: UITableViewCell {
 
         
     }
+    var header: CustomHeader! {
+        didSet {
+            self.updateHeader()
+        }
+    }
     
+     func updateHeader() {
+        
+    titleLabel.text = header.sectionTitle
+    titleSectionBackground.image = UIImage(named: header.sectionBackground)
+        }
     
     @IBAction func didPressExpand(_ sender: Any) {
         print("plusButton pressed")
@@ -80,7 +92,7 @@ class ProjectsDataCell: UITableViewCell {
                     UIView.animate(withDuration: 0.4, delay: 0.2, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations:{
         
                         self.backgroundViewProject.frame.origin.y =  self.backgroundViewProjectOriginalY - self.projectExpandedViewOriginalY + 52
-                        self.photoDarkMask.alpha = 0.5
+                        self.photoDarkMask.alpha = 0.7
         
         
                     })
@@ -115,7 +127,7 @@ class ProjectsDataCell: UITableViewCell {
                 
                 self.projectExpandedView.frame.origin.y = self.projectExpandedViewOriginalY
                 
-                self.photoDarkMask.alpha = 0.25
+                self.photoDarkMask.alpha = 0.4
                 
             })
             self.backgroundViewProject.frame.origin.y =  self.backgroundViewProjectOriginalY - 48 - self.projectExpandedViewOriginalY
