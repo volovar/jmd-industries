@@ -46,7 +46,9 @@ class CompanySection
 //        var header = [CustomHeader]()
 
         
-        projects.append(SingleProject(projectTitle: "Yahoo Projects", projectTags: "Yahoo Stuff | Yahoo manager | Assets", projectDescription: "Just something with less text to make use of a custom description and then moving to something else", projectImage: "sleep_tracker"))
+        projects.append(SingleProject(projectTitle: "SleepTracker", projectTags: "Yahoo Stuff | Yahoo manager | Assets", projectDescription: "Just something with less text to make use of a custom description and then moving to something else", projectImage: "sleep_tracker"))
+        
+        projects.append(SingleProject(projectTitle: "Iceberg Land", projectTags: "Yahoo Stuff | Yahoo manager | Assets", projectDescription: "Just something with less text to make use of a custom description and then moving to something else", projectImage: "iceberg-launch-screen"))
 
         
             return CompanySection(named: "Yahoo Projects", includeProjects: projects)
@@ -59,6 +61,8 @@ class CompanySection
 
         
         projects.append(SingleProject(projectTitle: "Moovly Something", projectTags: "Moovly Database | Moovly arghhh", projectDescription: "Just something with less text to make use of a custom description and then moving to something else", projectImage: "moovly"))
+    
+        projects.append(SingleProject(projectTitle: "Iceberg", projectTags: "User Interface | Brand Design", projectDescription: "Just something with less text to make use of a custom description and then moving to something else", projectImage: "iceberg-Logo"))
 
         
         
@@ -69,46 +73,4 @@ class CompanySection
 
 
 
-//struct Project {
-//
-//    var projectTitle: String
-//    var projectTags: String
-//    var projectDescription: String
-//    var projectImage: String
-//    
-//}
-
-//struct CompanySections {
-//    var FacebookProjects: [String]
-//    var MoovlyProjects: [String]
-//}
-
-//static func allProjects() -> [Projects]
-//{
-//    return [self.FacebookProjects(), self.MoovlyProjects()]
-//}
-//
-//struct ProjectsMetaData {
-////        static func getAllProjects() -> [Projects]
-//    
-//
-//    
-//    
-//    
-//    static func FacebookProjects() -> [Project] {
-//        return [
-//           Project(projectTitle: "Education Series", projectTags: "UX design | child development", projectDescription: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo ianventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed.Nemo enim ipsam voluptatem quia voluptas...", projectImage: "education_series"),
-//             Project(projectTitle: "Education Series", projectTags: "UX design | child development", projectDescription: "Just something with less text to make use of a custom description and then moving to something else", projectImage: "education_series")
-//
-//        ]
-//    }
-//    
-//    static func MoovlyProjects() -> [Project] {
-//        return [
-//
-//            Project(projectTitle: "Moovly Something", projectTags: "Moovly Database | Moovly arghhh", projectDescription: "Just something with less text to make use of a custom description and then moving to something else", projectImage: "sleep_tracker"),
-//            Project(projectTitle: "Moovly Test", projectTags: "Something | testing new | works", projectDescription: "Just something with less text to make use of a custom description and then moving to something else", projectImage: "moovly")
-//        ]
-//    }
-//}
 

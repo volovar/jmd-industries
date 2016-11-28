@@ -65,17 +65,7 @@ class ProjectsDataCell: UITableViewCell {
 
         
     }
-    var header: CustomHeader! {
-        didSet {
-            self.updateHeader()
-        }
-    }
-    
-     func updateHeader() {
-        
-    titleLabel.text = header.sectionTitle
-    titleSectionBackground.image = UIImage(named: header.sectionBackground)
-        }
+
     
     @IBAction func didPressExpand(_ sender: Any) {
         print("plusButton pressed")
@@ -139,10 +129,6 @@ class ProjectsDataCell: UITableViewCell {
             UIView.animate(withDuration: 0, delay: 0.05, options: [], animations:{
                 
                 self.plusButtonBGColor.isEnabled = true
-                
-                
-                
-                
                 
             })
         }

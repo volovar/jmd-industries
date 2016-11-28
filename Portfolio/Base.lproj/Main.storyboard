@@ -12,6 +12,9 @@
         <array key="Borg.ttf">
             <string>Borg</string>
         </array>
+        <array key="Mosk-Bold-700.ttf">
+            <string>MoskBold700</string>
+        </array>
         <array key="Mosk-Medium-500.ttf">
             <string>MoskMedium500</string>
         </array>
@@ -453,8 +456,33 @@
                                 <color key="separatorColor" red="0.051577210426330566" green="0.66991740465164185" blue="0.9172358512878418" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="headerCell" rowHeight="51" id="a2E-Wt-bXQ" customClass="headerTableViewCell" customModule="Iceberg" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="35" width="360" height="51"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a2E-Wt-bXQ" id="9UD-CU-OGb">
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="51"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="SUy-O9-exd">
+                                                    <rect key="frame" x="-2" y="-2" width="365" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CZO-VP-bMB">
+                                                    <rect key="frame" x="30" y="15" width="276" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="MoskBold700" family="Mosk" pointSize="20"/>
+                                                    <color key="textColor" red="0.94844335317611694" green="0.98538178205490112" blue="0.98548072576522827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="headerBackground" destination="SUy-O9-exd" id="hNA-PV-BCr"/>
+                                            <outlet property="headerTitle" destination="CZO-VP-bMB" id="pqv-UV-Axa"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="15" indentationWidth="0.0" reuseIdentifier="projectsDataCell" rowHeight="250" id="Fnl-Ho-wrk" userLabel="ProjectsDataCell" customClass="ProjectsDataCell" customModule="Iceberg" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="35" width="360" height="250"/>
+                                        <rect key="frame" x="0.0" y="86" width="360" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fnl-Ho-wrk" id="D0i-qa-ZSx">
                                             <rect key="frame" x="0.0" y="0.0" width="360" height="250"/>
@@ -472,7 +500,7 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="360" height="250"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 </imageView>
-                                                                <view alpha="0.25" contentMode="scaleToFill" id="Pzh-rA-foy" userLabel="darkMask">
+                                                                <view alpha="0.25" contentMode="scaleAspectFill" id="Pzh-rA-foy" userLabel="darkMask">
                                                                     <rect key="frame" x="-1" y="0.0" width="362" height="250"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
