@@ -166,6 +166,7 @@ class PortfolioViewController: UIViewController {
         setImage(imageView: educationSeries, image: #imageLiteral(resourceName: "education_series"))
         addImageShadow(imageSuperView: educationSeriesSuperView)
         
+        
         // Yahoo
         
         let yahooDescriptionText = "Worked with VP of Product to design a new sleep tracker feature. Updated large portions of Yahoo! Answers to conform with modern design principles. Increased overall engagement by 6% through implementing cutting-edge information architecture techniques."
