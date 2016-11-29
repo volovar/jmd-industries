@@ -14,9 +14,13 @@ class headerTableViewCell: UITableViewCell {
     
     @IBOutlet weak var headerTitle: UILabel!
     
-    func setupCell(image: UIImage, titleLabelText: String) {
+    @IBOutlet weak var headerDate: UILabel!
+    
+    func setupCell(image: UIImage, titleLabelText: String, dateOnHeader: String) {
         headerBackground.image = image
          headerTitle.text = titleLabelText
+        headerDate.text = dateOnHeader
+        
     }
 
     

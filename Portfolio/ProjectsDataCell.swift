@@ -81,7 +81,7 @@ class ProjectsDataCell: UITableViewCell {
         
                     UIView.animate(withDuration: 0.4, delay: 0.2, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations:{
         
-                        self.backgroundViewProject.frame.origin.y =  self.backgroundViewProjectOriginalY - self.projectExpandedViewOriginalY + 52
+                        self.backgroundViewProject.frame.origin.y =  self.backgroundViewProjectOriginalY - self.projectExpandedViewOriginalY + 65
                         self.photoDarkMask.alpha = 0.7
         
         
@@ -129,6 +129,7 @@ class ProjectsDataCell: UITableViewCell {
             UIView.animate(withDuration: 0, delay: 0.05, options: [], animations:{
                 
                 self.plusButtonBGColor.isEnabled = true
+                
                 
             })
         }

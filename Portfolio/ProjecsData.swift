@@ -10,14 +10,10 @@ class CompanySection
     var nameOfSection: String            // name of the product line
     var projects: [SingleProject]     // all products in the line
     
-//    var header: [CustomHeader]
-    
     init(named: String, includeProjects: [SingleProject])
     {
         nameOfSection = named
         projects = includeProjects
-//        header = includeHeader
-        
         
     }
     
@@ -43,12 +39,10 @@ class CompanySection
     
     private class func yahooProjects() -> CompanySection {
         var projects = [SingleProject]()
-//        var header = [CustomHeader]()
-
         
         projects.append(SingleProject(projectTitle: "SleepTracker", projectTags: "Yahoo Stuff | Yahoo manager | Assets", projectDescription: "Just something with less text to make use of a custom description and then moving to something else", projectImage: "sleep_tracker"))
         
-        projects.append(SingleProject(projectTitle: "Iceberg Land", projectTags: "Yahoo Stuff | Yahoo manager | Assets", projectDescription: "Just something with less text to make use of a custom description and then moving to something else", projectImage: "iceberg-launch-screen"))
+        projects.append(SingleProject(projectTitle: "Yahoo Sports", projectTags: "Yahoo Stuff | Yahoo manager | Assets", projectDescription: "Just something with less text to make use of a custom description and then moving to something else", projectImage: "yahoo_sports"))
 
         
             return CompanySection(named: "Yahoo Projects", includeProjects: projects)
@@ -62,7 +56,7 @@ class CompanySection
         
         projects.append(SingleProject(projectTitle: "Moovly Something", projectTags: "Moovly Database | Moovly arghhh", projectDescription: "Just something with less text to make use of a custom description and then moving to something else", projectImage: "moovly"))
     
-        projects.append(SingleProject(projectTitle: "Iceberg", projectTags: "User Interface | Brand Design", projectDescription: "Just something with less text to make use of a custom description and then moving to something else", projectImage: "iceberg-Logo"))
+        projects.append(SingleProject(projectTitle: "Background Text", projectTags: "User Interface | Brand Design", projectDescription: "Just something with less text to make use of a custom description and then moving to something else", projectImage: "texturedBG"))
 
         
         
