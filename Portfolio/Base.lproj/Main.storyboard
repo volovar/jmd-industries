@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="623-jl-gPH">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="623-jl-gPH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -472,7 +472,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook Live" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Vv-TN-A3X">
                                                 <rect key="frame" x="25" y="19" width="346" height="55"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -510,10 +510,6 @@
                                         <fontDescription key="fontDescription" name="MoskNormal400" family="Mosk Normal 400" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="facebook_live" id="pCY-bj-yM0">
-                                        <rect key="frame" x="1" y="1622" width="375" height="580"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="The Solution" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qFf-kb-gQI">
                                         <rect key="frame" x="21" y="1412" width="257" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -521,26 +517,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="facebook_live" id="rlI-1G-sK8">
-                                        <rect key="frame" x="1" y="2272" width="375" height="269"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ai6-cC-iWR">
                                         <rect key="frame" x="22" y="904" width="321" height="23"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Lv-Q9-02M">
-                                        <rect key="frame" x="31" y="2213" width="321" height="23"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="27e-m5-U6Z">
-                                        <rect key="frame" x="32" y="2552" width="321" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -549,7 +527,7 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" id="pFt-Do-Fh1">
                                         <rect key="frame" x="16" y="985" width="343" height="439"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <mutableString key="text">Our team used two primary research methods to understand the user's needs. Our primary method was field observation. We recorded user behaviors at the moment when they utilized curent market offerings. We confirmed our hypothesis that users are drawn to live sharing apps primarily due to the immediate feedback they receive. A notable drawback in the current market offering was what we termed 'social network fatigue,' caused by switching between different sharing apps. Over 80% of target users shared live once, while only 37% shared live twice, opting instead to record experiences in less ephemeral ways. Our second method involved interviews with the target user base. We obtained valuable insight into use-cases we had previously not considered, such as sharing live as a means of direct communication.</mutableString>
+                                        <string key="text">Our team used two primary research methods to understand the user's needs. Our primary method was field observation. We recorded user behaviors at the moment when they utilized curent market offerings. We confirmed our hypothesis that users are drawn to live sharing apps primarily due to the immediate feedback they receive. A notable drawback in the current market offering was what we termed 'social network fatigue,' caused by switching between different sharing apps. Over 80% of target users shared live once, while only 37% shared live twice, opting instead to record experiences in less ephemeral ways. Our second method involved interviews with the target user base. We obtained valuable insight into use-cases we had previously not considered, such as sharing live as a means of direct communication.</string>
                                         <color key="textColor" red="0.7843137255" green="0.82352941180000006" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="MoskNormal400" family="Mosk Normal 400" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -561,26 +539,48 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="facebook_live" id="VOq-6l-sJf">
-                                        <rect key="frame" x="4" y="2616" width="375" height="580"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="wireframe_facebook_live" id="pCY-bj-yM0">
+                                        <rect key="frame" x="-1" y="1616" width="375" height="430"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="final_facebook_live" id="rlI-1G-sK8">
+                                        <rect key="frame" x="-1" y="2101" width="375" height="732"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Lv-Q9-02M">
+                                        <rect key="frame" x="29" y="2062" width="321" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="27e-m5-U6Z">
+                                        <rect key="frame" x="30" y="2846" width="321" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="facebook_live_spread" id="VOq-6l-sJf">
+                                        <rect key="frame" x="2" y="2900" width="375" height="371"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wYf-kN-Eux">
-                                        <rect key="frame" x="20" y="3210" width="321" height="23"/>
+                                        <rect key="frame" x="18" y="3294" width="321" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="g3q-Gh-Z5d">
-                                        <rect key="frame" x="19" y="3253" width="257" height="36"/>
+                                        <rect key="frame" x="17" y="3342" width="257" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" id="Mxa-Gi-Tn4">
-                                        <rect key="frame" x="14" y="3284" width="343" height="216"/>
+                                        <rect key="frame" x="12" y="3373" width="343" height="216"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <string key="text">Early adoption was strong, with 3% of users exploring the feature within the first week of launch. At the close of the first month, nearly 47% of users globally were sharing live on a regular basis.</string>
                                         <color key="textColor" red="0.7843137255" green="0.82352941180000006" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -607,7 +607,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gVy-G7-T1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2333" y="1673"/>
+            <point key="canvasLocation" x="2332.5" y="1673"/>
         </scene>
         <!--Layout2 View Controller-->
         <scene sceneID="lLn-ws-iDl">
@@ -913,6 +913,8 @@
         <image name="app_screen" width="350" height="200"/>
         <image name="blueGradient" width="298" height="3795"/>
         <image name="facebook_live" width="800" height="600"/>
+        <image name="facebook_live_spread" width="1920" height="1536"/>
+        <image name="final_facebook_live" width="515" height="984"/>
         <image name="measureLines" width="18" height="994"/>
         <image name="moovly" width="400" height="300"/>
         <image name="projectExpandedBG" width="301" height="223"/>
@@ -922,6 +924,7 @@
         <image name="titleLargeBlueBG" width="391" height="144"/>
         <image name="viewProjectButton_Default" width="137" height="25"/>
         <image name="viewProjectButton_Selected" width="137" height="25"/>
+        <image name="wireframe_facebook_live" width="1680" height="1268"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
