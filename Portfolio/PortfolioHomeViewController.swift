@@ -13,6 +13,8 @@ class PortfolioHomeViewController: UIViewController {
     @IBOutlet weak var portfolioView: UIView!
     @IBOutlet weak var portfolioSnapshot: UIImageView!
     @IBOutlet weak var createButton: UIButton!
+    
+    var zoomTransition: FadeTransition!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,5 +58,20 @@ class PortfolioHomeViewController: UIViewController {
         }
         
         portfolioSnapshot.image = image
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "sequeToView" {
+            // set up the transition
+//            portfolioViewController = segue.destination as! PortfolioViewController
+            zoomTransition = FadeTransition()
+            segue.destination.modalPresentationStyle = .custom
+            segue.destination.transitioningDelegate = zoomTransition
+            zoomTransition.duration = 0.3
+        }
+    }
+    
+    @IBAction func didTapPortfolioImage(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "segueToView", sender: nil)
     }
 }

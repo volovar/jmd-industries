@@ -31,6 +31,7 @@
 		4C4D13561DD430690023C9F2 /* PortfolioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13551DD430690023C9F2 /* PortfolioUITests.swift */; };
 		4C4D13671DD432F80023C9F2 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13661DD432F80023C9F2 /* ProjectDetailViewController.swift */; };
 		4C4D13691DD433600023C9F2 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13681DD433600023C9F2 /* InfoViewController.swift */; };
+		4CBFB7261DED46C300F1B76F /* ZoomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBFB7251DED46C300F1B76F /* ZoomTransition.swift */; };
 		4CC260751DDEF65C00726930 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC260741DDEF65C00726930 /* Onboarding.storyboard */; };
 		4CC260771DDEF81A00726930 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC260761DDEF81A00726930 /* LoginViewController.swift */; };
 		4CD8AED01DE56EB4001FA131 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8AECF1DE56EB4001FA131 /* HomeViewController.swift */; };
@@ -91,6 +92,7 @@
 		4C4D13571DD430690023C9F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C4D13661DD432F80023C9F2 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
 		4C4D13681DD433600023C9F2 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		4CBFB7251DED46C300F1B76F /* ZoomTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomTransition.swift; sourceTree = "<group>"; };
 		4CC260741DDEF65C00726930 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		4CC260761DDEF81A00726930 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4CD8AECF1DE56EB4001FA131 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			children = (
 				4C0479961DE231D8009E47DF /* BaseTransition.swift */,
 				4C0479971DE231D8009E47DF /* FadeTransition.swift */,
+				4CBFB7251DED46C300F1B76F /* ZoomTransition.swift */,
 			);
 			name = Transitions;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				4C0479951DE22DFC009E47DF /* SignUpViewController.swift in Sources */,
 				4C4D13361DD430690023C9F2 /* AppDelegate.swift in Sources */,
 				4C162CB71DED1E8D00D7BF02 /* Resume.swift in Sources */,
+				4CBFB7261DED46C300F1B76F /* ZoomTransition.swift in Sources */,
 				4CD8AED41DE58154001FA131 /* EmptyPortfolioHomeViewController.swift in Sources */,
 				4C0479991DE231D8009E47DF /* FadeTransition.swift in Sources */,
 				4C4D13671DD432F80023C9F2 /* ProjectDetailViewController.swift in Sources */,
