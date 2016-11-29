@@ -8,9 +8,12 @@
 
 import UIKit
 import AFNetworking
+    
 
 
 class InfoViewController: UIViewController, UITableViewDataSource, UIScrollViewDelegate, UITableViewDelegate {
+    var fadeTransition: FadeTransition!
+
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -129,18 +132,33 @@ class InfoViewController: UIViewController, UITableViewDataSource, UIScrollViewD
     }
     
     
-    
-    
-    
-    
     @IBAction func didPressBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+
+    @IBAction func didPressViewProject(_ sender: Any) {
+        performSegue(withIdentifier: "segueToProject", sender: Any?.self)
     }
     
     
     
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let destinationViewController = segue.destination
+        
+        
+        destinationViewController.modalPresentationStyle = UIModalPresentationStyle.custom
+        
+        fadeTransition = FadeTransition()
+        
+        
+        destinationViewController.transitioningDelegate = fadeTransition
+        
+        fadeTransition.duration = 0.6
+        print("fadeIn called")
+    }
     
     
 }
