@@ -19,6 +19,10 @@
 		4C04799C1DE4A652009E47DF /* Layout1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C04799B1DE4A652009E47DF /* Layout1ViewController.swift */; };
 		4C04799E1DE4A65D009E47DF /* Layout2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C04799D1DE4A65D009E47DF /* Layout2ViewController.swift */; };
 		4C162CAE1DECB61A00D7BF02 /* EditPortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C162CAD1DECB61A00D7BF02 /* EditPortfolioViewController.swift */; };
+		4C162CB01DED1BFD00D7BF02 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C162CAF1DED1BFD00D7BF02 /* Project.swift */; };
+		4C162CB31DED1C3400D7BF02 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C162CB21DED1C3400D7BF02 /* Company.swift */; };
+		4C162CB51DED1DB300D7BF02 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C162CB41DED1DB300D7BF02 /* Person.swift */; };
+		4C162CB71DED1E8D00D7BF02 /* Resume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C162CB61DED1E8D00D7BF02 /* Resume.swift */; };
 		4C4D13361DD430690023C9F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13351DD430690023C9F2 /* AppDelegate.swift */; };
 		4C4D133B1DD430690023C9F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4D13391DD430690023C9F2 /* Main.storyboard */; };
 		4C4D133D1DD430690023C9F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4D133C1DD430690023C9F2 /* Assets.xcassets */; };
@@ -69,6 +73,10 @@
 		4C04799B1DE4A652009E47DF /* Layout1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout1ViewController.swift; sourceTree = "<group>"; };
 		4C04799D1DE4A65D009E47DF /* Layout2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout2ViewController.swift; sourceTree = "<group>"; };
 		4C162CAD1DECB61A00D7BF02 /* EditPortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPortfolioViewController.swift; sourceTree = "<group>"; };
+		4C162CAF1DED1BFD00D7BF02 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		4C162CB21DED1C3400D7BF02 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		4C162CB41DED1DB300D7BF02 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		4C162CB61DED1E8D00D7BF02 /* Resume.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resume.swift; sourceTree = "<group>"; };
 		4C4D13321DD430690023C9F2 /* Iceberg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iceberg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4D13351DD430690023C9F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C4D133A1DD430690023C9F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -161,6 +169,17 @@
 			name = Transitions;
 			sourceTree = "<group>";
 		};
+		4C162CB11DED1C1100D7BF02 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4C162CAF1DED1BFD00D7BF02 /* Project.swift */,
+				4C162CB21DED1C3400D7BF02 /* Company.swift */,
+				4C162CB41DED1DB300D7BF02 /* Person.swift */,
+				4C162CB61DED1E8D00D7BF02 /* Resume.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		4C4D13291DD430690023C9F2 = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +215,7 @@
 				4CC260741DDEF65C00726930 /* Onboarding.storyboard */,
 				4C4D13411DD430690023C9F2 /* Info.plist */,
 				44C526981DE52D4F008475F2 /* Common.swift */,
+				4C162CB11DED1C1100D7BF02 /* Models */,
 			);
 			path = Portfolio;
 			sourceTree = "<group>";
@@ -536,19 +556,23 @@
 			files = (
 				4C0479951DE22DFC009E47DF /* SignUpViewController.swift in Sources */,
 				4C4D13361DD430690023C9F2 /* AppDelegate.swift in Sources */,
+				4C162CB71DED1E8D00D7BF02 /* Resume.swift in Sources */,
 				4CD8AED41DE58154001FA131 /* EmptyPortfolioHomeViewController.swift in Sources */,
 				4C0479991DE231D8009E47DF /* FadeTransition.swift in Sources */,
 				4C4D13671DD432F80023C9F2 /* ProjectDetailViewController.swift in Sources */,
 				44C526991DE52D4F008475F2 /* Common.swift in Sources */,
+				4C162CB51DED1DB300D7BF02 /* Person.swift in Sources */,
 				4C0479981DE231D8009E47DF /* BaseTransition.swift in Sources */,
 				4CD8AED01DE56EB4001FA131 /* HomeViewController.swift in Sources */,
 				4C04799E1DE4A65D009E47DF /* Layout2ViewController.swift in Sources */,
 				4C4D13691DD433600023C9F2 /* InfoViewController.swift in Sources */,
 				4C162CAE1DECB61A00D7BF02 /* EditPortfolioViewController.swift in Sources */,
 				4CC260771DDEF81A00726930 /* LoginViewController.swift in Sources */,
+				4C162CB31DED1C3400D7BF02 /* Company.swift in Sources */,
 				4CD8AED21DE57C5F001FA131 /* PortfolioViewController.swift in Sources */,
 				4C04799C1DE4A652009E47DF /* Layout1ViewController.swift in Sources */,
 				4CD8AED61DE58160001FA131 /* PortfolioHomeViewController.swift in Sources */,
+				4C162CB01DED1BFD00D7BF02 /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,6 +645,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -670,6 +695,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

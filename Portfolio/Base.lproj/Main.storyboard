@@ -503,7 +503,7 @@
         <!--View Controller-->
         <scene sceneID="vjr-8N-BYv">
             <objects>
-                <viewController id="46h-vz-X8a" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="46h-vz-X8a" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oak-Bc-McS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -550,6 +550,8 @@
                     </view>
                     <connections>
                         <outlet property="viewContainer" destination="kUB-sM-GnO" id="2ad-hb-u9C"/>
+                        <segue destination="3lu-WY-zCb" kind="modal" id="X0H-MC-XBv"/>
+                        <segue destination="2TG-u4-JwK" kind="modal" id="R2c-bx-f94"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b7U-so-F4B" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -564,13 +566,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="edit view" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="26m-OY-oCa">
-                                <rect key="frame" x="166" y="113" width="110" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sFA-q2-Mje">
                                 <rect key="frame" x="20" y="34" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -579,9 +574,19 @@
                                     <action selector="didTapBack:" destination="UPe-9a-Yml" eventType="touchUpInside" id="B8C-XL-hPg"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Main" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Sj-hP-UIE">
+                                <rect key="frame" x="20" y="70" width="343" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MoskMedium500" family="Mosk" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="portfolioTitle" destination="3Sj-hP-UIE" id="ZVb-zX-Hmk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EGO-Mu-EwA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -812,6 +817,6 @@
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="cnA-Tw-bSY"/>
+        <segue reference="5FL-fd-yMh"/>
     </inferredMetricsTieBreakers>
 </document>
