@@ -41,6 +41,10 @@
 		861E0FB0C93A0AD811BDA083 /* Pods_IcebergUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74BD51C0FA226BC599CBA20C /* Pods_IcebergUITests.framework */; };
 		B4B56B187F807CA0B43F1C69 /* Pods_Iceberg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B91198FAE9969FED1D9CB0F /* Pods_Iceberg.framework */; };
 		C930D88DCA50E49B0D7BEEF2 /* Pods_IcebergTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA1991395F70913B3891DC34 /* Pods_IcebergTests.framework */; };
+		CE2A11C71DE9653B00D9EFF4 /* ProjecsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A11C61DE9653B00D9EFF4 /* ProjecsData.swift */; };
+		CE2A11CD1DE97AFA00D9EFF4 /* ProjectsDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A11CC1DE97AFA00D9EFF4 /* ProjectsDataCell.swift */; };
+		CE2A11CF1DEA875500D9EFF4 /* SingleProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A11CE1DEA875500D9EFF4 /* SingleProject.swift */; };
+		CE2A11D51DECC9BF00D9EFF4 /* headerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A11D41DECC9BF00D9EFF4 /* headerTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +110,10 @@
 		AF5B520012001077D15B80B9 /* Pods-Iceberg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iceberg.release.xcconfig"; path = "Pods/Target Support Files/Pods-Iceberg/Pods-Iceberg.release.xcconfig"; sourceTree = "<group>"; };
 		C7D223E861A7E84470D95742 /* Pods-IcebergTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IcebergTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IcebergTests/Pods-IcebergTests.release.xcconfig"; sourceTree = "<group>"; };
 		CA1991395F70913B3891DC34 /* Pods_IcebergTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IcebergTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE2A11C61DE9653B00D9EFF4 /* ProjecsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjecsData.swift; sourceTree = "<group>"; };
+		CE2A11CC1DE97AFA00D9EFF4 /* ProjectsDataCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsDataCell.swift; sourceTree = "<group>"; };
+		CE2A11CE1DEA875500D9EFF4 /* SingleProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleProject.swift; sourceTree = "<group>"; };
+		CE2A11D41DECC9BF00D9EFF4 /* headerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = headerTableViewCell.swift; sourceTree = "<group>"; };
 		D706B931E10FB0317EE70FF4 /* Pods-Iceberg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iceberg.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Iceberg/Pods-Iceberg.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -217,6 +225,9 @@
 				4C4D133E1DD430690023C9F2 /* LaunchScreen.storyboard */,
 				4CC260741DDEF65C00726930 /* Onboarding.storyboard */,
 				4C4D13411DD430690023C9F2 /* Info.plist */,
+				CE2A11C61DE9653B00D9EFF4 /* ProjecsData.swift */,
+				CE2A11CE1DEA875500D9EFF4 /* SingleProject.swift */,
+				CE2A11D41DECC9BF00D9EFF4 /* headerTableViewCell.swift */,
 				44C526981DE52D4F008475F2 /* Common.swift */,
 				4C162CB11DED1C1100D7BF02 /* Models */,
 			);
@@ -244,6 +255,7 @@
 		4C4D13651DD432720023C9F2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE2A11CC1DE97AFA00D9EFF4 /* ProjectsDataCell.swift */,
 				4C4D13661DD432F80023C9F2 /* ProjectDetailViewController.swift */,
 				4C4D13681DD433600023C9F2 /* InfoViewController.swift */,
 				4CC260761DDEF81A00726930 /* LoginViewController.swift */,
@@ -346,7 +358,7 @@
 				TargetAttributes = {
 					4C4D13311DD430690023C9F2 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = CS2CDPZ474;
+						DevelopmentTeam = QLTD7VWVWY;
 						ProvisioningStyle = Automatic;
 					};
 					4C4D13451DD430690023C9F2 = {
@@ -557,13 +569,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2A11D51DECC9BF00D9EFF4 /* headerTableViewCell.swift in Sources */,
 				4C0479951DE22DFC009E47DF /* SignUpViewController.swift in Sources */,
+				CE2A11CD1DE97AFA00D9EFF4 /* ProjectsDataCell.swift in Sources */,
 				4C4D13361DD430690023C9F2 /* AppDelegate.swift in Sources */,
 				4C162CB71DED1E8D00D7BF02 /* Resume.swift in Sources */,
 				4CBFB7261DED46C300F1B76F /* ZoomTransition.swift in Sources */,
 				4CD8AED41DE58154001FA131 /* EmptyPortfolioHomeViewController.swift in Sources */,
+				CE2A11C71DE9653B00D9EFF4 /* ProjecsData.swift in Sources */,
 				4C0479991DE231D8009E47DF /* FadeTransition.swift in Sources */,
 				4C4D13671DD432F80023C9F2 /* ProjectDetailViewController.swift in Sources */,
+				CE2A11CF1DEA875500D9EFF4 /* SingleProject.swift in Sources */,
 				44C526991DE52D4F008475F2 /* Common.swift in Sources */,
 				4C162CB51DED1DB300D7BF02 /* Person.swift in Sources */,
 				4C0479981DE231D8009E47DF /* BaseTransition.swift in Sources */,
@@ -730,7 +746,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = CS2CDPZ474;
+				DEVELOPMENT_TEAM = QLTD7VWVWY;
 				INFOPLIST_FILE = Portfolio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jmd-industries.Iceberg";
@@ -744,7 +760,7 @@
 			baseConfigurationReference = AF5B520012001077D15B80B9 /* Pods-Iceberg.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CS2CDPZ474;
+				DEVELOPMENT_TEAM = QLTD7VWVWY;
 				INFOPLIST_FILE = Portfolio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jmd-industries.Iceberg";
