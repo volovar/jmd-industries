@@ -8,6 +8,9 @@
 
 import UIKit
 
+// temporary data model
+var mainPortfolio = Resume()
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,6 +18,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        ////////////////////
+        // setting up data
+        ////////////////////
+        mainPortfolio.title = "Main (from fake data)"
+        mainPortfolio.person = Person()
+        mainPortfolio.person?.name = "Allan Montiero"
+        
+        let fbCompany = Company()
+        fbCompany.name = "Facebook, Inc"
+        
+        let project1 = Project()
+        project1.name = "Facebook Live"
+        
+        let project2 = Project()
+        project2.name = "Education Series"
+        
+        fbCompany.projects?.append(project1)
+        fbCompany.projects?.append(project2)
+        mainPortfolio.companys?.append(fbCompany)
+        // end data
         
         // app page control style
         let pageControl = UIPageControl.appearance()

@@ -132,7 +132,11 @@ class InfoViewController: UIViewController, UITableViewDataSource, UIScrollViewD
     }
     
     
-    @IBAction func didPressBack(_ sender: Any) {
+
+    
+    
+    
+    @IBAction func didTapBack(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     
