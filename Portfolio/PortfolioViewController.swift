@@ -9,6 +9,7 @@
 import UIKit
 
 class PortfolioViewController: UIViewController {
+    var fadeTransition: FadeTransition!
     
     //Wireframe items
     @IBOutlet weak var scrollView: UIScrollView!
@@ -193,19 +194,6 @@ class PortfolioViewController: UIViewController {
         
         
     } // end viewDidLoad
-        
-        
-    
-    // Set navigation bar to hidden or visible on appear / disappear
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
-    }
-    
-    
     
     // Style text in the company descriptions
     func styleCompanyParagraphs (companyDescription: UITextView!, companyDescriptionText: String!) {
@@ -241,7 +229,37 @@ class PortfolioViewController: UIViewController {
     } // end addImageShadow
     
     
+    /////////////////////
+    //    transitions
+    /////////////////////
+    // replace with something nicer
+    @IBAction func didTapBack(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // set up a fade transition
+        let destination = segue.destination
+        fadeTransition = FadeTransition()
+        destination.modalPresentationStyle = .custom
+        destination.transitioningDelegate = fadeTransition
+        fadeTransition.duration = 0.35
+        
+        // for custom transitions
+        if segue.identifier == "segueToDetailsView" {
+            print("segue to details")
+            
+        } else if segue.identifier == "segueToInfoView" {
+            print("segue to info")
+        }
+    }
     
+    @IBAction func didTapInfo(_ sender: UIButton) {
+        performSegue(withIdentifier: "segueToInfoView", sender: nil)
+    }
+    
+    @IBAction func didTapDetail(_ sender: UIButton) {
+        performSegue(withIdentifier: "segueToDetailsView", sender: nil)
+    }
     
 } // end class
