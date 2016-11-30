@@ -8,7 +8,7 @@
 
 import UIKit
 
-// temp data model
+// temporary data model
 var mainPortfolio = Resume()
 
 @UIApplicationMain
@@ -18,8 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+        ////////////////////
         // setting up data
+        ////////////////////
         mainPortfolio.title = "Main (from fake data)"
         mainPortfolio.person = Person()
         mainPortfolio.person?.name = "Allan Montiero"
@@ -36,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         fbCompany.projects?.append(project1)
         fbCompany.projects?.append(project2)
         mainPortfolio.companys?.append(fbCompany)
+        // end data
         
         // app page control style
         let pageControl = UIPageControl.appearance()

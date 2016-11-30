@@ -14,7 +14,8 @@ class PortfolioHomeViewController: UIViewController {
     @IBOutlet weak var portfolioSnapshot: UIImageView!
     @IBOutlet weak var createButton: UIButton!
     
-    var zoomTransition: FadeTransition!
+    var zoomTransition: ImageZoomTransition!
+    var image: UIImage!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +24,6 @@ class PortfolioHomeViewController: UIViewController {
     }
 
     func setupView() {
-        // text colors
-        mainTitle.textColor = UIColor.white
-        
         // create button colors and borders
         createButton.layer.cornerRadius = 4
         createButton.layer.borderWidth = 1
@@ -53,7 +51,7 @@ class PortfolioHomeViewController: UIViewController {
         let viewForImage = storyboard?.instantiateViewController(withIdentifier: "PortfolioViewController")
         
         let renderer = UIGraphicsImageRenderer(size: (viewForImage?.view.bounds.size)!)
-        let image = renderer.image { ctx in
+        image = renderer.image { ctx in
             viewForImage?.view.drawHierarchy(in: (viewForImage?.view.bounds)!, afterScreenUpdates: true)
         }
         
@@ -61,13 +59,13 @@ class PortfolioHomeViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "sequeToView" {
+        if segue.identifier == "segueToView" {
             // set up the transition
-//            portfolioViewController = segue.destination as! PortfolioViewController
-            zoomTransition = FadeTransition()
-            segue.destination.modalPresentationStyle = .custom
-            segue.destination.transitioningDelegate = zoomTransition
-            zoomTransition.duration = 0.3
+            let destination = segue.destination
+            zoomTransition = ImageZoomTransition()
+            destination.modalPresentationStyle = .custom
+            destination.transitioningDelegate = zoomTransition
+            zoomTransition.duration = 0.35
         }
     }
     

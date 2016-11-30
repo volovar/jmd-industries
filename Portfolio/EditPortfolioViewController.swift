@@ -10,8 +10,7 @@ import UIKit
 
 class EditPortfolioViewController: UIViewController {
     @IBOutlet weak var portfolioTitle: UILabel!
-
-    var zoomTransition: FadeTransition!
+    @IBOutlet weak var viewToZoom: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,19 +24,5 @@ class EditPortfolioViewController: UIViewController {
 
     @IBAction func didTapBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueTest" {
-            // set up the transition
-            zoomTransition = FadeTransition()
-            segue.destination.modalPresentationStyle = .custom
-            segue.destination.transitioningDelegate = zoomTransition
-            zoomTransition.duration = 0.3
-        }
-    }
-    
-    @IBAction func didTapGreenButton(_ sender: UITapGestureRecognizer) {
-        performSegue(withIdentifier: "segueTest", sender: nil)
     }
 }
