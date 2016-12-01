@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="2TG-u4-JwK">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="2TG-u4-JwK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -262,14 +262,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ytp-xh-yac">
-                                <rect key="frame" x="15" y="12" width="46" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <action selector="didPressBack:" destination="U7A-zB-Dyp" eventType="touchUpInside" id="1uV-FH-2uK"/>
-                                </connections>
-                            </button>
                             <view alpha="0.0" contentMode="scaleToFill" id="HS8-dG-Eun" userLabel="sectionHeaderBackUp">
                                 <rect key="frame" x="-19" y="44" width="416" height="334"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -382,7 +374,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="360" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="SUy-O9-exd">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="titleCompressedBlue" id="SUy-O9-exd">
                                                     <rect key="frame" x="-2.4043825632415974" y="-2" width="365" height="60.000000000000114"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -515,8 +507,8 @@
                                                                         <action selector="didPressCollapse:" destination="Fnl-Ho-wrk" eventType="touchUpInside" id="D14-us-cae"/>
                                                                     </connections>
                                                                 </button>
-                                                                <view contentMode="scaleToFill" id="Wr1-d9-ofv" userLabel="divisorBlue">
-                                                                    <rect key="frame" x="102" y="43" width="100" height="1"/>
+                                                                <view contentMode="scaleToFill" misplaced="YES" id="Wr1-d9-ofv" userLabel="divisorBlue">
+                                                                    <rect key="frame" x="64" y="43" width="177" height="1"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <color key="backgroundColor" red="0.30980392156862746" green="0.67843137254901964" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </view>
@@ -554,6 +546,31 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bgDropShadow" id="Z8c-cg-qSy">
+                                <rect key="frame" x="-9" y="-7" width="392" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="titleLargeBlueBG" id="ihL-b4-RB7">
+                                <rect key="frame" x="-9" y="-5" width="416" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ytp-xh-yac">
+                                <rect key="frame" x="9" y="13" width="46" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.94844335317611694" green="0.98538178205490112" blue="0.98548072576522827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="didPressBack:" destination="U7A-zB-Dyp" eventType="touchUpInside" id="1uV-FH-2uK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="YbW-9W-vxQ">
+                                <rect key="frame" x="335" y="26" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.94844335317611694" green="0.98538178205490112" blue="0.98548072576522827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="didPressBack:" destination="U7A-zB-Dyp" eventType="touchUpInside" id="AM0-Mb-ogZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1043,6 +1060,7 @@
     <resources>
         <image name="Iceberg-Logo" width="1200" height="1200"/>
         <image name="app_screen" width="350" height="200"/>
+        <image name="bgDropShadow" width="301" height="65"/>
         <image name="blueGradient" width="298" height="3795"/>
         <image name="darkBlueGradient" width="298" height="3795"/>
         <image name="facebook_live" width="800" height="600"/>
