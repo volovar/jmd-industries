@@ -10,7 +10,6 @@ import UIKit
 
 class EditPortfolioViewController: UIViewController {
     @IBOutlet weak var portfolioTitle: UILabel!
-    @IBOutlet weak var viewToZoom: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
