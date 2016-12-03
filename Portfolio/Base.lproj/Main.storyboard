@@ -1130,6 +1130,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="2TG-u4-JwK" kind="modal" id="dox-vT-ouZ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="qTJ-jo-5Cl">
                                                 <rect key="frame" x="127" y="55" width="115" height="37"/>
@@ -1147,6 +1150,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="kIl-Mt-SYg" kind="modal" id="7lq-lh-foR"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </view>
@@ -1191,6 +1197,186 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0UE-O2-WqZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-376.5" y="1279.5"/>
+        </scene>
+        <!--On Boarding Steps View Controller-->
+        <scene sceneID="bkf-0J-kom">
+            <objects>
+                <viewController id="kIl-Mt-SYg" customClass="OnBoardingStepsViewController" customModule="Iceberg" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yiK-ZH-GMS">
+                        <rect key="frame" x="0.0" y="0.0" width="1500" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="Fbs-ke-IQ1">
+                                <rect key="frame" x="0.0" y="0.0" width="1500" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="onBoardingBGBlue" id="s4O-id-phW">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="onBoardingBGGreen" id="syC-wW-RYR">
+                                        <rect key="frame" x="375" y="0.0" width="375" height="667"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="onBoardingBGYellow" id="PWq-tn-ZgJ">
+                                        <rect key="frame" x="750" y="0.0" width="375" height="667"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="onBoardingBGRed" id="M54-LZ-IOc">
+                                        <rect key="frame" x="1125" y="0.0" width="375" height="667"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="sassBlue" id="TE1-Tf-VHO">
+                                        <rect key="frame" x="102" y="128" width="170" height="140"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UDt-PO-v2l">
+                                        <rect key="frame" x="47" y="445" width="281" height="102"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Make use of the mobile exclusive gestures and create animations to help your work to shine">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.82745098039215681" green="0.8666666666666667" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="20" name="MoskLight300"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="sassGreen" id="EGA-wX-vrq">
+                                        <rect key="frame" x="477" y="128" width="170" height="140"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cqT-mS-qHM">
+                                        <rect key="frame" x="449" y="299" width="226" height="88"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="A strong base lets you build higher">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.82745098039215681" green="0.8666666666666667" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="44" name="Borg"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.90000000000000002" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="sassYellow" id="Q4a-qb-7xC">
+                                        <rect key="frame" x="852" y="128" width="170" height="140"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a90-pb-Xes">
+                                        <rect key="frame" x="805" y="457" width="264" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Our timeline feature allows you to create a chronological order for your achievements. So you can track how much better you're getting.</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.82745098039215681" green="0.8666666666666667" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="20" name="MoskLight300"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mpp-ts-SCy">
+                                        <rect key="frame" x="810" y="299" width="251" height="126"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="You evolve with time, let your portfolio do the same">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.82745098039215681" green="0.8666666666666667" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="44" name="Borg"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.90000000000000002" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="sassRed" id="K6a-0d-K1O">
+                                        <rect key="frame" x="1227" y="128" width="170" height="140"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IXh-zJ-tC7">
+                                        <rect key="frame" x="1185" y="299" width="254" height="88"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Be the king of your own presentation">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.82745098039215681" green="0.8666666666666667" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="44" name="Borg"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.90000000000000002" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cBP-ml-lHg">
+                                        <rect key="frame" x="66" y="299" width="243" height="88"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="The best experience to show your work">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.82745098039215681" green="0.8666666666666667" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="44" name="Borg"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.90000000000000002" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nZr-6u-cN5">
+                                        <rect key="frame" x="1172" y="445" width="281" height="102"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Master your presentation creating exclusive portfolio views for each specific field you're working on">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.82745098039215681" green="0.8666666666666667" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="20" name="MoskLight300"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Jq-Ry-Hj9">
+                                        <rect key="frame" x="415" y="445" width="294" height="133"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">We defined a structure to help you define your work in a more goal oriented way. Classify your work by the: Problem; Development; Solution; Results.</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.82745098039215681" green="0.8666666666666667" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="20" name="MoskLight300"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </scrollView>
+                            <pageControl opaque="NO" alpha="0.75" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" id="Tj3-Eh-wil">
+                                <rect key="frame" x="172" y="619" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" red="0.14901960780000001" green="0.21176470589999999" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1500" height="667"/>
+                    <connections>
+                        <outlet property="onBoardingPageControl" destination="Tj3-Eh-wil" id="z3u-Ug-DZh"/>
+                        <outlet property="scrollVIew" destination="Fbs-ke-IQ1" id="nV9-AP-hdn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tsA-gY-exV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-376" y="2206.5"/>
         </scene>
         <!--Portfolio Home View Controller-->
         <scene sceneID="eeb-4d-Nyi">
@@ -1336,9 +1522,17 @@
         <image name="logoBase4" width="754" height="312"/>
         <image name="logoBase5" width="741" height="438"/>
         <image name="moovly" width="400" height="300"/>
+        <image name="onBoardingBGBlue" width="1440" height="2577"/>
+        <image name="onBoardingBGGreen" width="1440" height="2577"/>
+        <image name="onBoardingBGRed" width="1440" height="2577"/>
+        <image name="onBoardingBGYellow" width="1440" height="2577"/>
         <image name="pinkGradient" width="298" height="3795"/>
         <image name="projectExpandedBG" width="301" height="223"/>
         <image name="projectTitleBG_1" width="311" height="70"/>
+        <image name="sassBlue" width="731" height="739"/>
+        <image name="sassGreen" width="731" height="739"/>
+        <image name="sassRed" width="731" height="739"/>
+        <image name="sassYellow" width="731" height="739"/>
         <image name="sleep_tracker" width="800" height="600"/>
         <image name="texturedBG" width="375" height="666"/>
         <image name="titleCompressedBlue" width="375" height="56"/>
