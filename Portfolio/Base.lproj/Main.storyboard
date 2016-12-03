@@ -1131,7 +1131,7 @@
                                                     </attributedString>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="2TG-u4-JwK" kind="modal" id="dox-vT-ouZ"/>
+                                                    <segue destination="2TG-u4-JwK" kind="modal" identifier="segueToHome" id="dox-vT-ouZ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="qTJ-jo-5Cl">
@@ -1203,11 +1203,11 @@
             <objects>
                 <viewController id="kIl-Mt-SYg" customClass="OnBoardingStepsViewController" customModule="Iceberg" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yiK-ZH-GMS">
-                        <rect key="frame" x="0.0" y="0.0" width="1500" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1875" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="Fbs-ke-IQ1">
-                                <rect key="frame" x="0.0" y="0.0" width="1500" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1875" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="onBoardingBGBlue" id="s4O-id-phW">
@@ -1356,27 +1356,68 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="onBoardingBGFinal" id="HCM-fB-b44">
+                                        <rect key="frame" x="1500" y="0.0" width="375" height="667"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="sassFinal" id="ypl-sb-0Hz">
+                                        <rect key="frame" x="1646" y="421" width="88" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logoOnboardingDark" id="yNO-g9-cT0">
+                                        <rect key="frame" x="1567" y="116" width="246" height="161"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="typeIceDarkBG" id="BQP-DS-dWK">
+                                        <rect key="frame" x="1611" y="253" width="159" height="161"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="hO2-Om-cAf">
+                                        <rect key="frame" x="1582" y="576" width="220" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.1529411765" green="0.65098039220000004" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.52809423209999995" green="0.73483002190000002" blue="0.76793205740000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="titleShadowOffset" width="0.0" height="1"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="let's get it started">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.94844335317611694" green="0.98538178205490112" blue="0.98548072576522827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="20" name="MoskLight300"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="onBoardinMask" id="rlP-Km-vqj">
+                                        <rect key="frame" x="1495" y="219" width="380" height="448"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                             </scrollView>
-                            <pageControl opaque="NO" alpha="0.75" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" id="Tj3-Eh-wil">
-                                <rect key="frame" x="172" y="619" width="39" height="37"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" id="Tj3-Eh-wil">
+                                <rect key="frame" x="149" y="633" width="81" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="pageIndicatorTintColor" red="0.14901960780000001" green="0.21176470589999999" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="pageIndicatorTintColor" red="0.96602708101272583" green="0.24795198440551758" blue="0.066648133099079132" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.1128116995" green="0.2394079566" blue="0.30341044070000001" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="1500" height="667"/>
+                    <size key="freeformSize" width="1875" height="667"/>
                     <connections>
+                        <outlet property="getStartedButton" destination="hO2-Om-cAf" id="f0N-4F-wQA"/>
+                        <outlet property="onBoardingMask" destination="rlP-Km-vqj" id="uOs-lY-30t"/>
                         <outlet property="onBoardingPageControl" destination="Tj3-Eh-wil" id="z3u-Ug-DZh"/>
+                        <outlet property="sassFinal" destination="ypl-sb-0Hz" id="MjW-Jl-i1g"/>
                         <outlet property="scrollVIew" destination="Fbs-ke-IQ1" id="nV9-AP-hdn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tsA-gY-exV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-376" y="2206.5"/>
+            <point key="canvasLocation" x="-376.5" y="2206.5"/>
         </scene>
         <!--Portfolio Home View Controller-->
         <scene sceneID="eeb-4d-Nyi">
@@ -1521,8 +1562,11 @@
         <image name="logoBase3" width="754" height="329"/>
         <image name="logoBase4" width="754" height="312"/>
         <image name="logoBase5" width="741" height="438"/>
+        <image name="logoOnboardingDark" width="695" height="626"/>
         <image name="moovly" width="400" height="300"/>
+        <image name="onBoardinMask" width="1440" height="1731"/>
         <image name="onBoardingBGBlue" width="1440" height="2577"/>
+        <image name="onBoardingBGFinal" width="1438" height="2571"/>
         <image name="onBoardingBGGreen" width="1440" height="2577"/>
         <image name="onBoardingBGRed" width="1440" height="2577"/>
         <image name="onBoardingBGYellow" width="1440" height="2577"/>
@@ -1530,6 +1574,7 @@
         <image name="projectExpandedBG" width="301" height="223"/>
         <image name="projectTitleBG_1" width="311" height="70"/>
         <image name="sassBlue" width="731" height="739"/>
+        <image name="sassFinal" width="326" height="329"/>
         <image name="sassGreen" width="731" height="739"/>
         <image name="sassRed" width="731" height="739"/>
         <image name="sassYellow" width="731" height="739"/>
@@ -1537,6 +1582,7 @@
         <image name="texturedBG" width="375" height="666"/>
         <image name="titleCompressedBlue" width="375" height="56"/>
         <image name="titleLargeBlueBG" width="391" height="144"/>
+        <image name="typeIceDarkBG" width="666" height="368"/>
         <image name="viewProjectButton_Default" width="137" height="25"/>
         <image name="viewProjectButton_Selected" width="137" height="25"/>
         <image name="wideMeasure" width="15" height="1490"/>
