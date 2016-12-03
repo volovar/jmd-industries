@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="2TG-u4-JwK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="hos-mc-cVS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -43,13 +43,6 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fkP-Uw-Kgl">
-                                        <rect key="frame" x="32" y="501" width="343" height="270"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <action selector="didTapInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xtD-cN-7F2"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Axn-BE-vaa">
                                         <rect key="frame" x="68" y="779" width="133" height="175"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -204,6 +197,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fkP-Uw-Kgl">
+                                        <rect key="frame" x="52" y="601" width="343" height="270"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="didTapInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xtD-cN-7F2"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Rw8-Vt-oI5">
@@ -521,6 +521,7 @@
                                                             <state key="highlighted" image="viewProjectButton_Selected"/>
                                                             <connections>
                                                                 <action selector="didPressViewProject:" destination="U7A-zB-Dyp" eventType="touchUpInside" id="Hei-JF-7BU"/>
+                                                                <segue destination="Ye1-06-ZI7" kind="modal" identifier="segueToProject" id="lQd-uH-bdz"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -585,7 +586,7 @@
                         <outlet property="subtitleLabel" destination="s70-gP-g3p" id="Cd4-fO-fmD"/>
                         <outlet property="tableView" destination="Un2-sV-JOA" id="17U-e5-Rsf"/>
                         <outlet property="titleLabel" destination="2zx-zI-xOA" id="OWy-mT-O3d"/>
-                        <segue destination="46h-vz-X8a" kind="modal" identifier="segueToProject" id="zMs-sg-NzF"/>
+                        <segue destination="46h-vz-X8a" kind="modal" identifier="" id="zMs-sg-NzF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yYO-9j-5wa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -780,7 +781,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="E5a-hQ-p07">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="E5a-hQ-p07">
                                 <rect key="frame" x="0.0" y="297" width="375" height="367"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -788,16 +789,28 @@
                                     <outletCollection property="gestureRecognizers" destination="v0b-bH-YPA" appends="YES" id="t6D-mw-UDV"/>
                                 </connections>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="70Z-Tp-5cU">
+                                <rect key="frame" x="231" y="52" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="bNf-F9-C8T" kind="modal" id="3KP-aE-lQn"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="bodyText" destination="Nqd-ba-c7j" id="pOW-jx-JWu"/>
                         <outlet property="imageOne" destination="E5a-hQ-p07" id="6Xx-WU-ykE"/>
-                        <segue destination="bNf-F9-C8T" kind="modal" id="a3x-RR-iH8"/>
+                        <segue destination="bNf-F9-C8T" kind="modal" identifier="segueToLightBox" id="a3x-RR-iH8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HQU-xF-GOm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="v0b-bH-YPA"/>
+                <tapGestureRecognizer id="v0b-bH-YPA">
+                    <connections>
+                        <action selector="tapLightBoxPhoto:" destination="Ag8-DJ-xqY" id="XMP-WZ-rFj"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2920" y="207"/>
         </scene>
@@ -812,38 +825,40 @@
                             <view contentMode="scaleToFill" misplaced="YES" id="BZd-sB-2d2">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="A7j-Do-P8J">
-                                        <rect key="frame" x="7" y="12" width="37" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="MoskLight300" family="Mosk" pointSize="23"/>
-                                        <state key="normal" title="x"/>
-                                        <connections>
-                                            <action selector="didTapDismissLightBox:" destination="bNf-F9-C8T" eventType="touchUpInside" id="bsR-qp-kRO"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Bn6-5Z-Gva">
-                                        <rect key="frame" x="317" y="-1" width="52" height="42"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="MoskLight300" family="Mosk" pointSize="53"/>
-                                        <state key="normal" title="..."/>
-                                    </button>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="Atz-ij-u2A">
-                                        <rect key="frame" x="168" y="627" width="39" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="pageIndicatorTintColor" red="0.94844335317611694" green="0.98538178205490112" blue="0.98548072576522827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="currentPageIndicatorTintColor" red="0.30196078430000001" green="0.69411764710000001" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    </pageControl>
-                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Bn6-5Z-Gva">
+                                <rect key="frame" x="321" y="-8" width="52" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MoskLight300" family="Mosk" pointSize="53"/>
+                                <state key="normal" title="..."/>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="Atz-ij-u2A">
+                                <rect key="frame" x="168" y="625" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" red="0.94844335317611694" green="0.98538178205490112" blue="0.98548072576522827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.30196078430000001" green="0.69411764710000001" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="A7j-Do-P8J">
+                                <rect key="frame" x="0.0" y="11" width="37" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MoskLight300" family="Mosk" pointSize="23"/>
+                                <state key="normal" title="x"/>
+                                <connections>
+                                    <action selector="didTapDIsmissLightBox:" destination="bNf-F9-C8T" eventType="touchUpInside" id="yDo-6W-8zS"/>
+                                </connections>
+                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="Ud8-7x-Ihc">
                                 <rect key="frame" x="-0.71267605633693165" y="50.614084507042207" width="375" height="575"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="GfM-Uc-Jk2">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="GfM-Uc-Jk2">
                                         <rect key="frame" x="0.098591549296543235" y="0.098591549295861114" width="375" height="575.00000000000011"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="fWH-Un-x7U" appends="YES" id="MF4-AY-gT1"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                             </scrollView>
@@ -872,17 +887,66 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="5b0-Oe-ZSe"/>
                     <connections>
                         <outlet property="descriptionBox" destination="lOa-Qw-Xan" id="mcf-sk-1Ye"/>
                         <outlet property="descriptionTextLabel" destination="sxV-Db-dPg" id="OUo-qA-Izh"/>
                         <outlet property="dismissButton" destination="A7j-Do-P8J" id="ZPO-3d-New"/>
                         <outlet property="lightBoxBG" destination="BZd-sB-2d2" id="DRD-9W-UDL"/>
                         <outlet property="lightBoxImageView" destination="GfM-Uc-Jk2" id="kyd-Xo-grj"/>
+                        <outlet property="transitionToImageView" destination="GfM-Uc-Jk2" id="coP-PL-eZo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yny-Ae-mGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="fWH-Un-x7U">
+                    <connections>
+                        <action selector="tapLightBoxPhoto:" destination="bNf-F9-C8T" id="fgA-61-7xH"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2920" y="1027"/>
+            <point key="canvasLocation" x="2920" y="-1377"/>
+        </scene>
+        <!--Portfolio Temp View Controller-->
+        <scene sceneID="66G-at-kzo">
+            <objects>
+                <viewController id="Ye1-06-ZI7" customClass="PortfolioTempViewController" customModule="Iceberg" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uc6-yj-tLv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" id="xCq-7E-eJa">
+                                <rect key="frame" x="20" y="93" width="339" height="174"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="QOV-vX-KKn">
+                                <rect key="frame" x="0.0" y="300" width="375" height="367"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="A41-IL-49T" appends="YES" id="MBa-Mg-2z4"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tempProjectDescription" destination="xCq-7E-eJa" id="cjl-fX-z8J"/>
+                        <outlet property="transitionFromImageView" destination="QOV-vX-KKn" id="dOB-Gl-rGm"/>
+                        <segue destination="bNf-F9-C8T" kind="modal" identifier="segueToLightBoxTemp" id="Kgk-8k-aE4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gEN-Al-BLp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="A41-IL-49T">
+                    <connections>
+                        <action selector="didTapLightBoxImage:" destination="Ye1-06-ZI7" id="TS5-4Y-tI8"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2344" y="-1376"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="vjr-8N-BYv">
@@ -892,8 +956,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" id="tzq-1w-YAW">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" id="tzq-1w-YAW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="l6y-EA-CIU" kind="embed" id="R2q-Av-2Gk"/>
@@ -1017,6 +1081,116 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yn6-Xm-Q8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-375" y="-188"/>
+        </scene>
+        <!--On Boarding View Controller-->
+        <scene sceneID="zvh-Fc-DtP">
+            <objects>
+                <viewController id="hos-mc-cVS" customClass="OnBoardingViewController" customModule="Iceberg" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sFU-UW-3PY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" id="E1m-co-sLd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1334"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logoBase4" id="ioJ-sO-Rym">
+                                        <rect key="frame" x="78" y="949" width="217.99999999999994" height="153"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logoBase3" id="y9B-5e-d9P">
+                                        <rect key="frame" x="78" y="940" width="217.99999999999994" height="153"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logoBase2" id="XLm-81-e4I">
+                                        <rect key="frame" x="78" y="929" width="217.99999999999994" height="153.00000000000023"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logoBase1" id="zlD-zl-Rx4">
+                                        <rect key="frame" x="67" y="860" width="240" height="184.00000000000023"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" misplaced="YES" id="rM1-3A-b7Q">
+                                        <rect key="frame" x="56" y="1181" width="262" height="112"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="DB9-hQ-gYj">
+                                                <rect key="frame" x="20" y="20" width="220" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.15294117647058825" green="0.65098039215686276" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="tintColor" red="0.52809423208236694" green="0.73483002185821533" blue="0.76793205738067627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <size key="titleShadowOffset" width="0.0" height="1"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Login">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.94844335317611694" green="0.98538178205490112" blue="0.98548072576522827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="20" name="MoskLight300"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="qTJ-jo-5Cl">
+                                                <rect key="frame" x="127" y="55" width="115" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.52809423208236694" green="0.73483002185821533" blue="0.76793205738067627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <size key="titleShadowOffset" width="0.0" height="1"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="or take a tour &gt;&gt;&gt;">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.2196078431372549" green="0.41568627450980394" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <font key="NSFont" size="15" name="MoskLight300"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </view>
+                                    <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" id="VPs-De-leE" userLabel="logoType">
+                                        <rect key="frame" x="42" y="232" width="290" height="143"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoBase5" id="1Ub-qi-N6P">
+                                                <rect key="frame" x="20" y="20" width="250" height="122.99999999999977"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hRL-rO-LX5">
+                                                <rect key="frame" x="118.93370208726515" y="122" width="140" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="the portfolio app">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.19607843137254902" green="0.37254901960784315" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="19" name="MoskLight300"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginView" destination="rM1-3A-b7Q" id="AlG-Ss-HbL"/>
+                        <outlet property="logoBase1" destination="zlD-zl-Rx4" id="hfF-Ea-lXl"/>
+                        <outlet property="logoBase2" destination="XLm-81-e4I" id="XmA-ip-lNK"/>
+                        <outlet property="logoBase3" destination="y9B-5e-d9P" id="hhL-GQ-uAu"/>
+                        <outlet property="logoBase4" destination="ioJ-sO-Rym" id="FDz-mG-n28"/>
+                        <outlet property="scrollView" destination="E1m-co-sLd" id="LZt-BH-jfz"/>
+                        <outlet property="typeView" destination="VPs-De-leE" id="yxD-4I-dLV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0UE-O2-WqZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-376.5" y="1279.5"/>
         </scene>
         <!--Portfolio Home View Controller-->
         <scene sceneID="eeb-4d-Nyi">
@@ -1156,6 +1330,11 @@
         <image name="facebook_live_spread" width="1920" height="1536"/>
         <image name="final_facebook_live" width="515" height="984"/>
         <image name="greenGradient" width="298" height="3795"/>
+        <image name="logoBase1" width="791" height="637"/>
+        <image name="logoBase2" width="754" height="329"/>
+        <image name="logoBase3" width="754" height="329"/>
+        <image name="logoBase4" width="754" height="312"/>
+        <image name="logoBase5" width="741" height="438"/>
         <image name="moovly" width="400" height="300"/>
         <image name="pinkGradient" width="298" height="3795"/>
         <image name="projectExpandedBG" width="301" height="223"/>
@@ -1176,5 +1355,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="GeC-et-E5m"/>
+        <segue reference="Kgk-8k-aE4"/>
     </inferredMetricsTieBreakers>
 </document>
