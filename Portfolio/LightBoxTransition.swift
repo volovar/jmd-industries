@@ -35,7 +35,7 @@ class LightBoxTransition: BaseTransition {
     override func presentTransition(containerView: UIView, fromViewController: UIViewController, toViewController: UIViewController) {
 
         let lightBoxViewController = toViewController as! LightBoxViewController
-        let tappedImageImageView = presentDelegate?.imageViewForTapped()
+        let tappedImageView = presentDelegate?.imageViewForTapped()
         
         let lightBoxImageView = dismissDelegate?.imageViewForTapped()
         
@@ -44,14 +44,13 @@ class LightBoxTransition: BaseTransition {
         
         
         
+        originalSelectedImageViewFrame = tappedImageView!.frame
         
         
-        
-//        originalSelectedImageViewFrame = tappedImageImageView!.frame.offsetBy(dx: 0, dy: 126)
-        
+        tappedImageView!.isHidden = true
         
         //create lightBoxBG
-        blackView = UIView(frame: (tappedImageImageView?.frame)!)
+        blackView = UIView(frame: lightBoxViewController.view.frame)
         blackView.backgroundColor = UIColor.black
         blackView.alpha = 0
         containerView.addSubview(blackView)
@@ -59,41 +58,46 @@ class LightBoxTransition: BaseTransition {
         
         // creating window
         
-        let movingImage = UIImageView(frame: (tappedImageImageView?.frame)!) as! FlexibleAspectImageView
-        movingImage.image =  tappedImageImageView?.image
-//        movingImage.contentMode = UIViewContentMode.scaleAspectFill
-        movingImage.setFlexibleAspectFill()
-        movingImage.clipsToBounds = (tappedImageImageView?.clipsToBounds)!
-        
+        var movingImage = UIImageView(frame: originalSelectedImageViewFrame)
+        movingImage.contentMode = UIViewContentMode.scaleAspectFit
+        movingImage.clipsToBounds = tappedImageView!.clipsToBounds
+        movingImage.image =  tappedImageView!.image
         let window = UIApplication.shared.keyWindow
         window?.addSubview(movingImage)
         
         
         
-        
+//        lightBoxImageView?.isHidden = true
         containerView.addSubview((lightBoxViewController.view)!)
-        lightBoxViewController.view.isHidden = true
+        lightBoxViewController.view.alpha = 0
+        
         UIView.animate(withDuration: duration, animations: {
-            tappedImageImageView?.isHidden = true
-            lightBoxImageView?.isHidden = true
+            
+            movingImage.frame = (lightBoxImageView?.frame.offsetBy(dx: 0, dy: 52))!
+
+            tappedImageView?.isHidden = true
+            tappedImageView?.alpha = 1
             self.blackView.alpha = 1
-            let movingImage = UIImageView(frame: (lightBoxImageView?.frame)!) as! FlexibleAspectImageView
-      
-            movingImage.setFlexibleAspectFit()
-            //            movingImage.contentMode = UIViewContentMode.scaleAspectFit
-
-            lightBoxViewController.view.isHidden = false
-
+            
+            
+ 
+            
             
         }) { (finished: Bool) -> Void in
+            lightBoxViewController.view.alpha = 1
+
+            movingImage.contentMode = (lightBoxImageView?.contentMode)!
             
+            movingImage.clipsToBounds = lightBoxImageView!.clipsToBounds
             
-            self.blackView.removeFromSuperview()
             movingImage.removeFromSuperview()
+            self.blackView.removeFromSuperview()
             lightBoxImageView?.isHidden = false
+            tappedImageView?.isHidden = true
             self.finish()
+            
         }
-        
+
         
         
         
@@ -103,27 +107,26 @@ class LightBoxTransition: BaseTransition {
     override func dismissTransition(containerView: UIView, fromViewController: UIViewController, toViewController: UIViewController) {
         
         
+        
         let lightBoxViewController = fromViewController as! LightBoxViewController
         let tempViewController = toViewController as! PortfolioTempViewController
        
         
         
-        let tappedImageImageView = presentDelegate?.imageViewForTapped()
+        let tappedImageView = presentDelegate?.imageViewForTapped()
         let lightBoxImageView = dismissDelegate?.imageViewForTapped()
-
-//        
-//        originalTappedImageViewFrame = tappedPhotoImageView!.frame.offsetBy(dx: 0, dy: 52)
-//        
+        
+        originalTappedImageViewFrame = lightBoxImageView!.frame
+        
+        tappedImageView!.isHidden = true
         
         
         
         // creating window
         
-        let movingImage = UIImageView(frame: (lightBoxImageView?.frame)!) as! FlexibleAspectImageView
-       
-//        movingImage.contentMode = UIViewContentMode.scaleAspectFit
-//        movingImage.clipsToBounds = lightBoxImageView!.clipsToBounds
-        movingImage.setFlexibleAspectFit()
+        let movingImage = UIImageView(frame: (lightBoxImageView?.frame.offsetBy(dx: 0, dy: 52))!)
+        movingImage.contentMode = UIViewContentMode.scaleAspectFill
+        movingImage.clipsToBounds = lightBoxImageView!.clipsToBounds
         movingImage.image =  lightBoxImageView!.image
         let window = UIApplication.shared.keyWindow
         window?.addSubview(movingImage)
@@ -136,31 +139,29 @@ class LightBoxTransition: BaseTransition {
         self.blackView.alpha = 0.6
         
         UIView.animate(withDuration: duration, animations: {
-            tappedImageImageView?.isHidden = true
-
-            lightBoxImageView?.isHidden = false
-            self.blackView.alpha = 0
+            tappedImageView?.isHidden = true
             lightBoxViewController.lightBoxBG.alpha = 0
-//            lightBoxViewController.actionsImage.alpha = 0
-//            lightBoxViewController.doneButton.alpha = 0
+            lightBoxViewController.view.isHidden = true
+//            tappedPhotoViewController.actionsImage.alpha = 0
+//            tappedPhotoViewController.doneButton.alpha = 0
             
-//            .offsetBy(dx: 0, dy: 126)
-            movingImage.frame = tappedImageImageView!.frame
-//            movingImage.contentMode = (tappedImageImageView?.contentMode)!
-            movingImage.setFlexibleAspectFit()
             
+            movingImage.frame = tappedImageView!.frame
+            movingImage.contentMode = UIViewContentMode.scaleAspectFill
             
         }) { (finished: Bool) -> Void in
             movingImage.contentMode = UIViewContentMode.scaleAspectFit
-            movingImage.clipsToBounds = lightBoxImageView!.clipsToBounds
+            
+            //            movingImage.contentMode = (tappedPhotoImageView?.contentMode)!
+            movingImage.clipsToBounds = tappedImageView!.clipsToBounds
+            
             movingImage.removeFromSuperview()
             self.blackView.removeFromSuperview()
-            lightBoxImageView?.isHidden = true
-            tappedImageImageView?.isHidden = false
             
-
+            tappedImageView?.isHidden = false
             self.finish()
         }
+
         
         
         

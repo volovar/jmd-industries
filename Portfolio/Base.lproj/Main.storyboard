@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="hos-mc-cVS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="Ye1-06-ZI7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -827,19 +827,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Bn6-5Z-Gva">
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Bn6-5Z-Gva">
                                 <rect key="frame" x="321" y="-8" width="52" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MoskLight300" family="Mosk" pointSize="53"/>
                                 <state key="normal" title="..."/>
                             </button>
-                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="Atz-ij-u2A">
-                                <rect key="frame" x="168" y="625" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="pageIndicatorTintColor" red="0.94844335317611694" green="0.98538178205490112" blue="0.98548072576522827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="currentPageIndicatorTintColor" red="0.30196078430000001" green="0.69411764710000001" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
-                            </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="A7j-Do-P8J">
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="A7j-Do-P8J">
                                 <rect key="frame" x="0.0" y="11" width="37" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MoskLight300" family="Mosk" pointSize="23"/>
@@ -863,11 +857,11 @@
                                 </subviews>
                             </scrollView>
                             <view alpha="0.5" contentMode="scaleToFill" misplaced="YES" id="lOa-Qw-Xan">
-                                <rect key="frame" x="0.0" y="494" width="375" height="128"/>
+                                <rect key="frame" x="0.0" y="639" width="375" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="clip" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sxV-Db-dPg">
-                                        <rect key="frame" x="27" y="19" width="323" height="89"/>
+                                        <rect key="frame" x="27" y="29" width="323" height="89"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <attributedString key="attributedText">
                                             <fragment>
@@ -881,20 +875,33 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kQJ-3O-Bqy">
+                                        <rect key="frame" x="175" y="-8" width="25" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="arrow-1"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="4zC-Gv-YdP" appends="YES" id="2Qt-2M-Mwl"/>
+                                    <outletCollection property="gestureRecognizers" destination="GP3-6t-Lhc" appends="YES" id="ji1-gh-eR5"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="5b0-Oe-ZSe"/>
                     <connections>
-                        <outlet property="descriptionBox" destination="lOa-Qw-Xan" id="mcf-sk-1Ye"/>
+                        <outlet property="descrBoxArrow" destination="kQJ-3O-Bqy" id="mxk-9o-fSt"/>
                         <outlet property="descriptionTextLabel" destination="sxV-Db-dPg" id="OUo-qA-Izh"/>
                         <outlet property="dismissButton" destination="A7j-Do-P8J" id="ZPO-3d-New"/>
+                        <outlet property="imageScrollVIew" destination="Ud8-7x-Ihc" id="phq-3i-8vQ"/>
                         <outlet property="lightBoxBG" destination="BZd-sB-2d2" id="DRD-9W-UDL"/>
                         <outlet property="lightBoxImageView" destination="GfM-Uc-Jk2" id="kyd-Xo-grj"/>
+                        <outlet property="moreBUtton" destination="Bn6-5Z-Gva" id="jvE-Me-DD4"/>
                         <outlet property="transitionToImageView" destination="GfM-Uc-Jk2" id="coP-PL-eZo"/>
+                        <outlet property="trayView" destination="lOa-Qw-Xan" id="k96-4l-5qV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yny-Ae-mGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -903,8 +910,18 @@
                         <action selector="tapLightBoxPhoto:" destination="bNf-F9-C8T" id="fgA-61-7xH"/>
                     </connections>
                 </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="4zC-Gv-YdP">
+                    <connections>
+                        <action selector="panTray:" destination="bNf-F9-C8T" id="nhr-0t-yUA"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer id="GP3-6t-Lhc">
+                    <connections>
+                        <action selector="didTapArrow:" destination="bNf-F9-C8T" id="KSd-mM-zIE"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2920" y="-1377"/>
+            <point key="canvasLocation" x="2919.5" y="-1377.5"/>
         </scene>
         <!--Portfolio Temp View Controller-->
         <scene sceneID="66G-at-kzo">
@@ -1550,6 +1567,7 @@
     <resources>
         <image name="Iceberg-Logo" width="1200" height="1200"/>
         <image name="app_screen" width="350" height="200"/>
+        <image name="arrow-1" width="606" height="606"/>
         <image name="bgDropShadow" width="301" height="65"/>
         <image name="blueGradient" width="298" height="3795"/>
         <image name="darkBlueGradient" width="298" height="3795"/>
