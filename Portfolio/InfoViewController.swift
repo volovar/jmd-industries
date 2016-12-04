@@ -8,9 +8,12 @@
 
 import UIKit
 import AFNetworking
+    
 
 
 class InfoViewController: UIViewController, UITableViewDataSource, UIScrollViewDelegate, UITableViewDelegate {
+    var fadeTransition: FadeTransition!
+
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -75,11 +78,6 @@ class InfoViewController: UIViewController, UITableViewDataSource, UIScrollViewD
         let pinkBGOpacity = convertValue(inputValue: CGFloat(tableView.contentOffset.y), r1Min: 800, r1Max: 1200, r2Min: 0, r2Max: 1)
         measureIndexBGSct2.alpha = pinkBGOpacity
         
-
-        
-
-        
-        
         
     }
 
@@ -128,8 +126,29 @@ class InfoViewController: UIViewController, UITableViewDataSource, UIScrollViewD
         return 50
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        cell.alpha = 0
+        UIView.animate(withDuration: 1){
+            
+            cell.alpha = 1
+
+        }
+        
+        UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: [], animations:{
+            
+        })
+        { (Bool) in
+            UIView.animate(withDuration: 0.5, delay: 0.1, options: [], animations:{
+                
+                
+                
+            })
+        }
+
+    }
     
-    
+
     
     
     
@@ -138,9 +157,30 @@ class InfoViewController: UIViewController, UITableViewDataSource, UIScrollViewD
     }
     
     
+
+    @IBAction func didPressViewProject(_ sender: Any) {
+        performSegue(withIdentifier: "segueToProject", sender: Any?.self)
+    }
     
     
     
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let destinationViewController = segue.destination
+        
+        
+        destinationViewController.modalPresentationStyle = UIModalPresentationStyle.custom
+        
+        fadeTransition = FadeTransition()
+        
+        
+        destinationViewController.transitioningDelegate = fadeTransition
+        
+        fadeTransition.duration = 0.6
+        print("fadeIn called")
+    }
     
     
 }
