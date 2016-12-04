@@ -41,10 +41,16 @@
 		861E0FB0C93A0AD811BDA083 /* Pods_IcebergUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74BD51C0FA226BC599CBA20C /* Pods_IcebergUITests.framework */; };
 		B4B56B187F807CA0B43F1C69 /* Pods_Iceberg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B91198FAE9969FED1D9CB0F /* Pods_Iceberg.framework */; };
 		C930D88DCA50E49B0D7BEEF2 /* Pods_IcebergTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA1991395F70913B3891DC34 /* Pods_IcebergTests.framework */; };
+		CE0DD4441DEFB68600746BE9 /* LightBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0DD4431DEFB68600746BE9 /* LightBoxViewController.swift */; };
+		CE147B121DF13B6800A20A9D /* FlexibleAspectImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE147B111DF13B6800A20A9D /* FlexibleAspectImageView.swift */; };
+		CE147B141DF2A5FE00A20A9D /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE147B131DF2A5FE00A20A9D /* OnBoardingViewController.swift */; };
 		CE2A11C71DE9653B00D9EFF4 /* ProjecsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A11C61DE9653B00D9EFF4 /* ProjecsData.swift */; };
 		CE2A11CD1DE97AFA00D9EFF4 /* ProjectsDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A11CC1DE97AFA00D9EFF4 /* ProjectsDataCell.swift */; };
 		CE2A11CF1DEA875500D9EFF4 /* SingleProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A11CE1DEA875500D9EFF4 /* SingleProject.swift */; };
 		CE2A11D51DECC9BF00D9EFF4 /* headerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A11D41DECC9BF00D9EFF4 /* headerTableViewCell.swift */; };
+		CE7F4A7A1DEFCF52004B8AD8 /* LightBoxTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F4A791DEFCF52004B8AD8 /* LightBoxTransition.swift */; };
+		CE7F4A7C1DEFD9D0004B8AD8 /* PortfolioTempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F4A7B1DEFD9D0004B8AD8 /* PortfolioTempViewController.swift */; };
+		CEE18FCF1DF2C65F006CBF7A /* OnBoardingStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE18FCE1DF2C65F006CBF7A /* OnBoardingStepsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,10 +116,16 @@
 		AF5B520012001077D15B80B9 /* Pods-Iceberg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iceberg.release.xcconfig"; path = "Pods/Target Support Files/Pods-Iceberg/Pods-Iceberg.release.xcconfig"; sourceTree = "<group>"; };
 		C7D223E861A7E84470D95742 /* Pods-IcebergTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IcebergTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IcebergTests/Pods-IcebergTests.release.xcconfig"; sourceTree = "<group>"; };
 		CA1991395F70913B3891DC34 /* Pods_IcebergTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IcebergTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0DD4431DEFB68600746BE9 /* LightBoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightBoxViewController.swift; sourceTree = "<group>"; };
+		CE147B111DF13B6800A20A9D /* FlexibleAspectImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexibleAspectImageView.swift; sourceTree = "<group>"; };
+		CE147B131DF2A5FE00A20A9D /* OnBoardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		CE2A11C61DE9653B00D9EFF4 /* ProjecsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjecsData.swift; sourceTree = "<group>"; };
 		CE2A11CC1DE97AFA00D9EFF4 /* ProjectsDataCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsDataCell.swift; sourceTree = "<group>"; };
 		CE2A11CE1DEA875500D9EFF4 /* SingleProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleProject.swift; sourceTree = "<group>"; };
 		CE2A11D41DECC9BF00D9EFF4 /* headerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = headerTableViewCell.swift; sourceTree = "<group>"; };
+		CE7F4A791DEFCF52004B8AD8 /* LightBoxTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightBoxTransition.swift; sourceTree = "<group>"; };
+		CE7F4A7B1DEFD9D0004B8AD8 /* PortfolioTempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioTempViewController.swift; sourceTree = "<group>"; };
+		CEE18FCE1DF2C65F006CBF7A /* OnBoardingStepsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingStepsViewController.swift; sourceTree = "<group>"; };
 		D706B931E10FB0317EE70FF4 /* Pods-Iceberg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iceberg.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Iceberg/Pods-Iceberg.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,8 +186,9 @@
 			isa = PBXGroup;
 			children = (
 				4C0479961DE231D8009E47DF /* BaseTransition.swift */,
-				4C0479971DE231D8009E47DF /* FadeTransition.swift */,
 				4CBFB7251DED46C300F1B76F /* ImageZoomTransition.swift */,
+				4C0479971DE231D8009E47DF /* FadeTransition.swift */,
+				CE7F4A791DEFCF52004B8AD8 /* LightBoxTransition.swift */,
 			);
 			name = Transitions;
 			sourceTree = "<group>";
@@ -228,6 +241,7 @@
 				CE2A11C61DE9653B00D9EFF4 /* ProjecsData.swift */,
 				CE2A11CE1DEA875500D9EFF4 /* SingleProject.swift */,
 				CE2A11D41DECC9BF00D9EFF4 /* headerTableViewCell.swift */,
+				CE147B111DF13B6800A20A9D /* FlexibleAspectImageView.swift */,
 				44C526981DE52D4F008475F2 /* Common.swift */,
 				4C162CB11DED1C1100D7BF02 /* Models */,
 			);
@@ -260,9 +274,13 @@
 				4C4D13681DD433600023C9F2 /* InfoViewController.swift */,
 				4CC260761DDEF81A00726930 /* LoginViewController.swift */,
 				4C0479941DE22DFC009E47DF /* SignUpViewController.swift */,
+				CE0DD4431DEFB68600746BE9 /* LightBoxViewController.swift */,
 				4C04799B1DE4A652009E47DF /* Layout1ViewController.swift */,
+				CE147B131DF2A5FE00A20A9D /* OnBoardingViewController.swift */,
 				4C04799D1DE4A65D009E47DF /* Layout2ViewController.swift */,
+				CEE18FCE1DF2C65F006CBF7A /* OnBoardingStepsViewController.swift */,
 				4CD8AED11DE57C5F001FA131 /* PortfolioViewController.swift */,
+				CE7F4A7B1DEFD9D0004B8AD8 /* PortfolioTempViewController.swift */,
 				4CD8AED31DE58154001FA131 /* EmptyPortfolioHomeViewController.swift */,
 				4CD8AED51DE58160001FA131 /* PortfolioHomeViewController.swift */,
 				4C162CAD1DECB61A00D7BF02 /* EditPortfolioViewController.swift */,
@@ -578,17 +596,23 @@
 				4CD8AED41DE58154001FA131 /* EmptyPortfolioHomeViewController.swift in Sources */,
 				CE2A11C71DE9653B00D9EFF4 /* ProjecsData.swift in Sources */,
 				4C0479991DE231D8009E47DF /* FadeTransition.swift in Sources */,
+				CE147B141DF2A5FE00A20A9D /* OnBoardingViewController.swift in Sources */,
 				4C4D13671DD432F80023C9F2 /* ProjectDetailViewController.swift in Sources */,
 				CE2A11CF1DEA875500D9EFF4 /* SingleProject.swift in Sources */,
+				CE0DD4441DEFB68600746BE9 /* LightBoxViewController.swift in Sources */,
 				44C526991DE52D4F008475F2 /* Common.swift in Sources */,
 				4C162CB51DED1DB300D7BF02 /* Person.swift in Sources */,
 				4C0479981DE231D8009E47DF /* BaseTransition.swift in Sources */,
+				CE7F4A7C1DEFD9D0004B8AD8 /* PortfolioTempViewController.swift in Sources */,
 				4C04799E1DE4A65D009E47DF /* Layout2ViewController.swift in Sources */,
+				CE147B121DF13B6800A20A9D /* FlexibleAspectImageView.swift in Sources */,
 				4CA1F82C1DEF0ACD00A984BC /* DetailsViewController.swift in Sources */,
+				CE7F4A7A1DEFCF52004B8AD8 /* LightBoxTransition.swift in Sources */,
 				4C4D13691DD433600023C9F2 /* InfoViewController.swift in Sources */,
 				4C162CAE1DECB61A00D7BF02 /* EditPortfolioViewController.swift in Sources */,
 				4CC260771DDEF81A00726930 /* LoginViewController.swift in Sources */,
 				4C162CB31DED1C3400D7BF02 /* Company.swift in Sources */,
+				CEE18FCF1DF2C65F006CBF7A /* OnBoardingStepsViewController.swift in Sources */,
 				4CD8AED21DE57C5F001FA131 /* PortfolioViewController.swift in Sources */,
 				4C04799C1DE4A652009E47DF /* Layout1ViewController.swift in Sources */,
 				4CD8AED61DE58160001FA131 /* PortfolioHomeViewController.swift in Sources */,
