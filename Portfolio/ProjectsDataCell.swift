@@ -28,6 +28,8 @@ class ProjectsDataCell: UITableViewCell {
         
             projectExpandedViewOriginalY =  projectExpandedView.frame.origin.y
         backgroundViewProjectOriginalY = backgroundViewProject.frame.origin.y
+        
+        
 
     }
     
@@ -137,9 +139,6 @@ class ProjectsDataCell: UITableViewCell {
 
     }
    
-    
-
-
     
 
 
