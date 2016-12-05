@@ -10,12 +10,14 @@ import UIKit
 
 
 
-class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, iCarouselDataSource, iCarouselDelegate {
+class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, iCarouselDataSource, iCarouselDelegate, UIScrollViewDelegate {
     
-//    struct stretchyHeader {
-//         let headerHeight: CGFloat = 250
-//         let headerCut: CGFloat = 0
-//    }
+    struct StretchyHeader {
+        
+        fileprivate let headerHeight: CGFloat = 350
+        fileprivate let headerCut: CGFloat = 0
+        
+    }
     
     var containerImages: [UIImage] = [UIImage(named: "sassBlue")!,UIImage(named: "sassGreen")!,UIImage(named: "sassYellow")!, UIImage(named: "sassRed")!, UIImage(named: "sassFinal")!, UIImage(named: "problemIcon")!]
     
@@ -30,64 +32,80 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
         super.viewDidLoad()
         tableVIew.delegate = self
         tableVIew.dataSource = self
-//        updateView()
+        tableVIew.contentSize = CGSize(width: 375, height: 1000)
+        tableVIew.frame.size = CGSize(width: 375, height: 667)
+        updateView()
 
     }
     
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        setNewView()
-//    }
-//    
+    
 
-//    
-//    func updateView() {
-//
-//        tableVIew.backgroundColor = UIColor.white
-//        headerView = tableVIew.tableHeaderView
-//        tableVIew.tableHeaderView = nil
-//        tableVIew.rowHeight = UITableViewAutomaticDimension
-//        tableVIew.addSubview(headerView)
-////
-//        newHeaderLayer = CAShapeLayer()
-//        newHeaderLayer.fillColor = UIColor.black.cgColor
-//        headerView.layer.mask = newHeaderLayer
-//
-//        
-//        let newHeight = stretchyHeader().headerHeight - stretchyHeader().headerCut/2
-//        
-//        tableVIew.contentInset = UIEdgeInsets(top: newHeight, left: 0, bottom: 0, right: 0)
-//        tableVIew.contentOffset = CGPoint(x: 0, y: -newHeight)
-//        setNewView()
-//        
-//    }
-//    
-//    
-//   func  setNewView() {
-//    let newHeight = stretchyHeader().headerHeight - stretchyHeader().headerCut/2
-//    var getHeaderFrame = CGRect(x: 0, y: -newHeight, width: tableVIew.bounds.width, height: stretchyHeader().headerHeight)
-//    
-//    if tableVIew.contentOffset.y < newHeight {
-//        getHeaderFrame.origin.y = tableVIew.contentOffset.y
-//        getHeaderFrame.size.height = -tableVIew.contentOffset.y + stretchyHeader().headerCut/2
-//    }
-//    headerView.frame = getHeaderFrame
-//    let cutDirection = UIBezierPath()
-//    cutDirection.move(to: CGPoint(x: 0, y: 0))
-//    cutDirection.addLine(to: CGPoint(x: getHeaderFrame.width, y: 0))
-//    cutDirection.addLine(to: CGPoint(x: getHeaderFrame.width, y: getHeaderFrame.height))
-//
-//    cutDirection.addLine(to: CGPoint(x: 0, y: getHeaderFrame.height - stretchyHeader().headerCut))
-//    newHeaderLayer.path = cutDirection.cgPath
-//    
-//    }
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//       
-//        return 350
-//        
-//    }
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-       return  UITableViewAutomaticDimension
+    
+     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        setNewView()
     }
+    
+    func updateView(){
+        
+        tableVIew.backgroundColor = UIColor.white
+        headerView = tableVIew.tableHeaderView
+        tableVIew.tableHeaderView = nil
+        tableVIew.rowHeight = UITableViewAutomaticDimension
+        tableVIew.addSubview(headerView)
+        
+        newHeaderLayer = CAShapeLayer()
+        newHeaderLayer.fillColor = UIColor.black.cgColor
+        headerView.layer.mask = newHeaderLayer
+        
+        let newHeight = StretchyHeader().headerHeight-StretchyHeader().headerCut/2
+        
+        tableVIew.contentInset = UIEdgeInsets(top: newHeight, left: 0, bottom: 0, right: 0)
+        tableVIew.contentOffset = CGPoint(x: 0, y: -newHeight)
+        setNewView()
+    }
+    
+    
+    
+    func setNewView(){
+        
+        let newHeight = StretchyHeader().headerHeight-StretchyHeader().headerCut/2
+        var getHeaderFrame =  CGRect(x: 0, y: -newHeight, width: tableVIew.bounds.width, height: StretchyHeader().headerHeight)
+        
+        if tableVIew.contentOffset.y < newHeight {
+            
+            getHeaderFrame.origin.y = tableVIew.contentOffset.y
+            getHeaderFrame.size.height = -tableVIew.contentOffset.y + StretchyHeader().headerCut/2
+        }
+        
+        headerView.frame = getHeaderFrame
+        let cutDirection = UIBezierPath()
+        cutDirection.move(to: CGPoint(x: 0, y: 0))
+        cutDirection.addLine(to: CGPoint(x: getHeaderFrame.width, y: 0))
+        cutDirection.addLine(to: CGPoint(x: getHeaderFrame.width, y: getHeaderFrame.height))
+        cutDirection.addLine(to: CGPoint(x: 0, y: getHeaderFrame.height-StretchyHeader().headerCut))
+        newHeaderLayer.path = cutDirection.cgPath
+        
+        
+        
+        
+    }
+    
+     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 350
+    }
+
+    func tableView(_ tableView: UITableView, estimatedHeightForFooterInSection section: Int) -> CGFloat {
+        return UITableViewAutomaticDimension
+
+    }
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
+    }
+
+    
+    
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -95,9 +113,6 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
-    
-  
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -130,7 +145,7 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
         var imageView: UIImageView!
         
         if view == nil {
-            imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 325, height: 300))
+            imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
 
             imageView.contentMode = UIViewContentMode.scaleAspectFit
 
@@ -151,12 +166,7 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
         return value
     }
 
-    
-    
-    
-    
-    
-    
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
