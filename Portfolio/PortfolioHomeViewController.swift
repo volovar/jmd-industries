@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class PortfolioHomeViewController: UIViewController {
     @IBOutlet weak var mainTitle: UILabel!
@@ -26,8 +27,8 @@ class PortfolioHomeViewController: UIViewController {
     func setupView() {
         // create button colors and borders
         createButton.layer.cornerRadius = 4
-        createButton.layer.borderWidth = 1
-        createButton.layer.borderColor = UIColor.clear.cgColor
+        createButton.layer.borderWidth = 4
+        createButton.layer.borderColor = UIColor.init(patternImage: UIImage(named: "dash")!).cgColor
         
         portfolioSnapshot.layer.cornerRadius = 4
         portfolioSnapshot.layer.borderWidth = 0
@@ -71,5 +72,12 @@ class PortfolioHomeViewController: UIViewController {
     
     @IBAction func didTapPortfolioImage(_ sender: UITapGestureRecognizer) {
         performSegue(withIdentifier: "segueToView", sender: nil)
+    }
+    
+    @IBAction func didTapEdit(_ sender: Any) {
+        let editorStoryboard = UIStoryboard(name: "Editor", bundle: nil)
+        let initialView = editorStoryboard.instantiateInitialViewController()
+        
+        present(initialView!, animated: true, completion: nil)
     }
 }

@@ -6,14 +6,24 @@
 //  Copyright © 2016 JMD Industries. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Project {
-    var name: String?
-    var description: String?
+    var name: String
+    var image: UIImage?
     var details: [Detail]?
+    
+    init?(name: String, image: UIImage?, details: [Detail]?) {
+        self.name = name
+        self.image = image
+        self.details = details
+        
+        if name.isEmpty {
+            return nil
+        }
+    }
 }
 
 class Detail {
-    
+
 }

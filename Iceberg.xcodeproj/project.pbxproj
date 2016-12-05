@@ -22,7 +22,7 @@
 		4C162CB01DED1BFD00D7BF02 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C162CAF1DED1BFD00D7BF02 /* Project.swift */; };
 		4C162CB31DED1C3400D7BF02 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C162CB21DED1C3400D7BF02 /* Company.swift */; };
 		4C162CB51DED1DB300D7BF02 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C162CB41DED1DB300D7BF02 /* Person.swift */; };
-		4C162CB71DED1E8D00D7BF02 /* Resume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C162CB61DED1E8D00D7BF02 /* Resume.swift */; };
+		4C162CB71DED1E8D00D7BF02 /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C162CB61DED1E8D00D7BF02 /* Portfolio.swift */; };
 		4C4D13361DD430690023C9F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13351DD430690023C9F2 /* AppDelegate.swift */; };
 		4C4D133B1DD430690023C9F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4D13391DD430690023C9F2 /* Main.storyboard */; };
 		4C4D133D1DD430690023C9F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4D133C1DD430690023C9F2 /* Assets.xcassets */; };
@@ -32,6 +32,9 @@
 		4C4D13671DD432F80023C9F2 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13661DD432F80023C9F2 /* ProjectDetailViewController.swift */; };
 		4C4D13691DD433600023C9F2 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13681DD433600023C9F2 /* InfoViewController.swift */; };
 		4CA1F82C1DEF0ACD00A984BC /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1F82B1DEF0ACD00A984BC /* DetailsViewController.swift */; };
+		4CA1F82E1DF4E79300A984BC /* Editor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CA1F82D1DF4E79300A984BC /* Editor.storyboard */; };
+		4CA1F8301DF5063700A984BC /* EditorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1F82F1DF5063700A984BC /* EditorTableViewCell.swift */; };
+		4CA1F8361DF53DA300A984BC /* ProjectsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1F8351DF53DA300A984BC /* ProjectsCollectionViewCell.swift */; };
 		4CBFB7261DED46C300F1B76F /* ImageZoomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBFB7251DED46C300F1B76F /* ImageZoomTransition.swift */; };
 		4CC260751DDEF65C00726930 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC260741DDEF65C00726930 /* Onboarding.storyboard */; };
 		4CC260771DDEF81A00726930 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC260761DDEF81A00726930 /* LoginViewController.swift */; };
@@ -81,7 +84,7 @@
 		4C162CAF1DED1BFD00D7BF02 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		4C162CB21DED1C3400D7BF02 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		4C162CB41DED1DB300D7BF02 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		4C162CB61DED1E8D00D7BF02 /* Resume.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resume.swift; sourceTree = "<group>"; };
+		4C162CB61DED1E8D00D7BF02 /* Portfolio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
 		4C4D13321DD430690023C9F2 /* Iceberg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iceberg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4D13351DD430690023C9F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C4D133A1DD430690023C9F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,6 +100,9 @@
 		4C4D13661DD432F80023C9F2 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
 		4C4D13681DD433600023C9F2 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		4CA1F82B1DEF0ACD00A984BC /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		4CA1F82D1DF4E79300A984BC /* Editor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Editor.storyboard; sourceTree = "<group>"; };
+		4CA1F82F1DF5063700A984BC /* EditorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorTableViewCell.swift; sourceTree = "<group>"; };
+		4CA1F8351DF53DA300A984BC /* ProjectsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsCollectionViewCell.swift; sourceTree = "<group>"; };
 		4CBFB7251DED46C300F1B76F /* ImageZoomTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageZoomTransition.swift; sourceTree = "<group>"; };
 		4CC260741DDEF65C00726930 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		4CC260761DDEF81A00726930 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -186,7 +192,7 @@
 				4C162CAF1DED1BFD00D7BF02 /* Project.swift */,
 				4C162CB21DED1C3400D7BF02 /* Company.swift */,
 				4C162CB41DED1DB300D7BF02 /* Person.swift */,
-				4C162CB61DED1E8D00D7BF02 /* Resume.swift */,
+				4C162CB61DED1E8D00D7BF02 /* Portfolio.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -219,17 +225,20 @@
 				4C4D13351DD430690023C9F2 /* AppDelegate.swift */,
 				4C4D133C1DD430690023C9F2 /* Assets.xcassets */,
 				4C0479931DE2277F009E47DF /* Fonts */,
+				4C162CB11DED1C1100D7BF02 /* Models */,
 				4C04799A1DE231DD009E47DF /* Transitions */,
 				4C4D13651DD432720023C9F2 /* ViewControllers */,
 				4C4D13391DD430690023C9F2 /* Main.storyboard */,
 				4C4D133E1DD430690023C9F2 /* LaunchScreen.storyboard */,
 				4CC260741DDEF65C00726930 /* Onboarding.storyboard */,
+				4CA1F82D1DF4E79300A984BC /* Editor.storyboard */,
+				4CA1F82F1DF5063700A984BC /* EditorTableViewCell.swift */,
+				4CA1F8351DF53DA300A984BC /* ProjectsCollectionViewCell.swift */,
 				4C4D13411DD430690023C9F2 /* Info.plist */,
 				CE2A11C61DE9653B00D9EFF4 /* ProjecsData.swift */,
 				CE2A11CE1DEA875500D9EFF4 /* SingleProject.swift */,
 				CE2A11D41DECC9BF00D9EFF4 /* headerTableViewCell.swift */,
 				44C526981DE52D4F008475F2 /* Common.swift */,
-				4C162CB11DED1C1100D7BF02 /* Models */,
 			);
 			path = Portfolio;
 			sourceTree = "<group>";
@@ -405,6 +414,7 @@
 				4C04798F1DE22778009E47DF /* Mosk-Bold-700.ttf in Resources */,
 				4C4D133D1DD430690023C9F2 /* Assets.xcassets in Resources */,
 				4C4D133B1DD430690023C9F2 /* Main.storyboard in Resources */,
+				4CA1F82E1DF4E79300A984BC /* Editor.storyboard in Resources */,
 				4C0479901DE22778009E47DF /* Mosk-Light-300.ttf in Resources */,
 				4C0479911DE22778009E47DF /* Mosk-Medium-500.ttf in Resources */,
 			);
@@ -571,9 +581,11 @@
 			files = (
 				CE2A11D51DECC9BF00D9EFF4 /* headerTableViewCell.swift in Sources */,
 				4C0479951DE22DFC009E47DF /* SignUpViewController.swift in Sources */,
+				4CA1F8361DF53DA300A984BC /* ProjectsCollectionViewCell.swift in Sources */,
 				CE2A11CD1DE97AFA00D9EFF4 /* ProjectsDataCell.swift in Sources */,
 				4C4D13361DD430690023C9F2 /* AppDelegate.swift in Sources */,
-				4C162CB71DED1E8D00D7BF02 /* Resume.swift in Sources */,
+				4C162CB71DED1E8D00D7BF02 /* Portfolio.swift in Sources */,
+				4CA1F8301DF5063700A984BC /* EditorTableViewCell.swift in Sources */,
 				4CBFB7261DED46C300F1B76F /* ImageZoomTransition.swift in Sources */,
 				4CD8AED41DE58154001FA131 /* EmptyPortfolioHomeViewController.swift in Sources */,
 				CE2A11C71DE9653B00D9EFF4 /* ProjecsData.swift in Sources */,
