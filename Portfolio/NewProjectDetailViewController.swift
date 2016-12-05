@@ -19,13 +19,14 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
         
     }
     
-    var containerImages: [UIImage] = [UIImage(named: "sassBlue")!,UIImage(named: "sassGreen")!,UIImage(named: "sassYellow")!, UIImage(named: "sassRed")!, UIImage(named: "sassFinal")!, UIImage(named: "problemIcon")!]
+    var containerImages: [UIImage] = [UIImage(named: "app_screen")!,UIImage(named: "education_series")!,UIImage(named: "facebook_live")!, UIImage(named: "sassRed")!, UIImage(named: "sassFinal")!]
     
     var headerView: UIView!
     var newHeaderLayer: CAShapeLayer!
     
+    var headerTitleOriginalY: CGFloat!
 
-
+    @IBOutlet weak var headerTitle: UIView!
     @IBOutlet weak var tableVIew: UITableView!
    
     override func viewDidLoad() {
@@ -35,14 +36,41 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
         tableVIew.contentSize = CGSize(width: 375, height: 1000)
         tableVIew.frame.size = CGSize(width: 375, height: 667)
         updateView()
-
+        
+        self.headerTitle.alpha = 0
     }
     
     
 
     
      func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print(tableVIew.contentOffset.y)
+        if tableVIew.contentOffset.y >= -22 {
+            
+                tableVIew.contentOffset.y = -22
+            }
+        
+        if tableVIew.contentOffset.y >= -40 {
+            UIView.animate(withDuration: 1){
+                
+                self.headerTitle.alpha = 0.8
+                
+            }
+        } else {
+            UIView.animate(withDuration: 1){
+                
+                self.headerTitle.alpha = 0
+
+                
+            }
+        }
+
+
+        
+        
+ 
         setNewView()
+
     }
     
     func updateView(){
@@ -141,11 +169,10 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
     
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
-        
         var imageView: UIImageView!
         
         if view == nil {
-            imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+            imageView = UIImageView(frame: CGRect(x: 0, y: -50, width: 270, height: 270))
 
             imageView.contentMode = UIViewContentMode.scaleAspectFit
 
@@ -154,6 +181,8 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
         }
         
         imageView.image = self.containerImages[index]
+        
+        
         return imageView
     }
     
