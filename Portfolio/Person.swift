@@ -7,6 +7,13 @@
 //
 
 class Person {
-    var name: String?
+    var name: String
+    var title: String?
     var description: String?
+    
+    init(name: String, title: String?, description: String?) {
+        self.name = name
+        self.title = title
+        self.description = description
+    }
 }

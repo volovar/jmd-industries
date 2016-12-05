@@ -9,7 +9,7 @@
 import UIKit
 
 // temporary data model
-var mainPortfolio = Resume()
+var mainPortfolio = Portfolio(person: nil, title: "", companys: [])
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,26 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        ////////////////////
-        // setting up data
-        ////////////////////
-        mainPortfolio.title = "Main (from fake data)"
-        mainPortfolio.person = Person()
-        mainPortfolio.person?.name = "Allan Montiero"
         
-        let fbCompany = Company()
-        fbCompany.name = "Facebook, Inc"
-        
-        let project1 = Project()
-        project1.name = "Facebook Live"
-        
-        let project2 = Project()
-        project2.name = "Education Series"
-        
-        fbCompany.projects?.append(project1)
-        fbCompany.projects?.append(project2)
-        mainPortfolio.companys?.append(fbCompany)
-        // end data
+        // call function to set portfolio data
+        setupData()
         
         // app page control style
         let pageControl = UIPageControl.appearance()
@@ -73,6 +56,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func setupData() {
+        ////////////////////
+        // setting up data
+        ////////////////////
+        
+        let person = Person(name: "Allan Montiero", title: "Product Designer", description: "Senior mobile designer, specializing in new feature development. Research, prototype, learn, build. Formerly at Facebook, Yahoo!, and Moovly.")
+        var companys: [Company] = []
+        
+        // first company
+        let fbCompany = Company(name: "Facebook, Inc", description: "Helped design Facebook Live. Led a team of 3 designers on a 3-month expedition to research global usage of the Like button. Worked with top-level executives to create an in-house design educational series.", projects: [])
+        
+        // second company
+        let yahooCompany = Company(name: "Yahoo", description: "Worked with VP of Product to design a new sleep tracker feature. Updated large portions of Yahoo! Answers to conform with modern design principles. Increased overall engagement by 6% through implementing cutting-edge information architecture techniques.", projects: [])
+        
+        // third company
+        let moovlyCompany = Company(name: "Moovly", description: "Built an app for bovine relocation services. App summons relocator trucks to any spot in the world, inlcuding Antarctica. Adoption was nearly 100% in Central California. Incporporated tag-tracking and hoof-print ID to ensure cows were never lost.", projects: [])
+        
+        // first company projects
+        let fbProject1 = Project(name: "Facebook Live", image: #imageLiteral(resourceName: "facebook_live"), details: [])
+        let fbProject2 = Project(name: "Education Series", image: #imageLiteral(resourceName: "education_series"), details: [])
+        
+        // second company projects
+        let yahooProject1 = Project(name: "Yahoo Sleep Tracker", image: #imageLiteral(resourceName: "sleep_tracker"), details: [])
+        
+        // third company projects
+        let moovlyProject1 = Project(name: "Moovly", image: #imageLiteral(resourceName: "moovly"), details: [])
+        
+        // add projects to companies
+        fbCompany.projects?.append(fbProject1!)
+        fbCompany.projects?.append(fbProject2!)
+        yahooCompany.projects?.append(yahooProject1!)
+        moovlyCompany.projects?.append(moovlyProject1!)
+        
+        companys.append(fbCompany)
+        companys.append(yahooCompany)
+        companys.append(moovlyCompany)
+        
+        // add companies to portfolio
+        mainPortfolio.person = person
+        mainPortfolio.title = "Main"
+        mainPortfolio.companys = companys
     }
 
 
