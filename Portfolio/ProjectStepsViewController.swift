@@ -33,6 +33,10 @@ class ProjectStepsViewController: UIViewController, UIScrollViewDelegate{
     
     @IBOutlet weak var transtionBluePurpleBack: UIView!
     
+    
+    var contentOffset: CGFloat = 0
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,6 +57,12 @@ class ProjectStepsViewController: UIViewController, UIScrollViewDelegate{
         
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        projectStepsScrollView.setContentOffset(CGPoint(x: contentOffset, y: 0), animated: true)
+    }
+    
+  
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         print(projectStepsScrollView.contentOffset.x)
@@ -164,6 +174,8 @@ class ProjectStepsViewController: UIViewController, UIScrollViewDelegate{
         }
         
     }
+    
+
 
     
     

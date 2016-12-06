@@ -884,6 +884,9 @@
                                                             <rect key="frame" x="220" y="15" width="60" height="60"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <state key="normal" title="Button" image="researchIcon"/>
+                                                            <connections>
+                                                                <segue destination="7sd-dW-HV0" kind="modal" identifier="segueFromResearch" id="ABy-9J-PSQ"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Research" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="022-fU-aLs">
                                                             <rect key="frame" x="215" y="69" width="71" height="36"/>
@@ -2144,7 +2147,8 @@
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="zMs-sg-NzF"/>
+        <segue reference="GeC-et-E5m"/>
         <segue reference="Kgk-8k-aE4"/>
+        <segue reference="ABy-9J-PSQ"/>
     </inferredMetricsTieBreakers>
 </document>

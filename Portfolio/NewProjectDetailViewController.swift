@@ -12,6 +12,11 @@ import UIKit
 
 class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, iCarouselDataSource, iCarouselDelegate, UIScrollViewDelegate {
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.headerTitle.alpha = 0
+
+    }
+    
     struct StretchyHeader {
         
         fileprivate let headerHeight: CGFloat = 350
@@ -37,7 +42,6 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
         tableVIew.frame.size = CGSize(width: 375, height: 667)
         updateView()
         
-        self.headerTitle.alpha = 0
     }
     
     
@@ -202,7 +206,21 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
         // Dispose of any resources that can be recreated.
     }
     
- 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueFromResearch" {
+            // set up the transition
+            let destinationViewController = segue.destination as! ProjectStepsViewController
+            destinationViewController.contentOffset = 750
+            
+            
+            
+            
+            //            zoomTransition = ImageZoomTransition()
+            //            destination.modalPresentationStyle = .custom
+            //            destination.transitioningDelegate = zoomTransition
+            //            zoomTransition.duration = 0.35
+        }
+    }
 
   
 }
