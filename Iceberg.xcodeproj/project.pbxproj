@@ -98,7 +98,7 @@
 		4C162CAF1DED1BFD00D7BF02 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		4C162CB21DED1C3400D7BF02 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		4C162CB41DED1DB300D7BF02 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		4C162CB61DED1E8D00D7BF02 /* Resume.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resume.swift; sourceTree = "<group>"; };
+		4C162CB61DED1E8D00D7BF02 /* Portfolio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
 		4C4D13321DD430690023C9F2 /* Iceberg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iceberg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4D13351DD430690023C9F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C4D133A1DD430690023C9F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -641,7 +641,8 @@
 				4CA1F8361DF53DA300A984BC /* ProjectsCollectionViewCell.swift in Sources */,
 				CE2A11CD1DE97AFA00D9EFF4 /* ProjectsDataCell.swift in Sources */,
 				4C4D13361DD430690023C9F2 /* AppDelegate.swift in Sources */,
-				4C162CB71DED1E8D00D7BF02 /* Resume.swift in Sources */,
+				4C162CB71DED1E8D00D7BF02 /* Portfolio.swift in Sources */,
+				4CA1F8301DF5063700A984BC /* EditorTableViewCell.swift in Sources */,
 				CE15CC6A1DF515DB009A643D /* CarouselCell.swift in Sources */,
 				CE15CC681DF515C8009A643D /* ProjectDetailCell.swift in Sources */,
 				4CBFB7261DED46C300F1B76F /* ImageZoomTransition.swift in Sources */,
