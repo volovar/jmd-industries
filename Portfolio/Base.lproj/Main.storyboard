@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="Ye1-06-ZI7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="2TG-u4-JwK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1440,8 +1440,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="160" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cl9-of-VUk">
-                                                <rect key="frame" x="8" y="4" width="144" height="34"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Main" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cl9-of-VUk">
+                                                <rect key="frame" x="8" y="4" width="111" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
@@ -1457,7 +1457,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
                             </view>
@@ -1471,12 +1471,13 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="vKi-td-NGP"/>
                     <connections>
                         <outlet property="createButton" destination="CaB-td-AaH" id="zgv-Vh-oYQ"/>
                         <outlet property="portfolioSnapshot" destination="c4m-L7-SzM" id="RG3-je-0e0"/>
+                        <outlet property="portfolioTitle" destination="Cl9-of-VUk" id="SYc-Kp-Fiy"/>
                         <outlet property="portfolioView" destination="zxS-8V-LOE" id="NtV-Kt-Yb0"/>
                         <segue destination="BYZ-38-t0r" kind="modal" identifier="segueToView" id="9TY-nR-4ti"/>
                     </connections>
@@ -1488,7 +1489,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="709" y="-592"/>
+            <point key="canvasLocation" x="708.5" y="-592.5"/>
         </scene>
         <!--Empty Portfolio Home View Controller-->
         <scene sceneID="akv-eg-Hhm">

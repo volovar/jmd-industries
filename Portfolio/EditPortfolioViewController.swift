@@ -41,14 +41,18 @@ class EditPortfolioViewController: UIViewController, UITableViewDataSource, UITa
     @IBAction func didTapBack(_ sender: Any) {
         let closeAlert = UIAlertController(title: "Discard Changes?", message: "Closing will undo any changes you have made. Cancel and choose 'Save' if you want to keep your changes.", preferredStyle: .alert)
         
-        closeAlert.addAction(UIAlertAction(title: "Discard", style: .destructive, handler: {(alert: UIAlertAction) in self.dismiss(animated: true, completion: nil) }))
+        closeAlert.addAction(UIAlertAction(title: "Discard", style: .destructive, handler: {
+            (alert: UIAlertAction) in
+                self.view.endEditing(true)
+                self.dismiss(animated: true, completion: nil)
+        }))
         closeAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         present(closeAlert, animated: true, completion: nil)
     }
     
     @IBAction func didTapSave(_ sender: Any) {
-        
+        view.endEditing(true)
         
         dismiss(animated: true, completion: nil)
     }
