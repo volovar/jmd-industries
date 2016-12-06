@@ -65,6 +65,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ////////////////////
         let realm = try! Realm()
         
+        //!!!!!!!!!!!!!!!!!
+        //!!!! DANGER
+        //!!!! uncomment the section below if you want to delete(!) all data and recreate it
+        //!!!! this is only for development / test purposes, should be removed later
+        //!!!!!!!!!!!!!!!!!
+        //try! realm.write {
+        //    realm.deleteAll()
+        //}
+        //!!!!!!!!!!!!!!!!!
+        
         if realm.objects(UserData.self).count > 0 {
             userData = realm.objects(UserData.self).first
         } else {
