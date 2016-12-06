@@ -68,6 +68,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //!!!!!!!!!!!!!!!!!
         //!!!! DANGER
         //!!!! uncomment the section below if you want to delete(!) all data and recreate it
+        //!!!! after uncommenting, build and run the app once to delete and recreate the data
+        //!!!! comment the section out again once the new data is created
         //!!!! this is only for development / test purposes, should be removed later
         //!!!!!!!!!!!!!!!!!
         //try! realm.write {
