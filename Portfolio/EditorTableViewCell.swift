@@ -16,6 +16,8 @@ class EditorTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        descriptionText.delegate = self
+        nameText.delegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -48,4 +50,20 @@ class EditorTableViewCell: UITableViewCell {
         collectionView.reloadData()
     }
 
+}
+
+extension EditorTableViewCell: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let field = textField as! EditorTextField
+        
+        mainPortfolio.companys?[field.getRow()].name = field.text!
+    }
+}
+
+extension EditorTableViewCell: UITextViewDelegate {
+    func textViewDidEndEditing(_ textView: UITextView) {
+        let view = textView as! EditorTextView
+        
+        mainPortfolio.companys?[view.getRow()].description = view.text
+    }
 }

@@ -78,6 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // first company projects
         let fbProject1 = Project(name: "Facebook Live", image: #imageLiteral(resourceName: "facebook_live"), details: [])
         let fbProject2 = Project(name: "Education Series", image: #imageLiteral(resourceName: "education_series"), details: [])
+        let fbProject3 = Project(name: "Project 3", image: #imageLiteral(resourceName: "facebook_live"), details: [])
         
         // second company projects
         let yahooProject1 = Project(name: "Yahoo Sleep Tracker", image: #imageLiteral(resourceName: "sleep_tracker"), details: [])
@@ -88,6 +89,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // add projects to companies
         fbCompany.projects?.append(fbProject1!)
         fbCompany.projects?.append(fbProject2!)
+        fbCompany.projects?.append(fbProject3!)
         yahooCompany.projects?.append(yahooProject1!)
         moovlyCompany.projects?.append(moovlyProject1!)
         
