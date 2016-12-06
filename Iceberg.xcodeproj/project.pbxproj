@@ -31,6 +31,8 @@
 		4C4D13561DD430690023C9F2 /* PortfolioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13551DD430690023C9F2 /* PortfolioUITests.swift */; };
 		4C4D13671DD432F80023C9F2 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13661DD432F80023C9F2 /* ProjectDetailViewController.swift */; };
 		4C4D13691DD433600023C9F2 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13681DD433600023C9F2 /* InfoViewController.swift */; };
+		4C981D851DF6799700FBFAC3 /* EditorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C981D841DF6799700FBFAC3 /* EditorTextField.swift */; };
+		4C981D881DF67A6200FBFAC3 /* EditorTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C981D871DF67A6200FBFAC3 /* EditorTextView.swift */; };
 		4CA1F82C1DEF0ACD00A984BC /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1F82B1DEF0ACD00A984BC /* DetailsViewController.swift */; };
 		4CA1F82E1DF4E79300A984BC /* Editor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CA1F82D1DF4E79300A984BC /* Editor.storyboard */; };
 		4CA1F8301DF5063700A984BC /* EditorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1F82F1DF5063700A984BC /* EditorTableViewCell.swift */; };
@@ -105,6 +107,8 @@
 		4C4D13571DD430690023C9F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C4D13661DD432F80023C9F2 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
 		4C4D13681DD433600023C9F2 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		4C981D841DF6799700FBFAC3 /* EditorTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorTextField.swift; sourceTree = "<group>"; };
+		4C981D871DF67A6200FBFAC3 /* EditorTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorTextView.swift; sourceTree = "<group>"; };
 		4CA1F82B1DEF0ACD00A984BC /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		4CA1F82D1DF4E79300A984BC /* Editor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Editor.storyboard; sourceTree = "<group>"; };
 		4CA1F82F1DF5063700A984BC /* EditorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorTableViewCell.swift; sourceTree = "<group>"; };
@@ -244,8 +248,7 @@
 				4C4D13391DD430690023C9F2 /* Main.storyboard */,
 				4C4D133E1DD430690023C9F2 /* LaunchScreen.storyboard */,
 				4CC260741DDEF65C00726930 /* Onboarding.storyboard */,
-				4CA1F82D1DF4E79300A984BC /* Editor.storyboard */,
-				4CA1F82F1DF5063700A984BC /* EditorTableViewCell.swift */,
+				4C981D861DF67A4200FBFAC3 /* Editor */,
 				4CA1F8351DF53DA300A984BC /* ProjectsCollectionViewCell.swift */,
 				4C4D13411DD430690023C9F2 /* Info.plist */,
 				CE2A11C61DE9653B00D9EFF4 /* ProjecsData.swift */,
@@ -292,10 +295,21 @@
 				CE7F4A7B1DEFD9D0004B8AD8 /* PortfolioTempViewController.swift */,
 				4CD8AED31DE58154001FA131 /* EmptyPortfolioHomeViewController.swift */,
 				4CD8AED51DE58160001FA131 /* PortfolioHomeViewController.swift */,
-				4C162CAD1DECB61A00D7BF02 /* EditPortfolioViewController.swift */,
 				4CA1F82B1DEF0ACD00A984BC /* DetailsViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4C981D861DF67A4200FBFAC3 /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				4CA1F82D1DF4E79300A984BC /* Editor.storyboard */,
+				4C162CAD1DECB61A00D7BF02 /* EditPortfolioViewController.swift */,
+				4CA1F82F1DF5063700A984BC /* EditorTableViewCell.swift */,
+				4C981D841DF6799700FBFAC3 /* EditorTextField.swift */,
+				4C981D871DF67A6200FBFAC3 /* EditorTextView.swift */,
+			);
+			name = Editor;
 			sourceTree = "<group>";
 		};
 		81F2F99988CD828AEEB9838E /* Frameworks */ = {
@@ -385,7 +399,6 @@
 				TargetAttributes = {
 					4C4D13311DD430690023C9F2 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = QLTD7VWVWY;
 						ProvisioningStyle = Automatic;
 					};
 					4C4D13451DD430690023C9F2 = {
@@ -620,6 +633,7 @@
 				CE147B121DF13B6800A20A9D /* FlexibleAspectImageView.swift in Sources */,
 				4CA1F82C1DEF0ACD00A984BC /* DetailsViewController.swift in Sources */,
 				CE7F4A7A1DEFCF52004B8AD8 /* LightBoxTransition.swift in Sources */,
+				4C981D851DF6799700FBFAC3 /* EditorTextField.swift in Sources */,
 				4C4D13691DD433600023C9F2 /* InfoViewController.swift in Sources */,
 				4C162CAE1DECB61A00D7BF02 /* EditPortfolioViewController.swift in Sources */,
 				4CC260771DDEF81A00726930 /* LoginViewController.swift in Sources */,
@@ -628,6 +642,7 @@
 				4CD8AED21DE57C5F001FA131 /* PortfolioViewController.swift in Sources */,
 				4C04799C1DE4A652009E47DF /* Layout1ViewController.swift in Sources */,
 				4CD8AED61DE58160001FA131 /* PortfolioHomeViewController.swift in Sources */,
+				4C981D881DF67A6200FBFAC3 /* EditorTextView.swift in Sources */,
 				4C162CB01DED1BFD00D7BF02 /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -782,7 +797,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = QLTD7VWVWY;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Portfolio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jmd-industries.Iceberg";
@@ -796,7 +812,8 @@
 			baseConfigurationReference = AF5B520012001077D15B80B9 /* Pods-Iceberg.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QLTD7VWVWY;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Portfolio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jmd-industries.Iceberg";
