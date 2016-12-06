@@ -1,4 +1,4 @@
-//
+	//
 //  InfoViewController.swift
 //  Portfolio
 //
@@ -8,112 +8,179 @@
 
 import UIKit
 import AFNetworking
+    
 
-class InfoViewController: UIViewController {
+
+class InfoViewController: UIViewController, UITableViewDataSource, UIScrollViewDelegate, UITableViewDelegate {
+    var fadeTransition: FadeTransition!
+
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
-    @IBOutlet weak var projectExpandedView: UIView!
-    @IBOutlet weak var plusButtonBGColor: UIButton!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var measureIndexBg: UIImageView!
     
-    @IBOutlet weak var backgroundViewProject: UIView!
-    @IBOutlet weak var plusButtonExpanded: UIButton!
-    var projectExpandedViewOriginalY: CGFloat!
-    var backgroundViewProjectOriginalY: CGFloat!
+    @IBOutlet weak var measureIndexBGSct1: UIImageView!
+    
+    @IBOutlet weak var measureIndexBGSct2: UIImageView!
+    
+    @IBOutlet weak var measureIndex: UIImageView!
+    var companySections: [CompanySection] = {
+        
+        return CompanySection.companySections()
+    }()
+    
+    
+    let sectionHeaderImages: [UIImage] = [#imageLiteral(resourceName: "titleCompressedBlue"), #imageLiteral(resourceName: "titleCompressedGreen"), #imageLiteral(resourceName: "titleCompressedPink"), #imageLiteral(resourceName: "titleCompressedRuby"), #imageLiteral(resourceName: "titleCompressedPurple")]
+    let sectionTitles: [String] = ["Facebook Projects", "Yahoo Projects", "Moovly Projects"]
+    let sectionHeaderDates: [String] = ["2015 | 2016","2013 | 2015", "2011 | 2013"]
+    
+    
+    var measureIndexOriginalY: CGFloat!
+
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        measureIndexOriginalY = measureIndex.frame.origin.y
+
+        
+        
+        
+        tableView.sectionIndexColor = UIColor.blue
+        self.navigationItem.title = "Company Projects"
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navigationBar"),for: .default)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = 275
+                tableView.backgroundColor = UIColor.clear
+        
+        
         // changing mainProject Title Color
         titleLabel.textColor = UIColor.white
         subtitleLabel.textColor = UIColor.white
         
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print(tableView.contentOffset.y)
+        self.measureIndex.frame.origin.y = self.measureIndexOriginalY - (tableView.contentOffset.y*2.5)
         
-        // Changing color and making button a circle
-        plusButtonBGColor.layer.cornerRadius = 0.5 * plusButtonBGColor.bounds.size.width
-        plusButtonExpanded.layer.cornerRadius = 0.5 * plusButtonExpanded.bounds.size.width
-        plusButtonExpanded.clipsToBounds = true
-        plusButtonBGColor.alpha = 0.6
-        plusButtonExpanded.alpha = 0.6
-        plusButtonBGColor.clipsToBounds = true
-        self.plusButtonExpanded.alpha = 0
+        let blueBGopacity = convertValue(inputValue: CGFloat(tableView.contentOffset.y), r1Min: 335, r1Max: 600, r2Min: 1, r2Max: 0)
+        measureIndexBg.alpha = blueBGopacity
+        let greenBGopacity = convertValue(inputValue: CGFloat(tableView.contentOffset.y), r1Min: 335, r1Max: 615, r2Min: 0, r2Max: 1)
+        measureIndexBGSct1.alpha = greenBGopacity
         
-        //setting up original position for Expanded View
-        projectExpandedViewOriginalY =  projectExpandedView.frame.origin.y
-        backgroundViewProjectOriginalY = backgroundViewProject.frame.origin.y
+        let pinkBGOpacity = convertValue(inputValue: CGFloat(tableView.contentOffset.y), r1Min: 800, r1Max: 1200, r2Min: 0, r2Max: 1)
+        measureIndexBGSct2.alpha = pinkBGOpacity
+        
+        
+    }
+
+    
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return companySections.count
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let companySection = companySections[section]
+        return companySection.projects.count
+        
+        //        return companySections.count
         
     }
     
-    @IBAction func didPressBack(_ sender: Any) {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "projectsDataCell") as! ProjectsDataCell
+        let companySection = companySections[indexPath.section]
+        let project = companySection.projects[indexPath.row]
+        
+        
+        
+        cell.project = project
+        return cell
+        
+        
+    }
+    
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "headerCell") as! headerTableViewCell
+        
+        cell.setupCell(image: sectionHeaderImages[section], titleLabelText: sectionTitles[section], dateOnHeader: sectionHeaderDates[section])
+
+        
+        
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        cell.alpha = 0
+        UIView.animate(withDuration: 1){
+            
+            cell.alpha = 1
+
+        }
+        
+        UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: [], animations:{
+            
+        })
+        { (Bool) in
+            UIView.animate(withDuration: 0.5, delay: 0.1, options: [], animations:{
+                
+                
+                
+            })
+        }
+
+    }
+    
+
+    
+    
+    
+    @IBAction func didTapBack(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     
     
-    @IBAction func didPressPlusButton(_ sender: Any) {
-        print("plusButton pressed")
-        self.plusButtonBGColor.alpha = 0.6
-        
-        
-        
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations:{
-            self.plusButtonBGColor.alpha = 0
-            self.plusButtonExpanded.alpha = 0.6
-            
-            self.projectExpandedView.frame.origin.y = self.projectExpandedViewOriginalY + 260
-            
-            UIView.animate(withDuration: 0.4, delay: 0.2, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations:{
-                self.backgroundViewProject.frame.origin.y =  self.backgroundViewProjectOriginalY - self.projectExpandedViewOriginalY - 18
-                
-            })
-            
-            
-            
-            
-            
-            
-            
-        })
-        { (Bool) in
-            UIView.animate(withDuration: 0, delay: 0.05, options: [], animations:{
-                
-                self.plusButtonBGColor.isEnabled = false
-                
-                
-            })
-        }
-        
-    }
-    
-    
-    @IBAction func didPressCollapseButton(_ sender: Any) {
-        print("collapseButton pressed")
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations:{
-            self.plusButtonExpanded.alpha = 0
-            self.plusButtonBGColor.alpha = 0.6
-            
-            UIView.animate(withDuration: 0.3, delay: 0.1, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations:{
-                self.projectExpandedView.frame.origin.y = self.projectExpandedViewOriginalY
 
-                
-            })
-            self.backgroundViewProject.frame.origin.y =  self.backgroundViewProjectOriginalY - 48 - self.projectExpandedViewOriginalY
-            
-            
-            
-        })
-        { (Bool) in
-            UIView.animate(withDuration: 0, delay: 0.05, options: [], animations:{
-                
-                self.plusButtonBGColor.isEnabled = true
-                
-                
-                
-                
-                
-            })
-        }
-        
+    @IBAction func didPressViewProject(_ sender: Any) {
+        performSegue(withIdentifier: "segueToProject", sender: Any?.self)
     }
     
     
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let destinationViewController = segue.destination
+        
+        
+        destinationViewController.modalPresentationStyle = UIModalPresentationStyle.custom
+        
+        fadeTransition = FadeTransition()
+        
+        
+        destinationViewController.transitioningDelegate = fadeTransition
+        
+        fadeTransition.duration = 0.6
+        print("fadeIn called")
+    }
     
     
 }

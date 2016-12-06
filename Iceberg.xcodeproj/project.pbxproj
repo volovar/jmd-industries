@@ -18,6 +18,11 @@
 		4C0479991DE231D8009E47DF /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0479971DE231D8009E47DF /* FadeTransition.swift */; };
 		4C04799C1DE4A652009E47DF /* Layout1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C04799B1DE4A652009E47DF /* Layout1ViewController.swift */; };
 		4C04799E1DE4A65D009E47DF /* Layout2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C04799D1DE4A65D009E47DF /* Layout2ViewController.swift */; };
+		4C162CAE1DECB61A00D7BF02 /* EditPortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C162CAD1DECB61A00D7BF02 /* EditPortfolioViewController.swift */; };
+		4C162CB01DED1BFD00D7BF02 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C162CAF1DED1BFD00D7BF02 /* Project.swift */; };
+		4C162CB31DED1C3400D7BF02 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C162CB21DED1C3400D7BF02 /* Company.swift */; };
+		4C162CB51DED1DB300D7BF02 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C162CB41DED1DB300D7BF02 /* Person.swift */; };
+		4C162CB71DED1E8D00D7BF02 /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C162CB61DED1E8D00D7BF02 /* Portfolio.swift */; };
 		4C4D13361DD430690023C9F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13351DD430690023C9F2 /* AppDelegate.swift */; };
 		4C4D133B1DD430690023C9F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4D13391DD430690023C9F2 /* Main.storyboard */; };
 		4C4D133D1DD430690023C9F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4D133C1DD430690023C9F2 /* Assets.xcassets */; };
@@ -26,15 +31,32 @@
 		4C4D13561DD430690023C9F2 /* PortfolioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13551DD430690023C9F2 /* PortfolioUITests.swift */; };
 		4C4D13671DD432F80023C9F2 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13661DD432F80023C9F2 /* ProjectDetailViewController.swift */; };
 		4C4D13691DD433600023C9F2 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13681DD433600023C9F2 /* InfoViewController.swift */; };
+		4C981D851DF6799700FBFAC3 /* EditorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C981D841DF6799700FBFAC3 /* EditorTextField.swift */; };
+		4C981D881DF67A6200FBFAC3 /* EditorTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C981D871DF67A6200FBFAC3 /* EditorTextView.swift */; };
+		4C981D901DF6C81600FBFAC3 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C981D8F1DF6C81600FBFAC3 /* UserData.swift */; };
+		4CA1F82C1DEF0ACD00A984BC /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1F82B1DEF0ACD00A984BC /* DetailsViewController.swift */; };
+		4CA1F82E1DF4E79300A984BC /* Editor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CA1F82D1DF4E79300A984BC /* Editor.storyboard */; };
+		4CA1F8301DF5063700A984BC /* EditorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1F82F1DF5063700A984BC /* EditorTableViewCell.swift */; };
+		4CA1F8361DF53DA300A984BC /* ProjectsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1F8351DF53DA300A984BC /* ProjectsCollectionViewCell.swift */; };
+		4CBFB7261DED46C300F1B76F /* ImageZoomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBFB7251DED46C300F1B76F /* ImageZoomTransition.swift */; };
 		4CC260751DDEF65C00726930 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC260741DDEF65C00726930 /* Onboarding.storyboard */; };
 		4CC260771DDEF81A00726930 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC260761DDEF81A00726930 /* LoginViewController.swift */; };
-		4CD8AED01DE56EB4001FA131 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8AECF1DE56EB4001FA131 /* HomeViewController.swift */; };
 		4CD8AED21DE57C5F001FA131 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8AED11DE57C5F001FA131 /* PortfolioViewController.swift */; };
 		4CD8AED41DE58154001FA131 /* EmptyPortfolioHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8AED31DE58154001FA131 /* EmptyPortfolioHomeViewController.swift */; };
 		4CD8AED61DE58160001FA131 /* PortfolioHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8AED51DE58160001FA131 /* PortfolioHomeViewController.swift */; };
 		861E0FB0C93A0AD811BDA083 /* Pods_IcebergUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74BD51C0FA226BC599CBA20C /* Pods_IcebergUITests.framework */; };
 		B4B56B187F807CA0B43F1C69 /* Pods_Iceberg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B91198FAE9969FED1D9CB0F /* Pods_Iceberg.framework */; };
 		C930D88DCA50E49B0D7BEEF2 /* Pods_IcebergTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA1991395F70913B3891DC34 /* Pods_IcebergTests.framework */; };
+		CE0DD4441DEFB68600746BE9 /* LightBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0DD4431DEFB68600746BE9 /* LightBoxViewController.swift */; };
+		CE147B121DF13B6800A20A9D /* FlexibleAspectImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE147B111DF13B6800A20A9D /* FlexibleAspectImageView.swift */; };
+		CE147B141DF2A5FE00A20A9D /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE147B131DF2A5FE00A20A9D /* OnBoardingViewController.swift */; };
+		CE2A11C71DE9653B00D9EFF4 /* ProjecsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A11C61DE9653B00D9EFF4 /* ProjecsData.swift */; };
+		CE2A11CD1DE97AFA00D9EFF4 /* ProjectsDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A11CC1DE97AFA00D9EFF4 /* ProjectsDataCell.swift */; };
+		CE2A11CF1DEA875500D9EFF4 /* SingleProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A11CE1DEA875500D9EFF4 /* SingleProject.swift */; };
+		CE2A11D51DECC9BF00D9EFF4 /* headerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A11D41DECC9BF00D9EFF4 /* headerTableViewCell.swift */; };
+		CE7F4A7A1DEFCF52004B8AD8 /* LightBoxTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F4A791DEFCF52004B8AD8 /* LightBoxTransition.swift */; };
+		CE7F4A7C1DEFD9D0004B8AD8 /* PortfolioTempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F4A7B1DEFD9D0004B8AD8 /* PortfolioTempViewController.swift */; };
+		CEE18FCF1DF2C65F006CBF7A /* OnBoardingStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE18FCE1DF2C65F006CBF7A /* OnBoardingStepsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +89,11 @@
 		4C0479971DE231D8009E47DF /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
 		4C04799B1DE4A652009E47DF /* Layout1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout1ViewController.swift; sourceTree = "<group>"; };
 		4C04799D1DE4A65D009E47DF /* Layout2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout2ViewController.swift; sourceTree = "<group>"; };
+		4C162CAD1DECB61A00D7BF02 /* EditPortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPortfolioViewController.swift; sourceTree = "<group>"; };
+		4C162CAF1DED1BFD00D7BF02 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		4C162CB21DED1C3400D7BF02 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		4C162CB41DED1DB300D7BF02 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		4C162CB61DED1E8D00D7BF02 /* Portfolio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
 		4C4D13321DD430690023C9F2 /* Iceberg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iceberg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4D13351DD430690023C9F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C4D133A1DD430690023C9F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,9 +108,16 @@
 		4C4D13571DD430690023C9F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C4D13661DD432F80023C9F2 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
 		4C4D13681DD433600023C9F2 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		4C981D841DF6799700FBFAC3 /* EditorTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorTextField.swift; sourceTree = "<group>"; };
+		4C981D871DF67A6200FBFAC3 /* EditorTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorTextView.swift; sourceTree = "<group>"; };
+		4C981D8F1DF6C81600FBFAC3 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		4CA1F82B1DEF0ACD00A984BC /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		4CA1F82D1DF4E79300A984BC /* Editor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Editor.storyboard; sourceTree = "<group>"; };
+		4CA1F82F1DF5063700A984BC /* EditorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorTableViewCell.swift; sourceTree = "<group>"; };
+		4CA1F8351DF53DA300A984BC /* ProjectsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsCollectionViewCell.swift; sourceTree = "<group>"; };
+		4CBFB7251DED46C300F1B76F /* ImageZoomTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageZoomTransition.swift; sourceTree = "<group>"; };
 		4CC260741DDEF65C00726930 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		4CC260761DDEF81A00726930 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		4CD8AECF1DE56EB4001FA131 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4CD8AED11DE57C5F001FA131 /* PortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
 		4CD8AED31DE58154001FA131 /* EmptyPortfolioHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyPortfolioHomeViewController.swift; sourceTree = "<group>"; };
 		4CD8AED51DE58160001FA131 /* PortfolioHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioHomeViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +128,16 @@
 		AF5B520012001077D15B80B9 /* Pods-Iceberg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iceberg.release.xcconfig"; path = "Pods/Target Support Files/Pods-Iceberg/Pods-Iceberg.release.xcconfig"; sourceTree = "<group>"; };
 		C7D223E861A7E84470D95742 /* Pods-IcebergTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IcebergTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IcebergTests/Pods-IcebergTests.release.xcconfig"; sourceTree = "<group>"; };
 		CA1991395F70913B3891DC34 /* Pods_IcebergTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IcebergTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0DD4431DEFB68600746BE9 /* LightBoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightBoxViewController.swift; sourceTree = "<group>"; };
+		CE147B111DF13B6800A20A9D /* FlexibleAspectImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexibleAspectImageView.swift; sourceTree = "<group>"; };
+		CE147B131DF2A5FE00A20A9D /* OnBoardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		CE2A11C61DE9653B00D9EFF4 /* ProjecsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjecsData.swift; sourceTree = "<group>"; };
+		CE2A11CC1DE97AFA00D9EFF4 /* ProjectsDataCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsDataCell.swift; sourceTree = "<group>"; };
+		CE2A11CE1DEA875500D9EFF4 /* SingleProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleProject.swift; sourceTree = "<group>"; };
+		CE2A11D41DECC9BF00D9EFF4 /* headerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = headerTableViewCell.swift; sourceTree = "<group>"; };
+		CE7F4A791DEFCF52004B8AD8 /* LightBoxTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightBoxTransition.swift; sourceTree = "<group>"; };
+		CE7F4A7B1DEFD9D0004B8AD8 /* PortfolioTempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioTempViewController.swift; sourceTree = "<group>"; };
+		CEE18FCE1DF2C65F006CBF7A /* OnBoardingStepsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingStepsViewController.swift; sourceTree = "<group>"; };
 		D706B931E10FB0317EE70FF4 /* Pods-Iceberg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iceberg.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Iceberg/Pods-Iceberg.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,9 +198,23 @@
 			isa = PBXGroup;
 			children = (
 				4C0479961DE231D8009E47DF /* BaseTransition.swift */,
+				4CBFB7251DED46C300F1B76F /* ImageZoomTransition.swift */,
 				4C0479971DE231D8009E47DF /* FadeTransition.swift */,
+				CE7F4A791DEFCF52004B8AD8 /* LightBoxTransition.swift */,
 			);
 			name = Transitions;
+			sourceTree = "<group>";
+		};
+		4C162CB11DED1C1100D7BF02 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4C162CAF1DED1BFD00D7BF02 /* Project.swift */,
+				4C162CB21DED1C3400D7BF02 /* Company.swift */,
+				4C162CB41DED1DB300D7BF02 /* Person.swift */,
+				4C162CB61DED1E8D00D7BF02 /* Portfolio.swift */,
+				4C981D8F1DF6C81600FBFAC3 /* UserData.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		4C4D13291DD430690023C9F2 = {
@@ -187,12 +245,19 @@
 				4C4D13351DD430690023C9F2 /* AppDelegate.swift */,
 				4C4D133C1DD430690023C9F2 /* Assets.xcassets */,
 				4C0479931DE2277F009E47DF /* Fonts */,
+				4C162CB11DED1C1100D7BF02 /* Models */,
 				4C04799A1DE231DD009E47DF /* Transitions */,
 				4C4D13651DD432720023C9F2 /* ViewControllers */,
 				4C4D13391DD430690023C9F2 /* Main.storyboard */,
 				4C4D133E1DD430690023C9F2 /* LaunchScreen.storyboard */,
 				4CC260741DDEF65C00726930 /* Onboarding.storyboard */,
+				4C981D861DF67A4200FBFAC3 /* Editor */,
+				4CA1F8351DF53DA300A984BC /* ProjectsCollectionViewCell.swift */,
 				4C4D13411DD430690023C9F2 /* Info.plist */,
+				CE2A11C61DE9653B00D9EFF4 /* ProjecsData.swift */,
+				CE2A11CE1DEA875500D9EFF4 /* SingleProject.swift */,
+				CE2A11D41DECC9BF00D9EFF4 /* headerTableViewCell.swift */,
+				CE147B111DF13B6800A20A9D /* FlexibleAspectImageView.swift */,
 				44C526981DE52D4F008475F2 /* Common.swift */,
 			);
 			path = Portfolio;
@@ -219,18 +284,35 @@
 		4C4D13651DD432720023C9F2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE2A11CC1DE97AFA00D9EFF4 /* ProjectsDataCell.swift */,
 				4C4D13661DD432F80023C9F2 /* ProjectDetailViewController.swift */,
 				4C4D13681DD433600023C9F2 /* InfoViewController.swift */,
 				4CC260761DDEF81A00726930 /* LoginViewController.swift */,
 				4C0479941DE22DFC009E47DF /* SignUpViewController.swift */,
+				CE0DD4431DEFB68600746BE9 /* LightBoxViewController.swift */,
 				4C04799B1DE4A652009E47DF /* Layout1ViewController.swift */,
+				CE147B131DF2A5FE00A20A9D /* OnBoardingViewController.swift */,
 				4C04799D1DE4A65D009E47DF /* Layout2ViewController.swift */,
-				4CD8AECF1DE56EB4001FA131 /* HomeViewController.swift */,
+				CEE18FCE1DF2C65F006CBF7A /* OnBoardingStepsViewController.swift */,
 				4CD8AED11DE57C5F001FA131 /* PortfolioViewController.swift */,
+				CE7F4A7B1DEFD9D0004B8AD8 /* PortfolioTempViewController.swift */,
 				4CD8AED31DE58154001FA131 /* EmptyPortfolioHomeViewController.swift */,
 				4CD8AED51DE58160001FA131 /* PortfolioHomeViewController.swift */,
+				4CA1F82B1DEF0ACD00A984BC /* DetailsViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4C981D861DF67A4200FBFAC3 /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				4CA1F82D1DF4E79300A984BC /* Editor.storyboard */,
+				4C162CAD1DECB61A00D7BF02 /* EditPortfolioViewController.swift */,
+				4CA1F82F1DF5063700A984BC /* EditorTableViewCell.swift */,
+				4C981D841DF6799700FBFAC3 /* EditorTextField.swift */,
+				4C981D871DF67A6200FBFAC3 /* EditorTextView.swift */,
+			);
+			name = Editor;
 			sourceTree = "<group>";
 		};
 		81F2F99988CD828AEEB9838E /* Frameworks */ = {
@@ -320,7 +402,6 @@
 				TargetAttributes = {
 					4C4D13311DD430690023C9F2 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = CS2CDPZ474;
 						ProvisioningStyle = Automatic;
 					};
 					4C4D13451DD430690023C9F2 = {
@@ -367,6 +448,7 @@
 				4C04798F1DE22778009E47DF /* Mosk-Bold-700.ttf in Resources */,
 				4C4D133D1DD430690023C9F2 /* Assets.xcassets in Resources */,
 				4C4D133B1DD430690023C9F2 /* Main.storyboard in Resources */,
+				4CA1F82E1DF4E79300A984BC /* Editor.storyboard in Resources */,
 				4C0479901DE22778009E47DF /* Mosk-Light-300.ttf in Resources */,
 				4C0479911DE22778009E47DF /* Mosk-Medium-500.ttf in Resources */,
 			);
@@ -531,20 +613,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2A11D51DECC9BF00D9EFF4 /* headerTableViewCell.swift in Sources */,
 				4C0479951DE22DFC009E47DF /* SignUpViewController.swift in Sources */,
+				4CA1F8361DF53DA300A984BC /* ProjectsCollectionViewCell.swift in Sources */,
+				CE2A11CD1DE97AFA00D9EFF4 /* ProjectsDataCell.swift in Sources */,
 				4C4D13361DD430690023C9F2 /* AppDelegate.swift in Sources */,
+				4C162CB71DED1E8D00D7BF02 /* Portfolio.swift in Sources */,
+				4CA1F8301DF5063700A984BC /* EditorTableViewCell.swift in Sources */,
+				4CBFB7261DED46C300F1B76F /* ImageZoomTransition.swift in Sources */,
 				4CD8AED41DE58154001FA131 /* EmptyPortfolioHomeViewController.swift in Sources */,
+				CE2A11C71DE9653B00D9EFF4 /* ProjecsData.swift in Sources */,
 				4C0479991DE231D8009E47DF /* FadeTransition.swift in Sources */,
+				CE147B141DF2A5FE00A20A9D /* OnBoardingViewController.swift in Sources */,
 				4C4D13671DD432F80023C9F2 /* ProjectDetailViewController.swift in Sources */,
+				CE2A11CF1DEA875500D9EFF4 /* SingleProject.swift in Sources */,
+				CE0DD4441DEFB68600746BE9 /* LightBoxViewController.swift in Sources */,
 				44C526991DE52D4F008475F2 /* Common.swift in Sources */,
+				4C162CB51DED1DB300D7BF02 /* Person.swift in Sources */,
 				4C0479981DE231D8009E47DF /* BaseTransition.swift in Sources */,
-				4CD8AED01DE56EB4001FA131 /* HomeViewController.swift in Sources */,
+				CE7F4A7C1DEFD9D0004B8AD8 /* PortfolioTempViewController.swift in Sources */,
 				4C04799E1DE4A65D009E47DF /* Layout2ViewController.swift in Sources */,
+				CE147B121DF13B6800A20A9D /* FlexibleAspectImageView.swift in Sources */,
+				4CA1F82C1DEF0ACD00A984BC /* DetailsViewController.swift in Sources */,
+				CE7F4A7A1DEFCF52004B8AD8 /* LightBoxTransition.swift in Sources */,
+				4C981D901DF6C81600FBFAC3 /* UserData.swift in Sources */,
+				4C981D851DF6799700FBFAC3 /* EditorTextField.swift in Sources */,
 				4C4D13691DD433600023C9F2 /* InfoViewController.swift in Sources */,
+				4C162CAE1DECB61A00D7BF02 /* EditPortfolioViewController.swift in Sources */,
 				4CC260771DDEF81A00726930 /* LoginViewController.swift in Sources */,
+				4C162CB31DED1C3400D7BF02 /* Company.swift in Sources */,
+				CEE18FCF1DF2C65F006CBF7A /* OnBoardingStepsViewController.swift in Sources */,
 				4CD8AED21DE57C5F001FA131 /* PortfolioViewController.swift in Sources */,
 				4C04799C1DE4A652009E47DF /* Layout1ViewController.swift in Sources */,
 				4CD8AED61DE58160001FA131 /* PortfolioHomeViewController.swift in Sources */,
+				4C981D881DF67A6200FBFAC3 /* EditorTextView.swift in Sources */,
+				4C162CB01DED1BFD00D7BF02 /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +720,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -666,6 +770,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -696,7 +801,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = CS2CDPZ474;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Portfolio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jmd-industries.Iceberg";
@@ -710,7 +816,8 @@
 			baseConfigurationReference = AF5B520012001077D15B80B9 /* Pods-Iceberg.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CS2CDPZ474;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Portfolio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jmd-industries.Iceberg";
@@ -723,7 +830,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5DE4672E09FC255CA1C932F8 /* Pods-IcebergTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PortfolioTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -738,7 +845,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C7D223E861A7E84470D95742 /* Pods-IcebergTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PortfolioTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -753,7 +860,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 35C1290D55BD27D1D1667FFB /* Pods-IcebergUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				INFOPLIST_FILE = PortfolioUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jmd-industries.PortfolioUITests";
@@ -767,7 +874,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 88A52097021B7C8316F08C06 /* Pods-IcebergUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				INFOPLIST_FILE = PortfolioUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jmd-industries.PortfolioUITests";
