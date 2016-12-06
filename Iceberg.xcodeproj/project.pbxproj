@@ -33,6 +33,7 @@
 		4C4D13691DD433600023C9F2 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13681DD433600023C9F2 /* InfoViewController.swift */; };
 		4C981D851DF6799700FBFAC3 /* EditorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C981D841DF6799700FBFAC3 /* EditorTextField.swift */; };
 		4C981D881DF67A6200FBFAC3 /* EditorTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C981D871DF67A6200FBFAC3 /* EditorTextView.swift */; };
+		4C981D901DF6C81600FBFAC3 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C981D8F1DF6C81600FBFAC3 /* UserData.swift */; };
 		4CA1F82C1DEF0ACD00A984BC /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1F82B1DEF0ACD00A984BC /* DetailsViewController.swift */; };
 		4CA1F82E1DF4E79300A984BC /* Editor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CA1F82D1DF4E79300A984BC /* Editor.storyboard */; };
 		4CA1F8301DF5063700A984BC /* EditorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1F82F1DF5063700A984BC /* EditorTableViewCell.swift */; };
@@ -109,6 +110,7 @@
 		4C4D13681DD433600023C9F2 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		4C981D841DF6799700FBFAC3 /* EditorTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorTextField.swift; sourceTree = "<group>"; };
 		4C981D871DF67A6200FBFAC3 /* EditorTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorTextView.swift; sourceTree = "<group>"; };
+		4C981D8F1DF6C81600FBFAC3 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		4CA1F82B1DEF0ACD00A984BC /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		4CA1F82D1DF4E79300A984BC /* Editor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Editor.storyboard; sourceTree = "<group>"; };
 		4CA1F82F1DF5063700A984BC /* EditorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorTableViewCell.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				4C162CB21DED1C3400D7BF02 /* Company.swift */,
 				4C162CB41DED1DB300D7BF02 /* Person.swift */,
 				4C162CB61DED1E8D00D7BF02 /* Portfolio.swift */,
+				4C981D8F1DF6C81600FBFAC3 /* UserData.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -633,6 +636,7 @@
 				CE147B121DF13B6800A20A9D /* FlexibleAspectImageView.swift in Sources */,
 				4CA1F82C1DEF0ACD00A984BC /* DetailsViewController.swift in Sources */,
 				CE7F4A7A1DEFCF52004B8AD8 /* LightBoxTransition.swift in Sources */,
+				4C981D901DF6C81600FBFAC3 /* UserData.swift in Sources */,
 				4C981D851DF6799700FBFAC3 /* EditorTextField.swift in Sources */,
 				4C4D13691DD433600023C9F2 /* InfoViewController.swift in Sources */,
 				4C162CAE1DECB61A00D7BF02 /* EditPortfolioViewController.swift in Sources */,
@@ -826,7 +830,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5DE4672E09FC255CA1C932F8 /* Pods-IcebergTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PortfolioTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -841,7 +845,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C7D223E861A7E84470D95742 /* Pods-IcebergTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PortfolioTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -856,7 +860,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 35C1290D55BD27D1D1667FFB /* Pods-IcebergUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				INFOPLIST_FILE = PortfolioUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jmd-industries.PortfolioUITests";
@@ -870,7 +874,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 88A52097021B7C8316F08C06 /* Pods-IcebergUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				INFOPLIST_FILE = PortfolioUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jmd-industries.PortfolioUITests";

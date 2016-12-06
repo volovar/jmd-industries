@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import RealmSwift
 
 class EditorTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionText: UITextView!
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    let realm = try! Realm()
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -56,7 +59,9 @@ extension EditorTableViewCell: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         let field = textField as! EditorTextField
         
-        mainPortfolio.companys?[field.getRow()].name = field.text!
+        try! realm.write {
+            userData.portfolios.first?.companys[field.getRow()].name = field.text!
+        }
     }
 }
 
@@ -64,6 +69,8 @@ extension EditorTableViewCell: UITextViewDelegate {
     func textViewDidEndEditing(_ textView: UITextView) {
         let view = textView as! EditorTextView
         
-        mainPortfolio.companys?[view.getRow()].description = view.text
+        try! realm.write {
+            userData.portfolios.first?.companys[view.getRow()].desc = view.text
+        }
     }
 }

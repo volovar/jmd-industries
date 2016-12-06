@@ -8,6 +8,7 @@
 
 import UIKit
 import QuartzCore
+import RealmSwift
 
 class PortfolioHomeViewController: UIViewController {
     @IBOutlet weak var mainTitle: UILabel!
@@ -68,7 +69,7 @@ class PortfolioHomeViewController: UIViewController {
     
     func setupPortfolio() {
         // set the title using our data
-        portfolioTitle.text = mainPortfolio.title
+        portfolioTitle.text = userData.portfolios.first?.title
         
         // get a snapshot of the portfolio view and set it as an image
         let viewForImage = storyboard?.instantiateViewController(withIdentifier: "PortfolioViewController")
