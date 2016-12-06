@@ -47,14 +47,9 @@
 		861E0FB0C93A0AD811BDA083 /* Pods_IcebergUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74BD51C0FA226BC599CBA20C /* Pods_IcebergUITests.framework */; };
 		B4B56B187F807CA0B43F1C69 /* Pods_Iceberg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B91198FAE9969FED1D9CB0F /* Pods_Iceberg.framework */; };
 		C930D88DCA50E49B0D7BEEF2 /* Pods_IcebergTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA1991395F70913B3891DC34 /* Pods_IcebergTests.framework */; };
-		CE03F5E11DF4D1080045FB92 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE03F5E01DF4D1080045FB92 /* iCarousel.m */; };
 		CE0DD4441DEFB68600746BE9 /* LightBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0DD4431DEFB68600746BE9 /* LightBoxViewController.swift */; };
 		CE147B121DF13B6800A20A9D /* FlexibleAspectImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE147B111DF13B6800A20A9D /* FlexibleAspectImageView.swift */; };
 		CE147B141DF2A5FE00A20A9D /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE147B131DF2A5FE00A20A9D /* OnBoardingViewController.swift */; };
-		CE15CC661DF515AE009A643D /* NewProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15CC651DF515AE009A643D /* NewProjectDetailViewController.swift */; };
-		CE15CC681DF515C8009A643D /* ProjectDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15CC671DF515C7009A643D /* ProjectDetailCell.swift */; };
-		CE15CC6A1DF515DB009A643D /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15CC691DF515DB009A643D /* CarouselCell.swift */; };
-		CE15CC6C1DF6234A009A643D /* ProjectStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15CC6B1DF6234A009A643D /* ProjectStepsViewController.swift */; };
 		CE2A11C71DE9653B00D9EFF4 /* ProjecsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A11C61DE9653B00D9EFF4 /* ProjecsData.swift */; };
 		CE2A11CD1DE97AFA00D9EFF4 /* ProjectsDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A11CC1DE97AFA00D9EFF4 /* ProjectsDataCell.swift */; };
 		CE2A11CF1DEA875500D9EFF4 /* SingleProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A11CE1DEA875500D9EFF4 /* SingleProject.swift */; };
@@ -98,7 +93,7 @@
 		4C162CAF1DED1BFD00D7BF02 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		4C162CB21DED1C3400D7BF02 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		4C162CB41DED1DB300D7BF02 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		4C162CB61DED1E8D00D7BF02 /* Resume.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resume.swift; sourceTree = "<group>"; };
+		4C162CB61DED1E8D00D7BF02 /* Portfolio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
 		4C4D13321DD430690023C9F2 /* Iceberg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iceberg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4D13351DD430690023C9F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C4D133A1DD430690023C9F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -133,16 +128,9 @@
 		AF5B520012001077D15B80B9 /* Pods-Iceberg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iceberg.release.xcconfig"; path = "Pods/Target Support Files/Pods-Iceberg/Pods-Iceberg.release.xcconfig"; sourceTree = "<group>"; };
 		C7D223E861A7E84470D95742 /* Pods-IcebergTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IcebergTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IcebergTests/Pods-IcebergTests.release.xcconfig"; sourceTree = "<group>"; };
 		CA1991395F70913B3891DC34 /* Pods_IcebergTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IcebergTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE03F5DE1DF4D1080045FB92 /* Iceberg-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Iceberg-Bridging-Header.h"; sourceTree = "<group>"; };
-		CE03F5DF1DF4D1080045FB92 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
-		CE03F5E01DF4D1080045FB92 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		CE0DD4431DEFB68600746BE9 /* LightBoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightBoxViewController.swift; sourceTree = "<group>"; };
 		CE147B111DF13B6800A20A9D /* FlexibleAspectImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexibleAspectImageView.swift; sourceTree = "<group>"; };
 		CE147B131DF2A5FE00A20A9D /* OnBoardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
-		CE15CC651DF515AE009A643D /* NewProjectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewProjectDetailViewController.swift; sourceTree = "<group>"; };
-		CE15CC671DF515C7009A643D /* ProjectDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailCell.swift; sourceTree = "<group>"; };
-		CE15CC691DF515DB009A643D /* CarouselCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
-		CE15CC6B1DF6234A009A643D /* ProjectStepsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectStepsViewController.swift; sourceTree = "<group>"; };
 		CE2A11C61DE9653B00D9EFF4 /* ProjecsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjecsData.swift; sourceTree = "<group>"; };
 		CE2A11CC1DE97AFA00D9EFF4 /* ProjectsDataCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsDataCell.swift; sourceTree = "<group>"; };
 		CE2A11CE1DEA875500D9EFF4 /* SingleProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleProject.swift; sourceTree = "<group>"; };
@@ -255,8 +243,6 @@
 			isa = PBXGroup;
 			children = (
 				4C4D13351DD430690023C9F2 /* AppDelegate.swift */,
-				CE03F5DF1DF4D1080045FB92 /* iCarousel.h */,
-				CE03F5E01DF4D1080045FB92 /* iCarousel.m */,
 				4C4D133C1DD430690023C9F2 /* Assets.xcassets */,
 				4C0479931DE2277F009E47DF /* Fonts */,
 				4C162CB11DED1C1100D7BF02 /* Models */,
@@ -273,8 +259,6 @@
 				CE2A11D41DECC9BF00D9EFF4 /* headerTableViewCell.swift */,
 				CE147B111DF13B6800A20A9D /* FlexibleAspectImageView.swift */,
 				44C526981DE52D4F008475F2 /* Common.swift */,
-				4C162CB11DED1C1100D7BF02 /* Models */,
-				CE03F5DE1DF4D1080045FB92 /* Iceberg-Bridging-Header.h */,
 			);
 			path = Portfolio;
 			sourceTree = "<group>";
@@ -306,10 +290,6 @@
 				4CC260761DDEF81A00726930 /* LoginViewController.swift */,
 				4C0479941DE22DFC009E47DF /* SignUpViewController.swift */,
 				CE0DD4431DEFB68600746BE9 /* LightBoxViewController.swift */,
-				CE15CC651DF515AE009A643D /* NewProjectDetailViewController.swift */,
-				CE15CC671DF515C7009A643D /* ProjectDetailCell.swift */,
-				CE15CC6B1DF6234A009A643D /* ProjectStepsViewController.swift */,
-				CE15CC691DF515DB009A643D /* CarouselCell.swift */,
 				4C04799B1DE4A652009E47DF /* Layout1ViewController.swift */,
 				CE147B131DF2A5FE00A20A9D /* OnBoardingViewController.swift */,
 				4C04799D1DE4A65D009E47DF /* Layout2ViewController.swift */,
@@ -318,7 +298,6 @@
 				CE7F4A7B1DEFD9D0004B8AD8 /* PortfolioTempViewController.swift */,
 				4CD8AED31DE58154001FA131 /* EmptyPortfolioHomeViewController.swift */,
 				4CD8AED51DE58160001FA131 /* PortfolioHomeViewController.swift */,
-				4C162CAD1DECB61A00D7BF02 /* EditPortfolioViewController.swift */,
 				4CA1F82B1DEF0ACD00A984BC /* DetailsViewController.swift */,
 			);
 			name = ViewControllers;
@@ -423,8 +402,6 @@
 				TargetAttributes = {
 					4C4D13311DD430690023C9F2 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = QLTD7VWVWY;
-						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					4C4D13451DD430690023C9F2 = {
@@ -641,24 +618,20 @@
 				4CA1F8361DF53DA300A984BC /* ProjectsCollectionViewCell.swift in Sources */,
 				CE2A11CD1DE97AFA00D9EFF4 /* ProjectsDataCell.swift in Sources */,
 				4C4D13361DD430690023C9F2 /* AppDelegate.swift in Sources */,
-				4C162CB71DED1E8D00D7BF02 /* Resume.swift in Sources */,
-				CE15CC6A1DF515DB009A643D /* CarouselCell.swift in Sources */,
-				CE15CC681DF515C8009A643D /* ProjectDetailCell.swift in Sources */,
+				4C162CB71DED1E8D00D7BF02 /* Portfolio.swift in Sources */,
+				4CA1F8301DF5063700A984BC /* EditorTableViewCell.swift in Sources */,
 				4CBFB7261DED46C300F1B76F /* ImageZoomTransition.swift in Sources */,
 				4CD8AED41DE58154001FA131 /* EmptyPortfolioHomeViewController.swift in Sources */,
 				CE2A11C71DE9653B00D9EFF4 /* ProjecsData.swift in Sources */,
-				CE03F5E11DF4D1080045FB92 /* iCarousel.m in Sources */,
 				4C0479991DE231D8009E47DF /* FadeTransition.swift in Sources */,
 				CE147B141DF2A5FE00A20A9D /* OnBoardingViewController.swift in Sources */,
 				4C4D13671DD432F80023C9F2 /* ProjectDetailViewController.swift in Sources */,
 				CE2A11CF1DEA875500D9EFF4 /* SingleProject.swift in Sources */,
-				CE15CC6C1DF6234A009A643D /* ProjectStepsViewController.swift in Sources */,
 				CE0DD4441DEFB68600746BE9 /* LightBoxViewController.swift in Sources */,
 				44C526991DE52D4F008475F2 /* Common.swift in Sources */,
 				4C162CB51DED1DB300D7BF02 /* Person.swift in Sources */,
 				4C0479981DE231D8009E47DF /* BaseTransition.swift in Sources */,
 				CE7F4A7C1DEFD9D0004B8AD8 /* PortfolioTempViewController.swift in Sources */,
-				CE15CC661DF515AE009A643D /* NewProjectDetailViewController.swift in Sources */,
 				4C04799E1DE4A65D009E47DF /* Layout2ViewController.swift in Sources */,
 				CE147B121DF13B6800A20A9D /* FlexibleAspectImageView.swift in Sources */,
 				4CA1F82C1DEF0ACD00A984BC /* DetailsViewController.swift in Sources */,
@@ -827,7 +800,6 @@
 			baseConfigurationReference = D706B931E10FB0317EE70FF4 /* Pods-Iceberg.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
@@ -835,8 +807,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jmd-industries.Iceberg";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Portfolio/Iceberg-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -852,7 +822,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jmd-industries.Iceberg";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Portfolio/Iceberg-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

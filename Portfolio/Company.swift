@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Company {
-    var name: String?
-    var projects: [Project]?
+class Company: Object {
+    dynamic var name = ""
+    dynamic var desc = ""
+    let projects = List<Project>()
 }

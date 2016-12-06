@@ -1,5 +1,5 @@
 //
-//  Person.swift
+//  Portfolio
 //  Iceberg
 //
 //  Created by Michael Volovar on 11/28/16.
@@ -9,8 +9,9 @@
 import Foundation
 import RealmSwift
 
-class Person: Object {
-    dynamic var name = ""
+class Portfolio: Object {
+    dynamic var person: Person?
     dynamic var title = ""
-    dynamic var desc = ""
+    let companys = List<Company>()
 }
+    

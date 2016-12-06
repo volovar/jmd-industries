@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Project {
-    var name: String?
-    var description: String?
-    var details: [Detail]?
+class Project: Object {
+    dynamic var name = ""
+    dynamic var image = ""
+    let details = List<Detail>()
 }
 
-class Detail {
-    
+class Detail: Object {
+
 }

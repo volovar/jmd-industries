@@ -98,7 +98,7 @@
 		4C162CAF1DED1BFD00D7BF02 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		4C162CB21DED1C3400D7BF02 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		4C162CB41DED1DB300D7BF02 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		4C162CB61DED1E8D00D7BF02 /* Resume.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resume.swift; sourceTree = "<group>"; };
+		4C162CB61DED1E8D00D7BF02 /* Portfolio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
 		4C4D13321DD430690023C9F2 /* Iceberg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iceberg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4D13351DD430690023C9F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C4D133A1DD430690023C9F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -318,7 +318,6 @@
 				CE7F4A7B1DEFD9D0004B8AD8 /* PortfolioTempViewController.swift */,
 				4CD8AED31DE58154001FA131 /* EmptyPortfolioHomeViewController.swift */,
 				4CD8AED51DE58160001FA131 /* PortfolioHomeViewController.swift */,
-				4C162CAD1DECB61A00D7BF02 /* EditPortfolioViewController.swift */,
 				4CA1F82B1DEF0ACD00A984BC /* DetailsViewController.swift */,
 			);
 			name = ViewControllers;
@@ -425,6 +424,7 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = QLTD7VWVWY;
 						LastSwiftMigration = 0810;
+
 						ProvisioningStyle = Automatic;
 					};
 					4C4D13451DD430690023C9F2 = {
@@ -644,6 +644,8 @@
 				4C162CB71DED1E8D00D7BF02 /* Resume.swift in Sources */,
 				CE15CC6A1DF515DB009A643D /* CarouselCell.swift in Sources */,
 				CE15CC681DF515C8009A643D /* ProjectDetailCell.swift in Sources */,
+				4C162CB71DED1E8D00D7BF02 /* Portfolio.swift in Sources */,
+				4CA1F8301DF5063700A984BC /* EditorTableViewCell.swift in Sources */,
 				4CBFB7261DED46C300F1B76F /* ImageZoomTransition.swift in Sources */,
 				4CD8AED41DE58154001FA131 /* EmptyPortfolioHomeViewController.swift in Sources */,
 				CE2A11C71DE9653B00D9EFF4 /* ProjecsData.swift in Sources */,
@@ -846,6 +848,8 @@
 			baseConfigurationReference = AF5B520012001077D15B80B9 /* Pods-Iceberg.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = QLTD7VWVWY;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Portfolio/Info.plist;
