@@ -7,15 +7,10 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Company {
-    var name: String
-    var description: String
-    var projects: [Project]?
-    
-    init(name: String, description: String, projects: [Project]?) {
-        self.name = name
-        self.description = description
-        self.projects = projects
-    }
+class Company: Object {
+    dynamic var name = ""
+    dynamic var desc = ""
+    let projects = List<Project>()
 }

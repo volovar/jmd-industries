@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class EditPortfolioViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var portfolioTitle: UITextField!
     @IBOutlet weak var editorTableView: UITableView!
+    
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +35,7 @@ class EditPortfolioViewController: UIViewController, UITableViewDataSource, UITa
     
     func setupView() {
         portfolioTitle.attributedPlaceholder = NSAttributedString(string: "Portfolio Title", attributes: [NSForegroundColorAttributeName: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)])
-        portfolioTitle.text = mainPortfolio.title
+        portfolioTitle.text = userData.portfolios.first?.title
     }
 
     //////////////////////
@@ -66,7 +69,7 @@ class EditPortfolioViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mainPortfolio.companys!.count
+        return (userData.portfolios.first?.companys.count)!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -75,9 +78,10 @@ class EditPortfolioViewController: UIViewController, UITableViewDataSource, UITa
         let description = cell.descriptionText as! EditorTextView
         
         cell.setCollectionViewDataSourceDelegate(self, forRow: indexPath.row)
-        name.text = mainPortfolio.companys?[indexPath.row].name
+        name.text = userData.portfolios.first?.companys[indexPath.row].name
         name.setRow(parentRow: indexPath.row)
-        description.text = mainPortfolio.companys?[indexPath.row].description
+        
+        description.text = userData.portfolios.first?.companys[indexPath.row].desc
         description.setRow(parentRow: indexPath.row)
         
         return cell
@@ -101,20 +105,22 @@ class EditPortfolioViewController: UIViewController, UITableViewDataSource, UITa
 
 extension EditPortfolioViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        mainPortfolio.title = textField.text
+        try! realm.write {
+            userData.portfolios.first?.title = textField.text!
+        }
     }
 }
 
 extension EditPortfolioViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (mainPortfolio.companys?[collectionView.tag].projects?.count)!
+        return (userData.portfolios.first?.companys[collectionView.tag].projects.count)!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProjectsCollectionViewCell", for: indexPath) as! ProjectsCollectionViewCell
         
-        cell.projectTitle.text = mainPortfolio.companys?[collectionView.tag].projects?[indexPath.row].name
-        cell.projectImageView.image = mainPortfolio.companys?[collectionView.tag].projects?[indexPath.row].image
+        cell.projectTitle.text = userData.portfolios.first?.companys[collectionView.tag].projects[indexPath.row].name
+        cell.projectImageView.image = UIImage(named: (userData.portfolios.first?.companys[collectionView.tag].projects[indexPath.row].image)!)
         
         return cell
     }

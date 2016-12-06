@@ -1,5 +1,5 @@
 # Uncomment this line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '9.0'
 
 target 'Iceberg' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
@@ -7,6 +7,7 @@ target 'Iceberg' do
 
   # Pods for Iceberg
   pod 'AFNetworking', '~> 3.1'
+  pod 'RealmSwift', '~> 2.1.1'
 
   target 'IcebergTests' do
     inherit! :search_paths
