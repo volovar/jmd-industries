@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="2TG-u4-JwK">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="hos-mc-cVS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1602,6 +1602,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1334"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="lightGradient" id="i7q-Af-hyN">
+                                        <rect key="frame" x="0.0" y="-126" width="375" height="1732"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logoBase4" id="ioJ-sO-Rym">
                                         <rect key="frame" x="78" y="949" width="217.99999999999994" height="153"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1668,31 +1672,24 @@
                                         <rect key="frame" x="42" y="232" width="290" height="143"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoBase5" id="1Ub-qi-N6P">
-                                                <rect key="frame" x="20" y="20" width="250" height="122.99999999999977"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icebergTypeLightBG" id="INN-qh-4Or">
+                                                <rect key="frame" x="20" y="38" width="250" height="111"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hRL-rO-LX5">
-                                                <rect key="frame" x="118.93370208726515" y="122" width="140" height="26"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="the portfolio app">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.19607843137254902" green="0.37254901960784315" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <font key="NSFont" metaFont="system" size="19"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                     </view>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow-1" id="QMT-bg-42Q">
+                                        <rect key="frame" x="174" y="612" width="25" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.83137254901960789" green="0.8784313725490196" blue="0.89411764705882357" alpha="1" colorSpace="calibratedRGB"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="arrowDown" destination="QMT-bg-42Q" id="Ikr-G2-Fp4"/>
                         <outlet property="loginView" destination="rM1-3A-b7Q" id="AlG-Ss-HbL"/>
                         <outlet property="logoBase1" destination="zlD-zl-Rx4" id="hfF-Ea-lXl"/>
                         <outlet property="logoBase2" destination="XLm-81-e4I" id="XmA-ip-lNK"/>
@@ -2071,11 +2068,12 @@
         <image name="facebook_live_spread" width="1920" height="1536"/>
         <image name="final_facebook_live" width="515" height="984"/>
         <image name="greenGradient" width="298" height="3795"/>
+        <image name="icebergTypeLightBG" width="576" height="317"/>
+        <image name="lightGradient" width="298" height="3795"/>
         <image name="logoBase1" width="791" height="637"/>
         <image name="logoBase2" width="754" height="329"/>
         <image name="logoBase3" width="754" height="329"/>
         <image name="logoBase4" width="754" height="312"/>
-        <image name="logoBase5" width="741" height="438"/>
         <image name="logoOnboardingDark" width="695" height="626"/>
         <image name="moovly" width="400" height="300"/>
         <image name="onBoardinMask" width="1440" height="1731"/>
@@ -2116,7 +2114,7 @@
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="GeC-et-E5m"/>
+        <segue reference="zMs-sg-NzF"/>
         <segue reference="Kgk-8k-aE4"/>
         <segue reference="ABy-9J-PSQ"/>
     </inferredMetricsTieBreakers>
