@@ -15,12 +15,12 @@ class LightBoxViewController: UIViewController, LightBoxTransitionDismissDelegat
     @IBOutlet weak var lightBoxBG: UIView!
     @IBOutlet weak var lightBoxImageView: UIImageView!
     @IBOutlet weak var transitionToImageView: UIImageView!
-
+    
     @IBOutlet weak var descriptionTextLabel: UILabel!
     
     @IBOutlet weak var moreBUtton: UIButton!
     @IBOutlet weak var descrBoxArrow: UIButton!
-
+    
     @IBOutlet weak var trayView: UIView!
     var image: UIImage!
     
@@ -31,7 +31,7 @@ class LightBoxViewController: UIViewController, LightBoxTransitionDismissDelegat
     var trayDown: CGPoint!
     var tappedImageCenterX: CGFloat!
     let tap = UITapGestureRecognizer()
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,25 +65,25 @@ class LightBoxViewController: UIViewController, LightBoxTransitionDismissDelegat
     @IBAction func didTapDIsmissLightBox(_ sender: UITapGestureRecognizer) {
         if  tap.numberOfTapsRequired == 1 {
             dismiss(animated: true, completion: nil)
-
+            
         }
-
+        
         
         
     }
     
     
-
+    
     func imageViewForTapped() -> UIImageView {
         return   transitionToImageView
-
+        
     }
     
     @IBAction func tapLightBoxPhoto(_ sender: UITapGestureRecognizer) {
         dismiss(animated: true, completion: nil)
     }
     
-
+    
     @IBAction func panTray(_ sender: UIPanGestureRecognizer) {
         let location = sender.location(in: view)
         
@@ -134,7 +134,7 @@ class LightBoxViewController: UIViewController, LightBoxTransitionDismissDelegat
         }
         
     }
-
+    
     
     @IBAction func didTapArrow(_ sender: Any) {
         
@@ -164,23 +164,28 @@ class LightBoxViewController: UIViewController, LightBoxTransitionDismissDelegat
             self.trayView.alpha = alphaButtons
             self.dismissButton.alpha = alphaButtons
         }
-
+        
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         
         lightBoxImageView.center.x = tappedImageCenterX
-
-        if imageScrollVIew.contentOffset.y < -120 {
-            print("dismiss on scroll")
-            lightBoxBG.isHidden = true
-            dismissButton.isHidden = true
-            trayView.isHidden = true
-            UIView.animate(withDuration: 0.4, animations: {
-                
-                self.dismiss(animated: true, completion: nil)
-                
-            })
+        if scrollView.zoomScale != 1 {
+            print("zoomed so don't segue")
+        } else if imageScrollVIew.contentOffset.y < -120 {
+            if scrollView.zoomScale != 1 {
+                print("zoomed so don't segue")
+            } else {
+                print("dismiss on scroll")
+                lightBoxBG.isHidden = true
+                dismissButton.isHidden = true
+                trayView.isHidden = true
+                UIView.animate(withDuration: 0.4, animations: {
+                    
+                    self.dismiss(animated: true, completion: nil)
+                    
+                })
+            }
             
         } else if imageScrollVIew.contentOffset.y > 120 {
             print("dismiss on scroll")
@@ -210,7 +215,7 @@ class LightBoxViewController: UIViewController, LightBoxTransitionDismissDelegat
         trayView.isHidden = true
         moreBUtton.isHidden = true
         
-
+        
         
         print("zoom began")
         
@@ -233,17 +238,17 @@ class LightBoxViewController: UIViewController, LightBoxTransitionDismissDelegat
             dismissButton.isHidden = false
             trayView.isHidden = false
             moreBUtton.isHidden = false
-           
+            
             
         }else if imageScrollVIew.zoomScale > 1.5 {
-
+            
             print("zoomScale up")
             dismissButton.isHidden = true
             trayView.isHidden = true
             moreBUtton.isHidden = true
-
+            
             imageScrollVIew.isScrollEnabled = true
-        
+            
             
             imageScrollVIew.contentSize.applying(CGAffineTransform.init(scaleX: 2, y: 2))
             imageScrollVIew.frame = CGRect(x: 0, y: 0, width: 375, height: 667)

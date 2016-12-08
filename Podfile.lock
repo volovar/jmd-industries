@@ -14,21 +14,38 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - ImagePicker (2.0.0)
   - Realm (2.1.1):
     - Realm/Headers (= 2.1.1)
   - Realm/Headers (2.1.1)
   - RealmSwift (2.1.1):
     - Realm (= 2.1.1)
+  - XLActionController (3.0.1):
+    - XLActionController/Core (= 3.0.1)
+  - XLActionController/Core (3.0.1)
+  - XLActionController/Periscope (3.0.1):
+    - XLActionController/Core
+  - XLActionController/Skype (3.0.1):
+    - XLActionController/Core
+  - XLActionController/Tweetbot (3.0.1):
+    - XLActionController/Core
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1)
+  - ImagePicker
   - RealmSwift (~> 2.1.1)
+  - XLActionController
+  - XLActionController/Periscope
+  - XLActionController/Skype
+  - XLActionController/Tweetbot
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  ImagePicker: 81175d36c2852cb543cb4f5d6c19e28f3e8d90eb
   Realm: a55959c0b171a5fe5267406d17f314fec3cefaae
   RealmSwift: 749fd955bf8d6471c21d218b9389a47aaeccfe3f
+  XLActionController: 57fe0ce1642e2eed971b188b490762345fdbf963
 
-PODFILE CHECKSUM: 07db2c8b04a8aa9c991626ae780684eab83c0d64
+PODFILE CHECKSUM: 266a29bee173d6e4cc56dc637a95c62c69958ca1
 
 COCOAPODS: 1.1.1
