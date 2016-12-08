@@ -12,6 +12,7 @@ import RealmSwift
 class Portfolio: Object {
     dynamic var person: Person?
     dynamic var title = ""
+    dynamic var coverImage = ""
     let companys = List<Company>()
 }
     

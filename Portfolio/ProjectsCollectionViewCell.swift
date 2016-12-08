@@ -9,8 +9,8 @@
 import UIKit
 
 class ProjectsCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var clippingContainer: UIView!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var projectImageView: UIImageView!
-    
     @IBOutlet weak var projectTitle: UILabel!
 }

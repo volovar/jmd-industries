@@ -13,4 +13,5 @@ class Person: Object {
     dynamic var name = ""
     dynamic var title = ""
     dynamic var desc = ""
+    dynamic var image = ""
 }
