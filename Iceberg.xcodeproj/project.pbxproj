@@ -41,9 +41,9 @@
 		4CBFB7261DED46C300F1B76F /* ImageZoomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBFB7251DED46C300F1B76F /* ImageZoomTransition.swift */; };
 		4CC260751DDEF65C00726930 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC260741DDEF65C00726930 /* Onboarding.storyboard */; };
 		4CC260771DDEF81A00726930 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC260761DDEF81A00726930 /* LoginViewController.swift */; };
-		4CD8AED21DE57C5F001FA131 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8AED11DE57C5F001FA131 /* PortfolioViewController.swift */; };
 		4CD8AED41DE58154001FA131 /* EmptyPortfolioHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8AED31DE58154001FA131 /* EmptyPortfolioHomeViewController.swift */; };
 		4CD8AED61DE58160001FA131 /* PortfolioHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8AED51DE58160001FA131 /* PortfolioHomeViewController.swift */; };
+		4CE171111DF9127B00E99985 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE171101DF9127B00E99985 /* PortfolioViewController.swift */; };
 		861E0FB0C93A0AD811BDA083 /* Pods_IcebergUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74BD51C0FA226BC599CBA20C /* Pods_IcebergUITests.framework */; };
 		B4B56B187F807CA0B43F1C69 /* Pods_Iceberg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B91198FAE9969FED1D9CB0F /* Pods_Iceberg.framework */; };
 		C930D88DCA50E49B0D7BEEF2 /* Pods_IcebergTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA1991395F70913B3891DC34 /* Pods_IcebergTests.framework */; };
@@ -125,9 +125,9 @@
 		4CBFB7251DED46C300F1B76F /* ImageZoomTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageZoomTransition.swift; sourceTree = "<group>"; };
 		4CC260741DDEF65C00726930 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		4CC260761DDEF81A00726930 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		4CD8AED11DE57C5F001FA131 /* PortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
 		4CD8AED31DE58154001FA131 /* EmptyPortfolioHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyPortfolioHomeViewController.swift; sourceTree = "<group>"; };
 		4CD8AED51DE58160001FA131 /* PortfolioHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioHomeViewController.swift; sourceTree = "<group>"; };
+		4CE171101DF9127B00E99985 /* PortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
 		5DE4672E09FC255CA1C932F8 /* Pods-IcebergTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IcebergTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IcebergTests/Pods-IcebergTests.debug.xcconfig"; sourceTree = "<group>"; };
 		74BD51C0FA226BC599CBA20C /* Pods_IcebergUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IcebergUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A52097021B7C8316F08C06 /* Pods-IcebergUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IcebergUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IcebergUITests/Pods-IcebergUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -270,7 +270,6 @@
 				4C4D133E1DD430690023C9F2 /* LaunchScreen.storyboard */,
 				4CC260741DDEF65C00726930 /* Onboarding.storyboard */,
 				4C981D861DF67A4200FBFAC3 /* Editor */,
-				4CA1F8351DF53DA300A984BC /* ProjectsCollectionViewCell.swift */,
 				4C4D13411DD430690023C9F2 /* Info.plist */,
 				CE2A11C61DE9653B00D9EFF4 /* ProjecsData.swift */,
 				CE2A11CE1DEA875500D9EFF4 /* SingleProject.swift */,
@@ -319,10 +318,10 @@
 				CE147B131DF2A5FE00A20A9D /* OnBoardingViewController.swift */,
 				4C04799D1DE4A65D009E47DF /* Layout2ViewController.swift */,
 				CEE18FCE1DF2C65F006CBF7A /* OnBoardingStepsViewController.swift */,
-				4CD8AED11DE57C5F001FA131 /* PortfolioViewController.swift */,
 				CE7F4A7B1DEFD9D0004B8AD8 /* PortfolioTempViewController.swift */,
 				4CD8AED31DE58154001FA131 /* EmptyPortfolioHomeViewController.swift */,
 				4CD8AED51DE58160001FA131 /* PortfolioHomeViewController.swift */,
+				4CE171101DF9127B00E99985 /* PortfolioViewController.swift */,
 				4CA1F82B1DEF0ACD00A984BC /* DetailsViewController.swift */,
 			);
 			name = ViewControllers;
@@ -336,6 +335,7 @@
 				4CA1F82F1DF5063700A984BC /* EditorTableViewCell.swift */,
 				4C981D841DF6799700FBFAC3 /* EditorTextField.swift */,
 				4C981D871DF67A6200FBFAC3 /* EditorTextView.swift */,
+				4CA1F8351DF53DA300A984BC /* ProjectsCollectionViewCell.swift */,
 			);
 			name = Editor;
 			sourceTree = "<group>";
@@ -662,6 +662,7 @@
 				CE0DD4441DEFB68600746BE9 /* LightBoxViewController.swift in Sources */,
 				44C526991DE52D4F008475F2 /* Common.swift in Sources */,
 				4C162CB51DED1DB300D7BF02 /* Person.swift in Sources */,
+				4CE171111DF9127B00E99985 /* PortfolioViewController.swift in Sources */,
 				4C0479981DE231D8009E47DF /* BaseTransition.swift in Sources */,
 				CE7F4A7C1DEFD9D0004B8AD8 /* PortfolioTempViewController.swift in Sources */,
 				CE15CC661DF515AE009A643D /* NewProjectDetailViewController.swift in Sources */,
@@ -676,7 +677,6 @@
 				4CC260771DDEF81A00726930 /* LoginViewController.swift in Sources */,
 				4C162CB31DED1C3400D7BF02 /* Company.swift in Sources */,
 				CEE18FCF1DF2C65F006CBF7A /* OnBoardingStepsViewController.swift in Sources */,
-				4CD8AED21DE57C5F001FA131 /* PortfolioViewController.swift in Sources */,
 				CEBAC22C1DF9018A00F759ED /* CircularTransition.swift in Sources */,
 				4C04799C1DE4A652009E47DF /* Layout1ViewController.swift in Sources */,
 				4CD8AED61DE58160001FA131 /* PortfolioHomeViewController.swift in Sources */,

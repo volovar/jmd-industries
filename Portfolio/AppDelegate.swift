@@ -72,9 +72,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //!!!! comment the section out again once the new data is created
         //!!!! this is only for development / test purposes, should be removed later
         //!!!!!!!!!!!!!!!!!
-        //try! realm.write {
-        //    realm.deleteAll()
-        //}
+//        try! realm.write {
+//            realm.deleteAll()
+//        }
         //!!!!!!!!!!!!!!!!!
         
         if realm.objects(UserData.self).count > 0 {
@@ -93,9 +93,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             realm.add(userData)
         }
         
-        let person = Person(value: ["name": "Allan Montiero", "title": "Product Designer", "desc": "Senior mobile designer, specializing in new feature development. Research, prototype, learn, build. Formerly at Facebook, Yahoo!, and Moovly."])
+        let person = Person(value: ["name": "Allan Montiero", "title": "Product Designer", "desc": "Senior mobile designer, specializing in new feature development. Research, prototype, learn, build. Formerly at Facebook, Yahoo!, and Moovly.", "image": "author_photo"])
         
-        let portfolio = Portfolio(value: ["title": "Main"])
+        let portfolio = Portfolio(value: ["title": "Main", "coverImage": "sleep_tracker"])
         
         // first company
         let fbCompany = Company(value: ["name": "Facebook, Inc", "desc": "Helped design Facebook Live. Led a team of 3 designers on a 3-month expedition to research global usage of the Like button. Worked with top-level executives to create an in-house design educational series."])
@@ -109,7 +109,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // first company projects
         let fbProject1 = Project(value: ["name": "Facebook Live", "image": "facebook_live"])
         let fbProject2 = Project(value: ["name": "Education Series", "image": "education_series"])
-        let fbProject3 = Project(value: ["name": "Project 3", "image": "facebook_live"])
+        let fbProject3 = Project(value: ["name": "Heavy FB", "image": "heavy_breathing_cat"])
         
         // second company projects
         let yahooProject1 = Project(value: ["name": "Yahoo Sleep Tracker", "image": "sleep_tracker"])
