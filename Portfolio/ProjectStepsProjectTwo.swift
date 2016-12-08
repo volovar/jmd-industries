@@ -1,37 +1,26 @@
 //
-//  ProjectStepsViewController.swift
+//  ProjectStepsProjectTwo.swift
 //  Iceberg
 //
-//  Created by user on 12/5/16.
+//  Created by user on 12/8/16.
 //  Copyright © 2016 JMD Industries. All rights reserved.
 //
 
 import UIKit
 
-class ProjectStepsViewController: UIViewController, UIScrollViewDelegate{
+class ProjectStepsProjectTwo: UIViewController, UIScrollViewDelegate{
     
     
 
-    
     @IBOutlet weak var problemIcon: UIButton!
     @IBOutlet weak var researchIcon: UIButton!
     @IBOutlet weak var developIcon: UIButton!
     @IBOutlet weak var resultIcon: UIButton!
     @IBOutlet weak var solutionIcon: UIButton!
     
-    let myRed = UIColor(red:191/255.0, green:84/255.0, blue:78/255.0, alpha: 1.0)
-    let myYellow = UIColor(red:40/255.0, green:200/255.0, blue:50/255.0, alpha: 1.0)
-    let myGreen = UIColor(red:140/255.0, green:200/255.0, blue:50/255.0, alpha: 1.0)
-    let myBlue = UIColor(red:40/255.0, green:20/255.0, blue:50/255.0, alpha: 1.0)
-    let myPurple = UIColor(red:40/255.0, green:200/255.0, blue:200/255.0, alpha: 1.0)
-    
-    
-
-
-
 
     
-  
+    
     @IBOutlet weak var viewTransitionRed: UIView!
     
     @IBOutlet weak var viewTransition: UIView!
@@ -49,20 +38,18 @@ class ProjectStepsViewController: UIViewController, UIScrollViewDelegate{
     
     
     override func viewWillAppear(_ animated: Bool) {
-    projectStepsScrollView.setContentOffset(CGPoint(x: contentOffset, y: 0), animated: false)
+        projectStepsScrollView.setContentOffset(CGPoint(x: contentOffset, y: 0), animated: false)
     }
     
     var contentOffset: CGFloat = 0
     
-
     
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
- 
 
-        
         
         projectStepsScrollView.delegate = self
         
@@ -82,23 +69,17 @@ class ProjectStepsViewController: UIViewController, UIScrollViewDelegate{
         // Do any additional setup after loading the view.
         
         // circular animation
-        
- 
-        
-        
+
         
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        projectStepsScrollView.setContentOffset(CGPoint(x: contentOffset, y: 0), animated: false)
-//    }
+
     
-  
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         print(projectStepsScrollView.contentOffset.x)
         let page: Int = Int(round(scrollView.contentOffset.x / 375))
-
+        
         if page == 0 {
             projectStepsScrollView.contentSize = CGSize(width: 1875, height: 1500)
             projectStepsScrollView.frame.size = CGSize(width: 375, height: 667)
@@ -107,7 +88,7 @@ class ProjectStepsViewController: UIViewController, UIScrollViewDelegate{
         if page == 1 {
             projectStepsScrollView.contentSize = CGSize(width: 1875, height: 900)
             projectStepsScrollView.frame.size = CGSize(width: 375, height: 667)
-
+            
         }
         if page == 2 {
             projectStepsScrollView.contentSize = CGSize(width: 1875, height: 2000)
@@ -146,25 +127,25 @@ class ProjectStepsViewController: UIViewController, UIScrollViewDelegate{
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let page: Int = Int(round(scrollView.contentOffset.x / 375))
-//        onBoardingPageControl.currentPage = page
-
+        //        onBoardingPageControl.currentPage = page
+        
         self.problemIcon.transform = CGAffineTransform.identity
         self.researchIcon.transform = CGAffineTransform.identity
         self.developIcon.transform = CGAffineTransform.identity
         self.solutionIcon.transform = CGAffineTransform.identity
         self.resultIcon.transform = CGAffineTransform.identity
-
+        
         
         if page == 0 {
             UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 1.5, options: [], animations:{
                 
                 self.problemIcon.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-
+                
             })
             { (Bool) in
-            
+                
             }
-
+            
         }
         if page == 1 {
             UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 1.5, options: [], animations:{
@@ -187,7 +168,7 @@ class ProjectStepsViewController: UIViewController, UIScrollViewDelegate{
         if page == 3 {
             UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 1.5, options: [], animations:{
                 self.solutionIcon.transform = CGAffineTransform.identity
-
+                
                 self.developIcon.transform = CGAffineTransform.identity
                 self.solutionIcon.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
             })
@@ -206,8 +187,8 @@ class ProjectStepsViewController: UIViewController, UIScrollViewDelegate{
         
     }
     
-
-
+    
+    
     
     
     override func didReceiveMemoryWarning() {
@@ -215,49 +196,47 @@ class ProjectStepsViewController: UIViewController, UIScrollViewDelegate{
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func tappedDIsmiss(_ sender: Any) {
-        self.problemIcon.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-        
-        
+    @IBAction func tappedDismiss(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+
+        
     }
     
+    
     @IBAction func tapDismissFromRed(_ sender: Any) {
-        self.problemIcon.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         
+            self.problemIcon.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+    
         dismiss(animated: true, completion: nil)
 
     }
+
     
     @IBAction func tapDismissFromYellow(_ sender: Any) {
-        self.researchIcon.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-        
+            self.researchIcon.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         dismiss(animated: true, completion: nil)
 
     }
     
     @IBAction func tapDismissFromGreen(_ sender: Any) {
-        self.developIcon.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-        
+            self.developIcon.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         dismiss(animated: true, completion: nil)
 
     }
     
     @IBAction func tapDismissFromBlue(_ sender: Any) {
-        self.solutionIcon.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-        
+            self.solutionIcon.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         dismiss(animated: true, completion: nil)
 
     }
     
     @IBAction func tapDismissFromPurple(_ sender: Any) {
-        self.resultIcon.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-        
         dismiss(animated: true, completion: nil)
 
+    self.resultIcon.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
     }
     
-
+    
     /*
      // MARK: - Navigation
      
@@ -269,3 +248,6 @@ class ProjectStepsViewController: UIViewController, UIScrollViewDelegate{
      */
     
 }
+
+
+   
