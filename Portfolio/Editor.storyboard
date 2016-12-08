@@ -104,6 +104,35 @@
                                                         <rect key="frame" x="112" y="117" width="150" height="150"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </imageView>
+                                                    <view alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gwg-wL-dMb">
+                                                        <rect key="frame" x="112" y="117" width="150" height="164"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZ5-pA-0kH">
+                                                                <rect key="frame" x="50" y="55" width="50" height="50"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <state key="normal" title="Button" image="cameraBW"/>
+                                                                <connections>
+                                                                    <action selector="didPressprofilePic:" destination="fAg-e9-QiN" eventType="touchUpInside" id="k8s-2E-KWT"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="add photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPO-aq-m11">
+                                                                <rect key="frame" x="35" y="152" width="79" height="21"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </view>
+                                                    <button opaque="NO" alpha="0.69999998807907104" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2D-mt-7Zj">
+                                                        <rect key="frame" x="15" y="18" width="25" height="25"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button" image="cameraBW"/>
+                                                        <connections>
+                                                            <action selector="didPressHeaderPic:" destination="fAg-e9-QiN" eventType="touchUpInside" id="rt8-2h-csA"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
@@ -230,8 +259,10 @@
                         <outlet property="authorName" destination="l4b-lA-nM1" id="fQ4-TT-on8"/>
                         <outlet property="authorTitle" destination="ter-Sn-HGp" id="pcN-dX-RGX"/>
                         <outlet property="coverImage" destination="8c4-F0-7v8" id="6Lv-OV-L0S"/>
+                        <outlet property="coverImageButton" destination="V2D-mt-7Zj" id="v6P-L9-PH1"/>
                         <outlet property="editorTableView" destination="ZJ3-7S-Zib" id="LeW-RK-5aG"/>
                         <outlet property="portfolioTitle" destination="s6e-mr-itv" id="Yik-Hg-9F2"/>
+                        <outlet property="profileImageButton" destination="BZ5-pA-0kH" id="S5d-Yc-c3e"/>
                         <outlet property="scrollContentView" destination="nPD-v6-Ccc" id="hmp-5r-3Ys"/>
                         <outlet property="scrollView" destination="Idz-Bo-xgf" id="ecm-MQ-WKi"/>
                     </connections>
@@ -241,4 +272,7 @@
             <point key="canvasLocation" x="-52" y="58.47076461769116"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cameraBW" width="409" height="409"/>
+    </resources>
 </document>

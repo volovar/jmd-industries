@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import XLActionController
 
 class EditPortfolioViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var portfolioTitle: UITextField!
@@ -20,6 +21,12 @@ class EditPortfolioViewController: UIViewController, UITableViewDataSource, UITa
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollContentView: UIView!
     
+    // image picker outlets and variables
+    @IBOutlet weak var coverImageButton: UIButton!
+    @IBOutlet weak var profileImageButton: UIButton!
+    var imagePicked = 0
+    
+    // realm and data
     let realm = try! Realm()
     let portfolio = userData.portfolios[0]
     
@@ -208,5 +215,157 @@ extension EditPortfolioViewController: UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Collection view at row \(collectionView.tag) selected index path \(indexPath)")
+    }
+}
+
+extension EditPortfolioViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    //////////////////////
+    // image picker
+    //////////////////////
+    @IBAction func didPressprofilePic(_ sender: UIButton) {
+        self.imagePicked = (sender as AnyObject).tag
+        
+        let actionController = SkypeActionController()
+        
+        actionController.addAction(Action("Camera", style: .default, handler: { action in
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.camera; imagePicker.allowsEditing = false
+            
+            self.present(imagePicker, animated: true, completion: nil)
+            print("cameraButtonAccessed")
+            
+        }))
+        
+        actionController.addAction(Action("Gallery", style: .default, handler: { action in
+            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
+                let imagePicker = UIImagePickerController()
+                imagePicker.delegate = self
+                imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary; imagePicker.allowsEditing = true
+                
+                
+                self.present(imagePicker, animated: true, completion: nil)
+            }
+        }))
+        
+        actionController.addSection(Section())
+        actionController.addAction(Action("Cancel", style: .cancel, handler:nil))
+        present(actionController, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func didPressHeaderPic(_ sender: UIButton) {
+        imagePicked = (sender as AnyObject).tag
+        
+        let actionController = TweetbotActionController()
+        actionController.addAction(Action("Camera", style: .default, handler: { action in
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.camera; imagePicker.allowsEditing = false
+            
+            self.present(imagePicker, animated: true, completion: nil)
+            print("cameraButtonAccessed")
+            
+        }))
+        
+        actionController.addAction(Action("Gallery", style: .default, handler: { action in
+            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
+                let imagePicker = UIImagePickerController()
+                imagePicker.delegate = self
+                imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary; imagePicker.allowsEditing = true
+                
+                self.present(imagePicker, animated: true, completion: nil)
+            }
+        }))
+        
+        actionController.addSection(Section())
+        actionController.addAction(Action("Cancel", style: .cancel, handler:nil))
+        present(actionController, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage pickedImage: UIImage!, editingInfo: [NSObject :   AnyObject]!) {
+        
+        if imagePicked == 1 {
+            authorImage.image = pickedImage
+        } else {
+            coverImage.image = pickedImage
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func tapToChangeProfilePic(_ sender: UITapGestureRecognizer) {
+        
+        let actionController = SkypeActionController()
+        
+        actionController.addAction(Action("Camera", style: .default, handler: { action in
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.camera; imagePicker.allowsEditing = false
+            
+            self.present(imagePicker, animated: true, completion: nil)
+            print("cameraButtonAccessed")
+            
+        }))
+        
+        actionController.addAction(Action("Gallery", style: .default, handler: { action in
+            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
+                let imagePicker = UIImagePickerController()
+                imagePicker.delegate = self
+                imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary; imagePicker.allowsEditing = true
+                
+                
+                self.present(imagePicker, animated: true, completion: nil)
+            }
+        }))
+        
+        actionController.addSection(Section())
+        actionController.addAction(Action("Cancel", style: .cancel, handler:nil))
+        present(actionController, animated: true, completion: nil)
+    }
+    
+    @IBAction func tapToChangeHeader(_ sender: Any) {
+        let actionController = TweetbotActionController()
+        actionController.addAction(Action("Camera", style: .default, handler: { action in
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.camera; imagePicker.allowsEditing = false
+            
+            self.present(imagePicker, animated: true, completion: nil)
+            print("cameraButtonAccessed")
+            
+        }))
+        
+        actionController.addAction(Action("Gallery", style: .default, handler: { action in
+            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
+                let imagePicker = UIImagePickerController()
+                imagePicker.delegate = self
+                imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary; imagePicker.allowsEditing = true
+                
+                self.present(imagePicker, animated: true, completion: nil)
+            }
+        }))
+        
+        actionController.addSection(Section())
+        actionController.addAction(Action("Cancel", style: .cancel, handler:nil))
+        present(actionController, animated: true, completion: nil)
+    }
+    
+    func saveImage (image: UIImage) {
+        let finalImage = image
+        
+        let nsDocumentDirectory = FileManager.SearchPathDirectory.documentDirectory
+        let nsUserDomainMask = FileManager.SearchPathDomainMask.userDomainMask
+//        if let paths = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true) {
+//            
+//            if paths.count > 0 {
+//                if let dirPath = paths[0] as? String {
+//                    let readPath = dirPath.stringByAppendingPathComponent("Image.png")
+//                    let image = UIImage(named: readPath)
+//                    let writePath = dirPath.stringByAppendingPathComponent("Image2.png")
+//                    UIImagePNGRepresentation(self.finalImage).writeToFile(writePath, atomically: true)
+//                } 
+//            }
+//        }
     }
 }
