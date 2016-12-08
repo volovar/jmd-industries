@@ -8,6 +8,14 @@ target 'Iceberg' do
   # Pods for Iceberg
   pod 'AFNetworking', '~> 3.1'
   pod 'RealmSwift', '~> 2.1.1'
+pod 'ImagePicker'
+pod 'XLActionController'
+pod 'XLActionController/Periscope'
+pod 'XLActionController/Skype'
+pod 'XLActionController/Tweetbot'
+
+
+
 
   target 'IcebergTests' do
     inherit! :search_paths
