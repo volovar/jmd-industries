@@ -36,6 +36,10 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Take Picture</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Update Portfolio</string>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleDefault</string>
 	<key>UISupportedInterfaceOrientations</key>

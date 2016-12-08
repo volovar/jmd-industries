@@ -31,7 +31,6 @@ extension ProjectDetailViewController: UIPageViewControllerDataSource {
         
         let currentIndex = pages.index(of: viewController)!
         
-        // prevents page wrap around
         guard currentIndex > 0 else {
             return nil
         }

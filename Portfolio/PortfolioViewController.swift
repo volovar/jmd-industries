@@ -11,6 +11,11 @@ import UIKit
 class PortfolioViewController: UIViewController {
     var fadeTransition: FadeTransition!
     
+    // grab the first portfolio from the data
+    let portfolio = userData.portfolios[0]
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     //Wireframe items
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -45,39 +50,19 @@ class PortfolioViewController: UIViewController {
     @IBOutlet weak var facebookTitle: UILabel!
     @IBOutlet weak var facebookDescription: UITextView!
     
-    @IBOutlet weak var facebookLiveSuperView: UIView!
-    @IBOutlet weak var facebookLive: UIImageView!
-    @IBOutlet weak var facebookLiveLabel: UILabel!
-    
-    @IBOutlet weak var educationSeriesSuperView: UIView!
-    @IBOutlet weak var educationSeries: UIImageView!
-    @IBOutlet weak var facebookEducationSeries: UILabel!
-    
     // Yahoo!
     @IBOutlet weak var yahooTitle: UILabel!
     @IBOutlet weak var yahooDescription: UITextView!
-    
-    
-    @IBOutlet weak var yahooProjectSuperView: UIView!
-    @IBOutlet weak var yahooProject: UIImageView!
-    @IBOutlet weak var yahooProjectTitle: UILabel!
     
     // Moovly
     @IBOutlet weak var moovlyTitle: UILabel!
     @IBOutlet weak var moovlyDescription: UITextView!
     
-    
-    @IBOutlet weak var moovlySuperView: UIView!
-    @IBOutlet weak var moovlyProject: UIImageView!
-    @IBOutlet weak var moovlyProjectLabel: UILabel!
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print ("viewDidLoad has executed")
+        collectionView.delegate = self
+        collectionView.dataSource = self
         
         /////////////////////////////////
         ///// Author Images Section /////
@@ -85,14 +70,14 @@ class PortfolioViewController: UIViewController {
         
         // Assign hero image
         
-        heroImageView.image = #imageLiteral(resourceName: "sleep_tracker")
+        heroImageView.image = UIImage(named: portfolio.coverImage)
         heroImageView.contentMode = UIViewContentMode.scaleAspectFill
         heroImageView.clipsToBounds = true
         
         
         // Author profile image styling
         
-        authorProfileImageView.image = #imageLiteral(resourceName: "author_photo")
+        authorProfileImageView.image = UIImage(named: (portfolio.person?.image)!)
         authorProfileImageView.frame.size = CGSize(width: 150, height: 150)
         
         // Create a circle by rounding the corners to half the imageView width
@@ -113,7 +98,7 @@ class PortfolioViewController: UIViewController {
         
         // Author name styling
         
-        let authorNameAttributedString = NSMutableAttributedString(string: authorNameLabel.text!)
+        let authorNameAttributedString = NSMutableAttributedString(string: (portfolio.person?.name)!.uppercased())
         
         // Adjust name kerning
         authorNameAttributedString.addAttribute(NSKernAttributeName, value: CGFloat(1.7), range: NSRange(location: 0, length: authorNameAttributedString.length))
@@ -131,15 +116,15 @@ class PortfolioViewController: UIViewController {
         
         authorDescriptionAttributes = [NSParagraphStyleAttributeName: authorDescriptionParagraphStyle]
         
-        let authorTitleText = "Product Designer"
+        let authorTitleText = portfolio.person?.title
         
-        authorTitle.attributedText = NSAttributedString(string: authorTitleText, attributes: authorDescriptionAttributes)
+        authorTitle.attributedText = NSAttributedString(string: authorTitleText!, attributes: authorDescriptionAttributes)
         authorTitle.font = authorTitle.font?.withSize(18)
         authorTitle.textColor = midGrey
         
-        let authorDescriptionText = "Senior mobile designer, specializing in new feature development. Research, prototype, learn, build. Formerly at Facebook, Yahoo!, and Moovly."
+        let authorDescriptionText = portfolio.person?.desc
         
-        authorDescription.attributedText = NSAttributedString(string: authorDescriptionText, attributes: authorDescriptionAttributes)
+        authorDescription.attributedText = NSAttributedString(string: authorDescriptionText!, attributes: authorDescriptionAttributes)
         authorDescription.font = authorDescription.font?.withSize(18)
         authorDescription.textColor = midGrey
         
@@ -149,48 +134,27 @@ class PortfolioViewController: UIViewController {
         ///////////////////////////////
         
         // Global line spacing for company desriptions
-        
         companyDescriptionStyle = NSMutableParagraphStyle()
         companyDescriptionStyle.lineSpacing = 1.5
         companyDescriptionAttributes = [NSParagraphStyleAttributeName: companyDescriptionStyle]
         
-        
         // Facebook
-        
-        let facebookDescriptionText = "Helped design Facebook Live. Led a team of 3 designers on a 3-month expedition to research global usage of the Like button. Worked with top-level executives to create an in-house design educational series."
-        
+        let facebookDescriptionText = portfolio.companys[0].desc
         styleCompanyParagraphs(companyDescription: facebookDescription, companyDescriptionText: facebookDescriptionText)
-        
-        setImage(imageView: facebookLive, image: #imageLiteral(resourceName: "facebook_live"))
-        addImageShadow(imageSuperView: facebookLiveSuperView)
-        
-        setImage(imageView: educationSeries, image: #imageLiteral(resourceName: "education_series"))
-        addImageShadow(imageSuperView: educationSeriesSuperView)
-        
+        facebookTitle.text = portfolio.companys[0].name
         
         // Yahoo
-        
-        let yahooDescriptionText = "Worked with VP of Product to design a new sleep tracker feature. Updated large portions of Yahoo! Answers to conform with modern design principles. Increased overall engagement by 6% through implementing cutting-edge information architecture techniques."
-        
+        let yahooDescriptionText = portfolio.companys[1].desc
         styleCompanyParagraphs(companyDescription: yahooDescription, companyDescriptionText: yahooDescriptionText)
-        
-        setImage(imageView: yahooProject, image: #imageLiteral(resourceName: "sleep_tracker"))
-        addImageShadow(imageSuperView: yahooProjectSuperView)
-        
+        yahooTitle.text = portfolio.companys[1].name
         
         // Moovly
-        
-        let moovlyDescriptionText = "Built an app for bovine relocation services. App summons relocator trucks to any spot in the world, inlcuding Antarctica. Adoption was nearly 100% in Central California. Incporporated tag-tracking and hoof-print ID to ensure cows were never lost."
-        
+        let moovlyDescriptionText = portfolio.companys[2].desc
         styleCompanyParagraphs(companyDescription: moovlyDescription, companyDescriptionText: moovlyDescriptionText)
-        
-        setImage(imageView: moovlyProject, image: #imageLiteral(resourceName: "moovly"))
-        addImageShadow(imageSuperView: moovlySuperView)
-        
+        moovlyTitle.text = portfolio.companys[2].name
         
         // Scroll view
-        
-        scrollView.contentSize = CGSize(width: 375, height: 3600)
+        scrollView.contentSize = CGSize(width: 375, height: 2060)
         
         
     } // end viewDidLoad
@@ -263,3 +227,36 @@ class PortfolioViewController: UIViewController {
     }
     
 } // end class
+
+extension PortfolioViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return (userData.portfolios.first?.companys[collectionView.tag].projects.count)!
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProjectsCollectionViewCell", for: indexPath) as! ProjectsCollectionViewCell
+        
+        cell.clippingContainer.layer.cornerRadius = 4
+        cell.layer.cornerRadius = 4
+        cell.layer.masksToBounds = false
+        cell.layer.shadowOpacity = 0.3
+        cell.layer.shadowRadius = 4
+        cell.layer.shadowOffset = CGSize.zero
+        cell.layer.shadowPath = UIBezierPath(rect: cell.bounds).cgPath
+        cell.layer.shouldRasterize = true
+        
+        cell.projectTitle.text = userData.portfolios.first?.companys[collectionView.tag].projects[indexPath.row].name
+        cell.projectImageView.image = UIImage(named: (userData.portfolios.first?.companys[collectionView.tag].projects[indexPath.row].image)!)
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Collection view at row \(collectionView.tag) selected index path \(indexPath)")
+        
+        if indexPath.row == 0 {
+            performSegue(withIdentifier: "segueToDetailsView", sender: nil)
+        }
+    }
+}
+
