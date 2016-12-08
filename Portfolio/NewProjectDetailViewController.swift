@@ -274,9 +274,10 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
         var imageView: UIImageView!
         
         if view == nil {
-            imageView = UIImageView(frame: CGRect(x: 0, y: -50, width: 270, height: 300))
+            imageView = UIImageView(frame: CGRect(x: 0, y: 10, width: 350, height: 250))
             
             imageView.contentMode = UIViewContentMode.scaleAspectFill
+            imageView.clipsToBounds = true
             
         } else {
             imageView = view as! UIImageView
@@ -292,7 +293,7 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
     
     func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
         if option == iCarouselOption.spacing {
-            return 0.7
+            return 0.8
         }
         return value
     }
@@ -338,6 +339,8 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
         } else if segue.identifier == "segueGreenTransition" {
             let destinationViewController = segue.destination as! ProjectStepsViewController
             destinationViewController.transitioningDelegate = self
+            transition.startingPoint = greenTransitionButton.center
+            transition.circleColor = greenTransitionButton.backgroundColor!
             destinationViewController.modalPresentationStyle = .custom
             
             showGreenButton.isHidden = false
@@ -345,11 +348,13 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
                 
                 self.greenTransitionButton.isHidden = true
             }
-            destinationViewController.contentOffset = 375
+            destinationViewController.contentOffset = 750
         
         } else if segue.identifier == "segueBlueTransition" {
             let destinationViewController = segue.destination as! ProjectStepsViewController
             destinationViewController.transitioningDelegate = self
+            transition.startingPoint = blueTransitionButton.center
+            transition.circleColor = blueTransitionButton.backgroundColor!
             destinationViewController.modalPresentationStyle = .custom
             
             showBlueButton.isHidden = false
@@ -357,19 +362,21 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
                 
                 self.blueTransitionButton.isHidden = true
             }
-            destinationViewController.contentOffset = 375
+            destinationViewController.contentOffset = 1125
             
         } else if segue.identifier == "seguePurpleTransition" {
             let destinationViewController = segue.destination as! ProjectStepsViewController
             destinationViewController.transitioningDelegate = self
+            transition.startingPoint = purpleTransitionButton.center
+            transition.circleColor = purpleTransitionButton.backgroundColor!
             destinationViewController.modalPresentationStyle = .custom
             
-            purpleTransitionButton.isHidden = false
+            showPurpleButton.isHidden = false
             UIView.animate(withDuration: 1){
                 
                 self.purpleTransitionButton.isHidden = true
             }
-            destinationViewController.contentOffset = 375
+            destinationViewController.contentOffset = 1500
         }
     }
     

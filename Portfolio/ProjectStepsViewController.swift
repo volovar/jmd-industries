@@ -14,7 +14,9 @@ class ProjectStepsViewController: UIViewController, UIScrollViewDelegate{
     @IBOutlet weak var dismissFromRed: UIButton!
     
     @IBOutlet weak var dismissFromYellow: UIButton!
-    
+        @IBOutlet weak var dismissFromGreen: UIButton!
+        @IBOutlet weak var dismissFromBlue: UIButton!
+        @IBOutlet weak var dismissFromPurple: UIButton!
     
 
     
@@ -23,6 +25,12 @@ class ProjectStepsViewController: UIViewController, UIScrollViewDelegate{
     @IBOutlet weak var developIcon: UIButton!
     @IBOutlet weak var resultIcon: UIButton!
     @IBOutlet weak var solutionIcon: UIButton!
+    
+    let myRed = UIColor(red:191/255.0, green:84/255.0, blue:78/255.0, alpha: 1.0)
+    let myYellow = UIColor(red:40/255.0, green:200/255.0, blue:50/255.0, alpha: 1.0)
+    let myGreen = UIColor(red:140/255.0, green:200/255.0, blue:50/255.0, alpha: 1.0)
+    let myBlue = UIColor(red:40/255.0, green:20/255.0, blue:50/255.0, alpha: 1.0)
+    let myPurple = UIColor(red:40/255.0, green:200/255.0, blue:200/255.0, alpha: 1.0)
     
     
 
@@ -53,8 +61,7 @@ class ProjectStepsViewController: UIViewController, UIScrollViewDelegate{
     
     var contentOffset: CGFloat = 0
     
-    let myRed = UIColor(red:191/255.0, green:84/255.0, blue:78/255.0, alpha: 1.0)
-    let myYellow = UIColor(red:40/255.0, green:200/255.0, blue:50/255.0, alpha: 1.0)
+
     
 
     override func viewDidLoad() {
@@ -62,6 +69,10 @@ class ProjectStepsViewController: UIViewController, UIScrollViewDelegate{
         
         dismissFromYellow.isHidden = true
         dismissFromRed.isHidden = true
+        dismissFromGreen.isHidden = true
+        dismissFromBlue.isHidden = true
+        dismissFromPurple.isHidden = true
+
         
         
         projectStepsScrollView.delegate = self
@@ -90,6 +101,20 @@ class ProjectStepsViewController: UIViewController, UIScrollViewDelegate{
         dismissFromYellow.layer.cornerRadius = 0.5 * dismissFromYellow.bounds.size.width
         dismissFromYellow.layer.borderWidth = 3
         dismissFromYellow.layer.borderColor = myYellow.cgColor
+        
+        dismissFromGreen.layer.cornerRadius = 0.5 * dismissFromGreen.bounds.size.width
+        dismissFromGreen.layer.borderWidth = 3
+        dismissFromGreen.layer.borderColor = myGreen.cgColor
+        
+        dismissFromBlue.layer.cornerRadius = 0.5 * dismissFromBlue.bounds.size.width
+        dismissFromBlue.layer.borderWidth = 3
+        dismissFromBlue.layer.borderColor = myBlue.cgColor
+        
+        dismissFromPurple.layer.cornerRadius = 0.5 * dismissFromPurple.bounds.size.width
+        dismissFromPurple.layer.borderWidth = 3
+        dismissFromPurple.layer.borderColor = myPurple.cgColor
+        
+        
         
     }
     
@@ -219,14 +244,16 @@ class ProjectStepsViewController: UIViewController, UIScrollViewDelegate{
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func showDismissFromRed(_ sender: Any) {
-        dismissFromRed.isHidden = false
-    }
-    
     @IBAction func tappedDIsmiss(_ sender: Any) {
         
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func showDismissFromRed(_ sender: Any) {
+        dismissFromRed.isHidden = false
+    }
+    
+ 
     
     @IBAction func tapDismissFromRed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -245,7 +272,43 @@ class ProjectStepsViewController: UIViewController, UIScrollViewDelegate{
     }
 
     
-      
+    @IBAction func showDismissFromGreen(_ sender: Any) {
+        
+        dismissFromGreen.isHidden = false
+
+        
+    }
+    
+    @IBAction func tapDismissFromGreen(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        
+        dismissFromGreen.isHidden = true
+    }
+    
+    @IBAction func showDismissFromBlue(_ sender: Any) {
+        
+        dismissFromBlue.isHidden = false
+    }
+    
+    @IBAction func tapDismissFromBlue(_ sender: Any) {
+        dismissFromPurple.isHidden = true
+
+        dismiss(animated: true, completion: nil)
+
+    }
+    
+    @IBAction func showDismissFromPurple(_ sender: Any) {
+        dismissFromPurple.isHidden = false
+
+  
+    }
+    
+    @IBAction func tapDismissFromPurple(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        
+        dismissFromPurple.isHidden = true
+    }
+    
     /*
      // MARK: - Navigation
      
