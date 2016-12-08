@@ -10,19 +10,29 @@ import UIKit
 
 
 
-class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, iCarouselDataSource, iCarouselDelegate, UIScrollViewDelegate {
+class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, iCarouselDataSource, iCarouselDelegate, UIScrollViewDelegate, UIViewControllerTransitioningDelegate {
+    
+    
+
+    
+    var tagButtonPressed = 0
+    
+    let transition = CircularTransition()
     
     override func viewWillAppear(_ animated: Bool) {
         self.headerTitle.alpha = 0
-
+        
+        
     }
     
     struct StretchyHeader {
         
-        fileprivate let headerHeight: CGFloat = 350
+        fileprivate let headerHeight: CGFloat = 330
         fileprivate let headerCut: CGFloat = 0
         
     }
+    
+    
     
     var containerImages: [UIImage] = [UIImage(named: "app_screen")!,UIImage(named: "education_series")!,UIImage(named: "facebook_live")!, UIImage(named: "sassRed")!, UIImage(named: "sassFinal")!]
     
@@ -30,51 +40,138 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
     var newHeaderLayer: CAShapeLayer!
     
     var headerTitleOriginalY: CGFloat!
-
+    
     @IBOutlet weak var headerTitle: UIView!
     @IBOutlet weak var tableVIew: UITableView!
-   
+    @IBOutlet weak var redTransitionButton: UIButton!
+    @IBOutlet weak var showTransitionButton: UIButton!
+    
+    @IBOutlet weak var yellowTransitionButton: UIButton!
+    @IBOutlet weak var showYellowButton: UIButton!
+
+    @IBOutlet weak var greenTransitionButton: UIButton!
+    @IBOutlet weak var showGreenButton: UIButton!
+    
+    @IBOutlet weak var blueTransitionButton: UIButton!
+    @IBOutlet weak var showBlueButton: UIButton!
+    
+    @IBOutlet weak var purpleTransitionButton: UIButton!
+    @IBOutlet weak var showPurpleButton: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         tableVIew.delegate = self
         tableVIew.dataSource = self
         tableVIew.contentSize = CGSize(width: 375, height: 1000)
         tableVIew.frame.size = CGSize(width: 375, height: 667)
         updateView()
         
+        
+        // transition red
+        
+        redTransitionButton.layer.cornerRadius = 0.5 * redTransitionButton.bounds.size.width
+        redTransitionButton.layer.borderWidth = 2
+        redTransitionButton.layer.borderColor = white.cgColor
+        showTransitionButton.isHidden = false
+        redTransitionButton.isHidden = true
+        
+        yellowTransitionButton.layer.cornerRadius = 0.5 * yellowTransitionButton.bounds.size.width
+        yellowTransitionButton.layer.borderWidth = 2
+        yellowTransitionButton.layer.borderColor = white.cgColor
+        showYellowButton.isHidden = false
+        yellowTransitionButton.isHidden = true
+        
+        greenTransitionButton.layer.cornerRadius = 0.5 * greenTransitionButton.bounds.size.width
+        greenTransitionButton.layer.borderWidth = 2
+        greenTransitionButton.layer.borderColor = white.cgColor
+        showGreenButton.isHidden = false
+        greenTransitionButton.isHidden = true
+        
+        showBlueButton.isHidden = false
+        blueTransitionButton.isHidden = true
+        blueTransitionButton.layer.cornerRadius = 0.5 * blueTransitionButton.bounds.size.width
+        blueTransitionButton.layer.borderWidth = 2
+        blueTransitionButton.layer.borderColor = white.cgColor
+        
+        showPurpleButton.isHidden = false
+        purpleTransitionButton.isHidden = true
+        purpleTransitionButton.layer.cornerRadius = 0.5 * purpleTransitionButton.bounds.size.width
+        purpleTransitionButton.layer.borderWidth = 2
+        purpleTransitionButton.layer.borderColor = white.cgColor
     }
     
     
-
+    @IBAction func showRedButton(_ sender: Any) {
+        redTransitionButton.isHidden = false
+        showTransitionButton.isHidden = true
+    }
     
-     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    
+    @IBAction func showYellow(_ sender: Any) {
+        showYellowButton.isHidden = true
+        yellowTransitionButton.isHidden = false
+    }
+    
+    @IBAction func showGreen(_ sender: Any) {
+        showGreenButton.isHidden = true
+        greenTransitionButton.isHidden = false
+    }
+    
+    @IBAction func showBlue(_ sender: Any) {
+        showBlueButton.isHidden = true
+        blueTransitionButton.isHidden = false
+    }
+    
+    @IBAction func showPurple(_ sender: Any) {
+            showPurpleButton.isHidden = true
+            purpleTransitionButton.isHidden = false
+    }
+      
+    
+    
+    
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         print(tableVIew.contentOffset.y)
+        
+        
         if tableVIew.contentOffset.y >= -22 {
             
-                tableVIew.contentOffset.y = -22
-            }
+            tableVIew.contentOffset.y = -22
+        }
         
         if tableVIew.contentOffset.y >= -40 {
             UIView.animate(withDuration: 1){
                 
                 self.headerTitle.alpha = 0.8
-                
-            }
+                }
+            
+        } else if tableVIew.contentOffset.y <= -40 && tableVIew.contentOffset.y > -125 {
+            showTransitionButton.isHidden = true
+            showYellowButton.isHidden = true
+            showGreenButton.isHidden = true
+            showBlueButton.isHidden = true
+            showPurpleButton.isHidden = true
+            
         } else {
+            showTransitionButton.isHidden = false
+            showYellowButton.isHidden = false
+            showGreenButton.isHidden = false
+            showBlueButton.isHidden = false
+            showPurpleButton.isHidden = false
+            
             UIView.animate(withDuration: 1){
-                
                 self.headerTitle.alpha = 0
-
+                
                 
             }
         }
-
-
         
-        
- 
         setNewView()
-
+        
     }
     
     func updateView(){
@@ -122,19 +219,20 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
         
     }
     
-     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 350
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 340
+        
     }
-
+    
     func tableView(_ tableView: UITableView, estimatedHeightForFooterInSection section: Int) -> CGFloat {
         return UITableViewAutomaticDimension
-
+        
     }
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
     }
-
+    
     
     
     
@@ -150,21 +248,21 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
         
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell") as! ProjectDetailCell
-             cell.selectionStyle = .none
+            cell.selectionStyle = .none
             return cell
-
+            
         } else {
             let cell2 = tableView.dequeueReusableCell(withIdentifier: "carouselCell") as! CarouselCell
             cell2.carouselContainer.type = .coverFlow2
-             cell2.selectionStyle = .none
+            cell2.selectionStyle = .none
             
             return cell2
         }
-
-
+        
+        
     }
     
-
+    
     
     
     func numberOfItems(in carousel: iCarousel) -> Int {
@@ -176,10 +274,11 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
         var imageView: UIImageView!
         
         if view == nil {
-            imageView = UIImageView(frame: CGRect(x: 0, y: -50, width: 270, height: 270))
-
-            imageView.contentMode = UIViewContentMode.scaleAspectFit
-
+            imageView = UIImageView(frame: CGRect(x: 0, y: 10, width: 350, height: 250))
+            
+            imageView.contentMode = UIViewContentMode.scaleAspectFill
+            imageView.clipsToBounds = true
+            
         } else {
             imageView = view as! UIImageView
         }
@@ -194,33 +293,167 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
     
     func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
         if option == iCarouselOption.spacing {
-            return 1
+            return 0.8
         }
         return value
     }
-
-
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueFromResearch" {
-            // set up the transition
+        if segue.identifier == "segueRedTransition" {
             let destinationViewController = segue.destination as! ProjectStepsViewController
+            destinationViewController.transitioningDelegate = self
+            destinationViewController.modalPresentationStyle = .custom
+            transition.startingPoint = redTransitionButton.center
+            transition.circleColor = redTransitionButton.backgroundColor!
+            
+            showTransitionButton.isHidden = false
+            UIView.animate(withDuration: 1){
+                self.redTransitionButton.isHidden = true
+            }
+            
+            
+       
+        } else if segue.identifier == "segueYellowTransition" {
+            let destinationViewController = segue.destination as! ProjectStepsViewController
+            destinationViewController.transitioningDelegate = self
+            destinationViewController.modalPresentationStyle = .custom
+            transition.startingPoint = yellowTransitionButton.center
+            transition.circleColor = yellowTransitionButton.backgroundColor!
+            showYellowButton.isHidden = false
+            UIView.animate(withDuration: 1){
+                
+                self.yellowTransitionButton.isHidden = true
+            }
+            destinationViewController.contentOffset = 375
+            
+        } else if segue.identifier == "segueGreenTransition" {
+            let destinationViewController = segue.destination as! ProjectStepsViewController
+            destinationViewController.transitioningDelegate = self
+            transition.startingPoint = greenTransitionButton.center
+            transition.circleColor = greenTransitionButton.backgroundColor!
+            destinationViewController.modalPresentationStyle = .custom
+            
+            showGreenButton.isHidden = false
+            UIView.animate(withDuration: 1){
+                
+                self.greenTransitionButton.isHidden = true
+            }
             destinationViewController.contentOffset = 750
+        
+        } else if segue.identifier == "segueBlueTransition" {
+            let destinationViewController = segue.destination as! ProjectStepsViewController
+            destinationViewController.transitioningDelegate = self
+            transition.startingPoint = blueTransitionButton.center
+            transition.circleColor = blueTransitionButton.backgroundColor!
+            destinationViewController.modalPresentationStyle = .custom
             
+            showBlueButton.isHidden = false
+            UIView.animate(withDuration: 1){
+                
+                self.blueTransitionButton.isHidden = true
+            }
+            destinationViewController.contentOffset = 1125
             
+        } else if segue.identifier == "seguePurpleTransition" {
+            let destinationViewController = segue.destination as! ProjectStepsViewController
+            destinationViewController.transitioningDelegate = self
+            transition.startingPoint = purpleTransitionButton.center
+            transition.circleColor = purpleTransitionButton.backgroundColor!
+            destinationViewController.modalPresentationStyle = .custom
             
-            
-            //            zoomTransition = ImageZoomTransition()
-            //            destination.modalPresentationStyle = .custom
-            //            destination.transitioningDelegate = zoomTransition
-            //            zoomTransition.duration = 0.35
+            showPurpleButton.isHidden = false
+            UIView.animate(withDuration: 1){
+                
+                self.purpleTransitionButton.isHidden = true
+            }
+            destinationViewController.contentOffset = 1500
         }
     }
+    
+    
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        transition.transitionMode = .present
+        
+        
+//        
+//        if tagButtonPressed == 1 {
+//            
+//            transition.startingPoint = redTransitionButton.center
+//            transition.circleColor = redTransitionButton.backgroundColor!
+//            
+//        }
+//
+//        if tagButtonPressed == 2 {
+//            
+//            transition.startingPoint = yellowTransitionButton.center
+//            transition.circleColor = yellowTransitionButton.backgroundColor!
+//            
+//        }
+//        
+//        if tagButtonPressed == 3 {
+//            
+//            transition.startingPoint = greenTransitionButton.center
+//            transition.circleColor = greenTransitionButton.backgroundColor!
+//            
+//        }
+//        if tagButtonPressed == 4 {
+//            
+//            transition.startingPoint = blueTransitionButton.center
+//            transition.circleColor = blueTransitionButton.backgroundColor!
+//    
+//            
+//        }
+//        if tagButtonPressed == 5 {
+//            
+//            transition.startingPoint = purpleTransitionButton.center
+//            transition.circleColor = purpleTransitionButton.backgroundColor!
+//            
+//        }
+        
+        return transition
+        
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .dismiss
+        
+        
+//
+//        if tagButtonPressed == 1 {
+//            
+//            transition.startingPoint = redTransitionButton.center
+//            transition.circleColor = redTransitionButton.backgroundColor!
+//            
+//        }
+//        
+//        if tagButtonPressed == 2 {
+//            
+//            transition.startingPoint = yellowTransitionButton.center
+//            transition.circleColor = yellowTransitionButton.backgroundColor!
+//            
+//        }
+        
 
-  
+
+        
+        
+        return transition
+    }
+    
+    
+    
+    
+    
 }

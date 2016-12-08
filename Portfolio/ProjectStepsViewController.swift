@@ -11,12 +11,34 @@ import UIKit
 class ProjectStepsViewController: UIViewController, UIScrollViewDelegate{
     
     
+    @IBOutlet weak var dismissFromRed: UIButton!
     
-    @IBOutlet weak var resultIcon: UIImageView!
-    @IBOutlet weak var solutionIcon: UIImageView!
-    @IBOutlet weak var developIcon: UIImageView!
-    @IBOutlet weak var researchIcon: UIImageView!
-    @IBOutlet weak var problemIcon: UIImageView!
+    @IBOutlet weak var dismissFromYellow: UIButton!
+        @IBOutlet weak var dismissFromGreen: UIButton!
+        @IBOutlet weak var dismissFromBlue: UIButton!
+        @IBOutlet weak var dismissFromPurple: UIButton!
+    
+
+    
+    @IBOutlet weak var problemIcon: UIButton!
+    @IBOutlet weak var researchIcon: UIButton!
+    @IBOutlet weak var developIcon: UIButton!
+    @IBOutlet weak var resultIcon: UIButton!
+    @IBOutlet weak var solutionIcon: UIButton!
+    
+    let myRed = UIColor(red:191/255.0, green:84/255.0, blue:78/255.0, alpha: 1.0)
+    let myYellow = UIColor(red:40/255.0, green:200/255.0, blue:50/255.0, alpha: 1.0)
+    let myGreen = UIColor(red:140/255.0, green:200/255.0, blue:50/255.0, alpha: 1.0)
+    let myBlue = UIColor(red:40/255.0, green:20/255.0, blue:50/255.0, alpha: 1.0)
+    let myPurple = UIColor(red:40/255.0, green:200/255.0, blue:200/255.0, alpha: 1.0)
+    
+    
+
+
+
+
+    
+  
     @IBOutlet weak var viewTransitionRed: UIView!
     
     @IBOutlet weak var viewTransition: UIView!
@@ -30,15 +52,28 @@ class ProjectStepsViewController: UIViewController, UIScrollViewDelegate{
     @IBOutlet weak var transitionBlueGreenBack: UIView!
     
     @IBOutlet weak var viewTransitionPurple: UIView!
-    
     @IBOutlet weak var transtionBluePurpleBack: UIView!
     
     
+    override func viewWillAppear(_ animated: Bool) {
+    projectStepsScrollView.setContentOffset(CGPoint(x: contentOffset, y: 0), animated: false)
+    }
+    
     var contentOffset: CGFloat = 0
     
+
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dismissFromYellow.isHidden = true
+        dismissFromRed.isHidden = true
+        dismissFromGreen.isHidden = true
+        dismissFromBlue.isHidden = true
+        dismissFromPurple.isHidden = true
+
+        
         
         projectStepsScrollView.delegate = self
         
@@ -56,11 +91,36 @@ class ProjectStepsViewController: UIViewController, UIScrollViewDelegate{
         transtionBluePurpleBack.layer.cornerRadius = 0.5 * transtionBluePurpleBack.bounds.size.width
         
         // Do any additional setup after loading the view.
+        
+        // circular animation
+        
+        dismissFromRed.layer.cornerRadius = 0.5 * dismissFromRed.bounds.size.width
+        dismissFromRed.layer.borderWidth = 3
+        dismissFromRed.layer.borderColor = myRed.cgColor
+        
+        dismissFromYellow.layer.cornerRadius = 0.5 * dismissFromYellow.bounds.size.width
+        dismissFromYellow.layer.borderWidth = 3
+        dismissFromYellow.layer.borderColor = myYellow.cgColor
+        
+        dismissFromGreen.layer.cornerRadius = 0.5 * dismissFromGreen.bounds.size.width
+        dismissFromGreen.layer.borderWidth = 3
+        dismissFromGreen.layer.borderColor = myGreen.cgColor
+        
+        dismissFromBlue.layer.cornerRadius = 0.5 * dismissFromBlue.bounds.size.width
+        dismissFromBlue.layer.borderWidth = 3
+        dismissFromBlue.layer.borderColor = myBlue.cgColor
+        
+        dismissFromPurple.layer.cornerRadius = 0.5 * dismissFromPurple.bounds.size.width
+        dismissFromPurple.layer.borderWidth = 3
+        dismissFromPurple.layer.borderColor = myPurple.cgColor
+        
+        
+        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        projectStepsScrollView.setContentOffset(CGPoint(x: contentOffset, y: 0), animated: true)
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        projectStepsScrollView.setContentOffset(CGPoint(x: contentOffset, y: 0), animated: false)
+//    }
     
   
     
@@ -184,6 +244,70 @@ class ProjectStepsViewController: UIViewController, UIScrollViewDelegate{
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func tappedDIsmiss(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func showDismissFromRed(_ sender: Any) {
+        dismissFromRed.isHidden = false
+    }
+    
+ 
+    
+    @IBAction func tapDismissFromRed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        dismissFromRed.isHidden = true
+    }
+    
+    
+    @IBAction func showDismissFromYellow(_ sender: Any) {
+        dismissFromYellow.isHidden = false
+    }
+    @IBAction func tapDismissFromYellow(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+
+                dismissFromYellow.isHidden = true
+        
+    }
+
+    
+    @IBAction func showDismissFromGreen(_ sender: Any) {
+        
+        dismissFromGreen.isHidden = false
+
+        
+    }
+    
+    @IBAction func tapDismissFromGreen(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        
+        dismissFromGreen.isHidden = true
+    }
+    
+    @IBAction func showDismissFromBlue(_ sender: Any) {
+        
+        dismissFromBlue.isHidden = false
+    }
+    
+    @IBAction func tapDismissFromBlue(_ sender: Any) {
+        dismissFromPurple.isHidden = true
+
+        dismiss(animated: true, completion: nil)
+
+    }
+    
+    @IBAction func showDismissFromPurple(_ sender: Any) {
+        dismissFromPurple.isHidden = false
+
+  
+    }
+    
+    @IBAction func tapDismissFromPurple(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        
+        dismissFromPurple.isHidden = true
+    }
     
     /*
      // MARK: - Navigation
