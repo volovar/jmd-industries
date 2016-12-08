@@ -258,7 +258,7 @@ open class SkypeActionController: ActionController<SkypeCell, String, UICollecti
               return
             }
             context.addPath(path.cgPath)
-            UIColor(colorLiteralRed: 18/255.0, green: 165/255.0, blue: 244/255.0, alpha: 1.0).set()
+            UIColor(colorLiteralRed: 82/255.0, green: 173/255.0, blue: 200/255.0, alpha: 1.0).set()
             context.fillPath()
         }
     }

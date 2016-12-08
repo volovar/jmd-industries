@@ -58,7 +58,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="7pm-55-0dA">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="7pm-55-0dA">
                                         <rect key="frame" x="-1" y="-1" width="376" height="197"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -2015,7 +2015,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" id="Rsk-vJ-KnY" userLabel="Author Description Bg">
-                                <rect key="frame" x="0.0" y="185" width="376" height="266"/>
+                                <rect key="frame" x="0.0" y="196" width="376" height="255"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="center" id="dkD-bU-tEV">
@@ -2058,26 +2058,47 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="2Jt-j4-unV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="2Jt-j4-unV">
                                 <rect key="frame" x="0.0" y="0.0" width="376" height="197"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="7Nw-PJ-9Ft" appends="YES" id="HAv-Tw-OKg"/>
+                                </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="RH3-R6-ppm">
+                            <imageView tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="RH3-R6-ppm">
                                 <rect key="frame" x="137" y="133" width="102" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bRw-Ug-cfy">
-                                <rect key="frame" x="209" y="205" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <action selector="didPressprofilePic:" destination="svE-y0-fhu" eventType="touchUpInside" id="h5Y-3z-4Et"/>
+                                    <outletCollection property="gestureRecognizers" destination="gYZ-HU-zez" appends="YES" id="0Rl-sZ-bye"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qD2-Pk-3po">
-                                <rect key="frame" x="313" y="20" width="46" height="30"/>
+                            </imageView>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" misplaced="YES" id="ffa-xS-lvR">
+                                <rect key="frame" x="129" y="142" width="119" height="109"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bRw-Ug-cfy">
+                                        <rect key="frame" x="34" y="29" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="cameraBW"/>
+                                        <connections>
+                                            <action selector="didPressprofilePic:" destination="svE-y0-fhu" eventType="touchUpInside" id="h5Y-3z-4Et"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="add photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SXo-AH-9M2">
+                                        <rect key="frame" x="20" y="102" width="79" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </view>
+                            <button opaque="NO" alpha="0.69999999999999996" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qD2-Pk-3po">
+                                <rect key="frame" x="334" y="20" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="cameraBW"/>
                                 <connections>
                                     <action selector="didPressHeaderPic:" destination="svE-y0-fhu" eventType="touchUpInside" id="NdU-VO-dk7"/>
                                     <action selector="didPressprofilePic:" destination="svE-y0-fhu" eventType="touchUpInside" id="O72-LQ-XUW"/>
@@ -2087,11 +2108,23 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="headerCameraButton" destination="qD2-Pk-3po" id="tOP-4E-gLL"/>
                         <outlet property="headerImage" destination="2Jt-j4-unV" id="tb8-bn-PFf"/>
                         <outlet property="profileImage" destination="RH3-R6-ppm" id="3kB-lN-xUc"/>
+                        <outlet property="profileImageVIew" destination="ffa-xS-lvR" id="wlU-En-3n2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fyu-gp-Bnv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="gYZ-HU-zez">
+                    <connections>
+                        <action selector="tapToChangeProfilePic:" destination="svE-y0-fhu" id="Wm0-3s-eck"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="7Nw-PJ-9Ft">
+                    <connections>
+                        <action selector="tapToChangeHeader:" destination="svE-y0-fhu" id="uNO-Cj-3tN"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1237.5" y="-1493.5"/>
         </scene>
@@ -2143,6 +2176,7 @@
         <image name="arrow-1" width="606" height="606"/>
         <image name="bgDropShadow" width="301" height="65"/>
         <image name="blueGradient" width="298" height="3795"/>
+        <image name="cameraBW" width="409" height="409"/>
         <image name="darkBlueGradient" width="298" height="3795"/>
         <image name="developmentIcon" width="593" height="593"/>
         <image name="developmentIconClear" width="486" height="486"/>
