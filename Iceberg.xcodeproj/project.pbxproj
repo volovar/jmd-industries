@@ -31,6 +31,8 @@
 		4C4D13561DD430690023C9F2 /* PortfolioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13551DD430690023C9F2 /* PortfolioUITests.swift */; };
 		4C4D13671DD432F80023C9F2 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13661DD432F80023C9F2 /* ProjectDetailViewController.swift */; };
 		4C4D13691DD433600023C9F2 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D13681DD433600023C9F2 /* InfoViewController.swift */; };
+		4C967E8E1DFA4C8100C85AE2 /* MyPortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C967E8D1DFA4C8100C85AE2 /* MyPortfolioViewController.swift */; };
+		4C967E901DFA4DB800C85AE2 /* ImageZoomTransition2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C967E8F1DFA4DB800C85AE2 /* ImageZoomTransition2.swift */; };
 		4C981D851DF6799700FBFAC3 /* EditorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C981D841DF6799700FBFAC3 /* EditorTextField.swift */; };
 		4C981D881DF67A6200FBFAC3 /* EditorTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C981D871DF67A6200FBFAC3 /* EditorTextView.swift */; };
 		4C981D901DF6C81600FBFAC3 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C981D8F1DF6C81600FBFAC3 /* UserData.swift */; };
@@ -120,6 +122,8 @@
 		4C4D13571DD430690023C9F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C4D13661DD432F80023C9F2 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
 		4C4D13681DD433600023C9F2 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		4C967E8D1DFA4C8100C85AE2 /* MyPortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPortfolioViewController.swift; sourceTree = "<group>"; };
+		4C967E8F1DFA4DB800C85AE2 /* ImageZoomTransition2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageZoomTransition2.swift; sourceTree = "<group>"; };
 		4C981D841DF6799700FBFAC3 /* EditorTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorTextField.swift; sourceTree = "<group>"; };
 		4C981D871DF67A6200FBFAC3 /* EditorTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorTextView.swift; sourceTree = "<group>"; };
 		4C981D8F1DF6C81600FBFAC3 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -228,6 +232,7 @@
 				CEBAC22B1DF9018A00F759ED /* CircularTransition.swift */,
 				4C0479971DE231D8009E47DF /* FadeTransition.swift */,
 				CE7F4A791DEFCF52004B8AD8 /* LightBoxTransition.swift */,
+				4C967E8F1DFA4DB800C85AE2 /* ImageZoomTransition2.swift */,
 			);
 			name = Transitions;
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 				4CD8AED51DE58160001FA131 /* PortfolioHomeViewController.swift */,
 				4CE171101DF9127B00E99985 /* PortfolioViewController.swift */,
 				4CA1F82B1DEF0ACD00A984BC /* DetailsViewController.swift */,
+				4C967E8D1DFA4C8100C85AE2 /* MyPortfolioViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -665,6 +671,7 @@
 				4CA1F8301DF5063700A984BC /* EditorTableViewCell.swift in Sources */,
 				CEBAC2291DF88C2300F759ED /* ImagePickerViewController.swift in Sources */,
 				CE15CC6A1DF515DB009A643D /* CarouselCell.swift in Sources */,
+				4C967E901DFA4DB800C85AE2 /* ImageZoomTransition2.swift in Sources */,
 				CE15CC681DF515C8009A643D /* ProjectDetailCell.swift in Sources */,
 				4CBFB7261DED46C300F1B76F /* ImageZoomTransition.swift in Sources */,
 				4CD8AED41DE58154001FA131 /* EmptyPortfolioHomeViewController.swift in Sources */,

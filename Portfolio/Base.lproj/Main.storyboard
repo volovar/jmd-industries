@@ -92,6 +92,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <action selector="didTapInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xtD-cN-7F2"/>
+                                            <segue destination="U7A-zB-Dyp" kind="modal" identifier="segueToInfoView" id="8gc-GB-LyY"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Projects" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Kz-n3-gOD">
@@ -113,7 +114,7 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProjectsCollectionViewCell" id="XYL-If-FGW" customClass="ProjectsCollectionViewCell" customModule="Iceberg" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="12" width="160" height="154"/>
+                                                <rect key="frame" x="16" y="11.5" width="160" height="154"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                     <rect key="frame" x="0.0" y="0.0" width="160" height="154"/>
@@ -692,7 +693,7 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" id="pFt-Do-Fh1">
                                         <rect key="frame" x="16" y="985" width="343" height="439"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <mutableString key="text">Our team used two primary research methods to understand the user's needs. Our primary method was field observation. We recorded user behaviors at the moment when they utilized curent market offerings. We confirmed our hypothesis that users are drawn to live sharing apps primarily due to the immediate feedback they receive. A notable drawback in the current market offering was what we termed 'social network fatigue,' caused by switching between different sharing apps. Over 80% of target users shared live once, while only 37% shared live twice, opting instead to record experiences in less ephemeral ways. Our second method involved interviews with the target user base. We obtained valuable insight into use-cases we had previously not considered, such as sharing live as a means of direct communication.</mutableString>
+                                        <string key="text">Our team used two primary research methods to understand the user's needs. Our primary method was field observation. We recorded user behaviors at the moment when they utilized curent market offerings. We confirmed our hypothesis that users are drawn to live sharing apps primarily due to the immediate feedback they receive. A notable drawback in the current market offering was what we termed 'social network fatigue,' caused by switching between different sharing apps. Over 80% of target users shared live once, while only 37% shared live twice, opting instead to record experiences in less ephemeral ways. Our second method involved interviews with the target user base. We obtained valuable insight into use-cases we had previously not considered, such as sharing live as a means of direct communication.</string>
                                         <color key="textColor" red="0.7843137255" green="0.82352941180000006" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="MoskNormal400" family="Mosk Normal 400" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1229,7 +1230,7 @@
                                                 <rect key="frame" x="0.0" y="661" width="375" height="350"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="whs-gq-hjz" id="4vc-IZ-n9g">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="349"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" id="tEt-RS-x6Y" customClass="iCarousel">
@@ -1436,7 +1437,7 @@
                                                             <fragment content="Problem Phase">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.69411764705882351" green="0.25098039215686274" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="20" name="MoskMedium500"/>
+                                                                    <font key="NSFont" metaFont="system" size="20"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -1489,7 +1490,7 @@
                                                             <fragment content="Research Phase">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.77647058823529413" green="0.6705882352941176" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="20" name="MoskMedium500"/>
+                                                                    <font key="NSFont" metaFont="system" size="20"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -1556,7 +1557,7 @@
                                                             <fragment content="Development Phase">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.32549019607843138" green="0.71372549019607845" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="20" name="MoskMedium500"/>
+                                                                    <font key="NSFont" metaFont="system" size="20"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -1623,7 +1624,7 @@
                                                             <fragment content="Solution Phase">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.25098039215686274" green="0.56862745098039214" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="20" name="MoskMedium500"/>
+                                                                    <font key="NSFont" metaFont="system" size="20"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -1690,7 +1691,7 @@
                                                             <fragment content="Results Page">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.5607843137254902" green="0.30588235294117649" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="20" name="MoskMedium500"/>
+                                                                    <font key="NSFont" metaFont="system" size="20"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -1861,7 +1862,7 @@
                                                             <fragment content="Problem Phase">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.69411764705882351" green="0.25098039215686274" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="20" name="MoskMedium500"/>
+                                                                    <font key="NSFont" metaFont="system" size="20"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -1914,7 +1915,7 @@
                                                             <fragment content="Research Phase">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.77647058823529413" green="0.6705882352941176" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="20" name="MoskMedium500"/>
+                                                                    <font key="NSFont" metaFont="system" size="20"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -1981,7 +1982,7 @@
                                                             <fragment content="Development Phase">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.32549019607843138" green="0.71372549019607845" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="20" name="MoskMedium500"/>
+                                                                    <font key="NSFont" metaFont="system" size="20"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -2048,7 +2049,7 @@
                                                             <fragment content="Solution Phase">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.25098039215686274" green="0.56862745098039214" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="20" name="MoskMedium500"/>
+                                                                    <font key="NSFont" metaFont="system" size="20"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -2115,7 +2116,7 @@
                                                             <fragment content="Results Page">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.5607843137254902" green="0.30588235294117649" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="20" name="MoskMedium500"/>
+                                                                    <font key="NSFont" metaFont="system" size="20"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -2719,7 +2720,7 @@
                                                 <string key="content">Our timeline feature allows you to create a chronological order for your achievements. So you can track how much better you're getting.</string>
                                                 <attributes>
                                                     <color key="NSColor" red="0.82745098039215681" green="0.8666666666666667" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="20" name="MoskLight300"/>
+                                                    <font key="NSFont" metaFont="system" size="20"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -2780,7 +2781,7 @@
                                                 <string key="content">We defined a structure to help you define your work in a more goal oriented way. Classify your work by the: Problem; Development; Solution; Results.</string>
                                                 <attributes>
                                                     <color key="NSColor" red="0.82745098039215681" green="0.8666666666666667" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="20" name="MoskLight300"/>
+                                                    <font key="NSFont" metaFont="system" size="20"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -2835,47 +2836,8 @@
                                             <fragment content="Master your presentation creating exclusive portfolio views for each specific field you're working on">
                                                 <attributes>
                                                     <color key="NSColor" red="0.82745098039215681" green="0.8666666666666667" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="20" name="MoskLight300"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                        <tabStops>
-                                                            <textTab alignment="left" location="28">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="56">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="84">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="112">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="140">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="168">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="196">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="224">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="252">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="280">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="308">
-                                                                <options/>
-                                                            </textTab>
-                                                            <textTab alignment="left" location="336">
-                                                                <options/>
-                                                            </textTab>
-                                                        </tabStops>
-                                                    </paragraphStyle>
+                                                    <font key="NSFont" metaFont="system" size="20"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -2888,7 +2850,7 @@
                                             <fragment content="Make use of the mobile exclusive gestures and create animations to help your work to shine">
                                                 <attributes>
                                                     <color key="NSColor" red="0.82745098039215681" green="0.8666666666666667" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="20" name="MoskLight300"/>
+                                                    <font key="NSFont" metaFont="system" size="20"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -2996,6 +2958,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="160" height="223"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="O5U-ww-uMJ" appends="YES" id="u9u-4I-J12"/>
+                                        </connections>
                                     </imageView>
                                     <view contentMode="scaleToFill" id="WCd-tG-IWZ">
                                         <rect key="frame" x="0.0" y="0.0" width="160" height="40"/>
@@ -3028,6 +2993,8 @@
                     <navigationItem key="navigationItem" id="vKi-td-NGP"/>
                     <connections>
                         <outlet property="createButton" destination="CaB-td-AaH" id="zgv-Vh-oYQ"/>
+                        <outlet property="portfolio2Snapshot" destination="aAL-qu-ICf" id="kqu-ry-Fc7"/>
+                        <outlet property="portfolio2View" destination="BAd-yC-ao8" id="ut0-TT-78x"/>
                         <outlet property="portfolioSnapshot" destination="c4m-L7-SzM" id="RG3-je-0e0"/>
                         <outlet property="portfolioTitle" destination="Cl9-of-VUk" id="SYc-Kp-Fiy"/>
                         <outlet property="portfolioView" destination="zxS-8V-LOE" id="NtV-Kt-Yb0"/>
@@ -3040,8 +3007,14 @@
                         <action selector="didTapPortfolioImage:" destination="2TG-u4-JwK" id="OcG-1j-bBr"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="O5U-ww-uMJ" userLabel="portfolio 2 Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="didTapMyPortfolioImage:" destination="2TG-u4-JwK" id="M1h-IP-qR6"/>
+                        <segue destination="uAq-JW-0JZ" kind="modal" identifier="segueToMyPortfolio" id="ZBg-Ek-YKv"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="708.5" y="-592.5"/>
+            <point key="canvasLocation" x="648" y="-593"/>
         </scene>
         <!--Image Picker View Controller-->
         <scene sceneID="0jv-cn-TCa">
@@ -3312,7 +3285,7 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProjectsCollectionViewCell" id="8UL-pb-qx2" customClass="ProjectsCollectionViewCell" customModule="Iceberg" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="12" width="160" height="154"/>
+                                                <rect key="frame" x="16" y="11.5" width="160" height="154"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                     <rect key="frame" x="0.0" y="0.0" width="160" height="154"/>
@@ -3542,6 +3515,7 @@
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="35F-eV-nvx"/>
         <segue reference="dox-vT-ouZ"/>
         <segue reference="y1r-RW-c0q"/>
         <segue reference="7nn-vD-bNd"/>
