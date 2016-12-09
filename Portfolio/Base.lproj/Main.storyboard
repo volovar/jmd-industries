@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="2TG-u4-JwK">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="uAq-JW-0JZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -271,7 +271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1169" y="104"/>
+            <point key="canvasLocation" x="1104" y="806"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="laH-YE-Kab">
@@ -1134,7 +1134,7 @@
                                                 <rect key="frame" x="0.0" y="321" width="375" height="340"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i1U-oW-hUX" id="TfU-pU-QwL">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="340"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="339"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" id="d77-LE-lZK">
@@ -3198,10 +3198,10 @@
             </objects>
             <point key="canvasLocation" x="2534.5" y="633.5"/>
         </scene>
-        <!--My Portfolio View Controller-->
+        <!--My Porfolio View Controller-->
         <scene sceneID="vdo-L4-r2j">
             <objects>
-                <viewController storyboardIdentifier="MyPortfolioViewController" id="uAq-JW-0JZ" customClass="MyPortfolioViewController" customModule="Iceberg" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uAq-JW-0JZ" customClass="MyPorfolioViewController" customModule="Iceberg" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CKk-5t-KrZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="2060"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3223,16 +3223,16 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="KNO-UK-Up6">
-                                        <rect key="frame" x="-1" y="-1" width="376" height="197"/>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="braveNewWorld" id="KNO-UK-Up6" customClass="heade">
+                                        <rect key="frame" x="-1" y="-22" width="376" height="218"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="OwA-cv-C7t">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" id="OwA-cv-C7t">
                                         <rect key="frame" x="136" y="132" width="102" height="102"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALLAN MONTEIRO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2xO-Iv-k12">
-                                        <rect key="frame" x="35" y="284" width="301" height="43"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JEAN MENEZES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2xO-Iv-k12">
+                                        <rect key="frame" x="56" y="284" width="260" height="43"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="36"/>
                                         <nil key="textColor"/>
@@ -3263,7 +3263,6 @@
                                         <rect key="frame" x="14" y="541" width="346" height="53"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
-                                            <action selector="didTapInfo:" destination="uAq-JW-0JZ" eventType="touchUpInside" id="XvE-8M-Khd"/>
                                             <segue destination="U7A-zB-Dyp" kind="modal" id="35F-eV-nvx"/>
                                         </connections>
                                     </button>
@@ -3300,7 +3299,7 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="160" height="154"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ptl-Lx-3PH">
+                                                                        <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook_live" id="ptl-Lx-3PH">
                                                                             <rect key="frame" x="0.0" y="0.0" width="160" height="116"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                             <gestureRecognizers/>
@@ -3309,7 +3308,7 @@
                                                                             <rect key="frame" x="0.0" y="116" width="160" height="34"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="46B-UQ-Qqc">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook_live" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="46B-UQ-Qqc">
                                                                                     <rect key="frame" x="8" y="1" width="144" height="32"/>
                                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -3337,7 +3336,7 @@
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yahoo!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AbW-1z-7Fe">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firecast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AbW-1z-7Fe">
                                         <rect key="frame" x="16" y="1037" width="344" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
@@ -3366,6 +3365,25 @@
                                                 <rect key="frame" x="1" y="6" width="186" height="164"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="firecastLogo" id="Wlq-vH-5nC">
+                                                <rect key="frame" x="18" y="14" width="152" height="110"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <gestureRecognizers/>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" id="qPy-bN-B40">
+                                                <rect key="frame" x="18" y="131" width="140" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firecast App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QOI-Ag-kIu">
+                                                        <rect key="frame" x="12" y="0.0" width="97" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.87450980389999999" green="0.87450980389999999" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
@@ -3412,9 +3430,6 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" red="0.29769137499999998" green="0.591232121" blue="0.78110676999999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Back"/>
-                                        <connections>
-                                            <action selector="didTapBack:" destination="uAq-JW-0JZ" eventType="touchUpInside" id="E7H-4q-NCO"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3425,10 +3440,14 @@
                     <navigationItem key="navigationItem" id="dLJ-p0-dVt"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="2060"/>
+                    <connections>
+                        <outlet property="authorProfileImageView" destination="OwA-cv-C7t" id="HQT-mL-Knm"/>
+                        <outlet property="scrollView" destination="x7j-eo-BUP" id="ZKV-en-VcW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8lm-Tz-zQF" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1730" y="-126"/>
+            <point key="canvasLocation" x="1729.5" y="-126"/>
         </scene>
     </scenes>
     <resources>
@@ -3439,6 +3458,7 @@
         <image name="arrowForwardBWhite" width="168" height="229"/>
         <image name="bgDropShadow" width="301" height="65"/>
         <image name="blueGradient" width="298" height="3795"/>
+        <image name="braveNewWorld" width="2523" height="807"/>
         <image name="cameraBW" width="409" height="409"/>
         <image name="darkBlueGradient" width="298" height="3795"/>
         <image name="developmentIcon" width="593" height="593"/>
@@ -3446,6 +3466,7 @@
         <image name="facebook_live" width="800" height="600"/>
         <image name="facebook_live_spread" width="1920" height="1536"/>
         <image name="final_facebook_live" width="515" height="984"/>
+        <image name="firecastLogo" width="542" height="478"/>
         <image name="greenGradient" width="298" height="3795"/>
         <image name="icebergTypeLightBG" width="576" height="317"/>
         <image name="lightGradient" width="298" height="3795"/>
@@ -3464,6 +3485,7 @@
         <image name="pinkGradient" width="298" height="3795"/>
         <image name="problemIcon" width="593" height="593"/>
         <image name="problemIconClear" width="486" height="486"/>
+        <image name="profilePic" width="706" height="768"/>
         <image name="projectExpandedBG" width="301" height="223"/>
         <image name="projectTitleBG_1" width="311" height="70"/>
         <image name="researchIcon" width="593" height="593"/>

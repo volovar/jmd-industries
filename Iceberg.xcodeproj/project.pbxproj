@@ -65,6 +65,7 @@
 		CE7792A61DF9F58C002EC19C /* CarouselCellProjectTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7792A51DF9F58C002EC19C /* CarouselCellProjectTwo.swift */; };
 		CE7792A81DF9F5A6002EC19C /* DetailCellProjectTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7792A71DF9F5A6002EC19C /* DetailCellProjectTwo.swift */; };
 		CE7792AA1DF9FC14002EC19C /* ProjectStepsProjectTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7792A91DF9FC14002EC19C /* ProjectStepsProjectTwo.swift */; };
+		CE7792AC1DFA4A89002EC19C /* MyPorfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7792AB1DFA4A89002EC19C /* MyPorfolioViewController.swift */; };
 		CE7F4A7A1DEFCF52004B8AD8 /* LightBoxTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F4A791DEFCF52004B8AD8 /* LightBoxTransition.swift */; };
 		CE7F4A7C1DEFD9D0004B8AD8 /* PortfolioTempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F4A7B1DEFD9D0004B8AD8 /* PortfolioTempViewController.swift */; };
 		CEBAC2291DF88C2300F759ED /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBAC2281DF88C2300F759ED /* ImagePickerViewController.swift */; };
@@ -161,6 +162,7 @@
 		CE7792A51DF9F58C002EC19C /* CarouselCellProjectTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselCellProjectTwo.swift; sourceTree = "<group>"; };
 		CE7792A71DF9F5A6002EC19C /* DetailCellProjectTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCellProjectTwo.swift; sourceTree = "<group>"; };
 		CE7792A91DF9FC14002EC19C /* ProjectStepsProjectTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectStepsProjectTwo.swift; sourceTree = "<group>"; };
+		CE7792AB1DFA4A89002EC19C /* MyPorfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPorfolioViewController.swift; sourceTree = "<group>"; };
 		CE7F4A791DEFCF52004B8AD8 /* LightBoxTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightBoxTransition.swift; sourceTree = "<group>"; };
 		CE7F4A7B1DEFD9D0004B8AD8 /* PortfolioTempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioTempViewController.swift; sourceTree = "<group>"; };
 		CEBAC2281DF88C2300F759ED /* ImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 				CE15CC651DF515AE009A643D /* NewProjectDetailViewController.swift */,
 				CE7792A31DF9EE76002EC19C /* ProjectTwoViewController.swift */,
 				CE15CC671DF515C7009A643D /* ProjectDetailCell.swift */,
+				CE7792AB1DFA4A89002EC19C /* MyPorfolioViewController.swift */,
 				CE7792A71DF9F5A6002EC19C /* DetailCellProjectTwo.swift */,
 				CE15CC691DF515DB009A643D /* CarouselCell.swift */,
 				CE7792A51DF9F58C002EC19C /* CarouselCellProjectTwo.swift */,
@@ -677,7 +680,7 @@
 				4C0479991DE231D8009E47DF /* FadeTransition.swift in Sources */,
 				CE147B141DF2A5FE00A20A9D /* OnBoardingViewController.swift in Sources */,
 				4C4D13671DD432F80023C9F2 /* ProjectDetailViewController.swift in Sources */,
-				4C967E8E1DFA4C8100C85AE2 /* MyPortfolioViewController.swift in Sources */,
+				CE7792AC1DFA4A89002EC19C /* MyPorfolioViewController.swift in Sources */,
 				CE2A11CF1DEA875500D9EFF4 /* SingleProject.swift in Sources */,
 				CE15CC6C1DF6234A009A643D /* ProjectStepsViewController.swift in Sources */,
 				CE0DD4441DEFB68600746BE9 /* LightBoxViewController.swift in Sources */,
