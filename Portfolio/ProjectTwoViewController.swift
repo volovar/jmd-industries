@@ -1,19 +1,17 @@
 //
-//  NewProjectDetailViewController.swift
+//  ProjectTwoViewController.swift
 //  Iceberg
 //
-//  Created by user on 12/4/16.
+//  Created by user on 12/8/16.
 //  Copyright © 2016 JMD Industries. All rights reserved.
 //
 
 import UIKit
 
-
-
-class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, iCarouselDataSource, iCarouselDelegate, UIScrollViewDelegate, UIViewControllerTransitioningDelegate {
+class ProjectTwoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, iCarouselDataSource, iCarouselDelegate, UIScrollViewDelegate, UIViewControllerTransitioningDelegate {
     
     
-
+    
     
     var tagButtonPressed = 0
     
@@ -28,7 +26,6 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
     struct StretchyHeader {
         
         fileprivate let headerHeight: CGFloat = 320
-        
         fileprivate let headerCut: CGFloat = 0
         
     }
@@ -43,13 +40,14 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
     var headerTitleOriginalY: CGFloat!
     
     @IBOutlet weak var headerTitle: UIView!
+
     @IBOutlet weak var tableVIew: UITableView!
     @IBOutlet weak var redTransitionButton: UIButton!
     @IBOutlet weak var showTransitionButton: UIButton!
     
     @IBOutlet weak var yellowTransitionButton: UIButton!
     @IBOutlet weak var showYellowButton: UIButton!
-
+    
     @IBOutlet weak var greenTransitionButton: UIButton!
     @IBOutlet weak var showGreenButton: UIButton!
     
@@ -63,7 +61,7 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableVIew.delegate = self
         tableVIew.dataSource = self
         tableVIew.contentSize = CGSize(width: 375, height: 1000)
@@ -105,33 +103,29 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
     }
     
     
-    @IBAction func showRedButton(_ sender: Any) {
+
+    
+    @IBAction func showRed(_ sender: Any) {
         redTransitionButton.isHidden = false
         showTransitionButton.isHidden = true
     }
-    
     
     @IBAction func showYellow(_ sender: Any) {
         showYellowButton.isHidden = true
         yellowTransitionButton.isHidden = false
     }
-    
     @IBAction func showGreen(_ sender: Any) {
         showGreenButton.isHidden = true
         greenTransitionButton.isHidden = false
     }
-    
     @IBAction func showBlue(_ sender: Any) {
         showBlueButton.isHidden = true
         blueTransitionButton.isHidden = false
     }
-    
     @IBAction func showPurple(_ sender: Any) {
-            showPurpleButton.isHidden = true
-            purpleTransitionButton.isHidden = false
+        showPurpleButton.isHidden = true
+        purpleTransitionButton.isHidden = false
     }
-      
-    
     
     
     
@@ -148,7 +142,7 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
             UIView.animate(withDuration: 1){
                 
                 self.headerTitle.alpha = 0.8
-                }
+            }
             
         } else if tableVIew.contentOffset.y <= -40 && tableVIew.contentOffset.y > -125 {
             showTransitionButton.isHidden = true
@@ -248,12 +242,12 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell") as! ProjectDetailCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell") as! DetailCellProjectTwo
             cell.selectionStyle = .none
             return cell
             
         } else {
-            let cell2 = tableView.dequeueReusableCell(withIdentifier: "carouselCell") as! CarouselCell
+            let cell2 = tableView.dequeueReusableCell(withIdentifier: "carouselCell") as! CarouselCellProjectTwo
             cell2.carouselContainer.type = .rotary
             cell2.selectionStyle = .none
             
@@ -319,7 +313,7 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueRedTransition" {
-            let destinationViewController = segue.destination as! ProjectStepsViewController
+            let destinationViewController = segue.destination as! ProjectStepsProjectTwo
             destinationViewController.transitioningDelegate = self
             destinationViewController.modalPresentationStyle = .custom
             transition.startingPoint = redTransitionButton.center
@@ -331,9 +325,9 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
             }
             
             
-       
+            
         } else if segue.identifier == "segueYellowTransition" {
-            let destinationViewController = segue.destination as! ProjectStepsViewController
+            let destinationViewController = segue.destination as! ProjectStepsProjectTwo
             destinationViewController.transitioningDelegate = self
             destinationViewController.modalPresentationStyle = .custom
             transition.startingPoint = yellowTransitionButton.center
@@ -346,7 +340,7 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
             destinationViewController.contentOffset = 375
             
         } else if segue.identifier == "segueGreenTransition" {
-            let destinationViewController = segue.destination as! ProjectStepsViewController
+            let destinationViewController = segue.destination as! ProjectStepsProjectTwo
             destinationViewController.transitioningDelegate = self
             transition.startingPoint = greenTransitionButton.center
             transition.circleColor = greenTransitionButton.backgroundColor!
@@ -358,9 +352,9 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
                 self.greenTransitionButton.isHidden = true
             }
             destinationViewController.contentOffset = 750
-        
+            
         } else if segue.identifier == "segueBlueTransition" {
-            let destinationViewController = segue.destination as! ProjectStepsViewController
+            let destinationViewController = segue.destination as! ProjectStepsProjectTwo
             destinationViewController.transitioningDelegate = self
             transition.startingPoint = blueTransitionButton.center
             transition.circleColor = blueTransitionButton.backgroundColor!
@@ -374,7 +368,7 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
             destinationViewController.contentOffset = 1125
             
         } else if segue.identifier == "seguePurpleTransition" {
-            let destinationViewController = segue.destination as! ProjectStepsViewController
+            let destinationViewController = segue.destination as! ProjectStepsProjectTwo
             destinationViewController.transitioningDelegate = self
             transition.startingPoint = purpleTransitionButton.center
             transition.circleColor = purpleTransitionButton.backgroundColor!
@@ -395,7 +389,7 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
         
         transition.transitionMode = .present
         
-
+        
         
         return transition
         
@@ -404,18 +398,18 @@ class NewProjectDetailViewController: UIViewController, UITableViewDelegate, UIT
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .dismiss
         
-
+        
         
         
         return transition
     }
     
     
+    
     @IBAction func didTapBackButton(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
 
     }
-    
     
     
 }

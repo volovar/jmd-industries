@@ -152,17 +152,17 @@ class InfoViewController: UIViewController, UITableViewDataSource, UIScrollViewD
     
     
     
-    @IBAction func didTapBack(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    
-
     @IBAction func didPressViewProject(_ sender: Any) {
         performSegue(withIdentifier: "segueToProject", sender: Any?.self)
     }
+
+
+
     
     
+    @IBAction func didTapDismiss(_ sender: Any) {
+                dismiss(animated: true, completion: nil)
+    }
     
     
     

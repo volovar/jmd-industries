@@ -32,9 +32,13 @@ class LightBoxViewController: UIViewController, LightBoxTransitionDismissDelegat
     var tappedImageCenterX: CGFloat!
     let tap = UITapGestureRecognizer()
     
+    var lightBoxOriginalFrame: CGRect!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        lightBoxOriginalFrame = lightBoxImageView.frame
         imageScrollVIew.delegate = self
         
         tappedImageCenterX = view.center.x
@@ -145,7 +149,7 @@ class LightBoxViewController: UIViewController, LightBoxTransitionDismissDelegat
         
         
         
-        if imageScrollVIew.contentOffset.y > 0 &&  imageScrollVIew.contentOffset.y < 100 {
+        if imageScrollVIew.contentOffset.y > 0 &&  imageScrollVIew.contentOffset.y < 115 {
             let alphaLightBox = convertValue(inputValue: imageScrollVIew.contentOffset.y, r1Min: 0, r1Max: 100, r2Min: 1, r2Max: 0.3)
             
             lightBoxBG.alpha = alphaLightBox
@@ -153,8 +157,9 @@ class LightBoxViewController: UIViewController, LightBoxTransitionDismissDelegat
             let alphaButtons = convertValue(inputValue: imageScrollVIew.contentOffset.y, r1Min: 0, r1Max: 100, r2Min: 1, r2Max: 0)
             self.trayView.alpha = alphaButtons
             self.dismissButton.alpha = alphaButtons
-            
-        } else if imageScrollVIew.contentOffset.y > -100 &&  imageScrollVIew.contentOffset.y < 0 {
+            self.moreBUtton.alpha = alphaButtons
+
+        } else if imageScrollVIew.contentOffset.y > -115 &&  imageScrollVIew.contentOffset.y < 0 {
             let alphaLightBox = convertValue(inputValue: imageScrollVIew.contentOffset.y, r1Min: 0, r1Max: -100, r2Min: 1, r2Max: 0.3)
             lightBoxBG.alpha = alphaLightBox
             
@@ -163,6 +168,7 @@ class LightBoxViewController: UIViewController, LightBoxTransitionDismissDelegat
             
             self.trayView.alpha = alphaButtons
             self.dismissButton.alpha = alphaButtons
+            self.moreBUtton.alpha = alphaButtons
         }
         
     }
@@ -173,9 +179,7 @@ class LightBoxViewController: UIViewController, LightBoxTransitionDismissDelegat
         if scrollView.zoomScale != 1 {
             print("zoomed so don't segue")
         } else if imageScrollVIew.contentOffset.y < -120 {
-            if scrollView.zoomScale != 1 {
-                print("zoomed so don't segue")
-            } else {
+      
                 print("dismiss on scroll")
                 lightBoxBG.isHidden = true
                 dismissButton.isHidden = true
@@ -185,7 +189,7 @@ class LightBoxViewController: UIViewController, LightBoxTransitionDismissDelegat
                     self.dismiss(animated: true, completion: nil)
                     
                 })
-            }
+            
             
         } else if imageScrollVIew.contentOffset.y > 120 {
             print("dismiss on scroll")
@@ -205,8 +209,10 @@ class LightBoxViewController: UIViewController, LightBoxTransitionDismissDelegat
         return lightBoxImageView
     }
     
+    
+    
     func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) {
-        imageScrollVIew.isScrollEnabled = false
+//        imageScrollVIew.isScrollEnabled = false
         
         lightBoxBG.isHidden = false
         lightBoxBG.alpha = 1
@@ -227,17 +233,19 @@ class LightBoxViewController: UIViewController, LightBoxTransitionDismissDelegat
         print("zoom ended")
         lightBoxBG.alpha = 1
         
-        
+        imageScrollVIew.isUserInteractionEnabled = true
+
         
         if imageScrollVIew.zoomScale < 1.5 {
             print("zoomScale down")
+            imageScrollVIew.zoomScale = 1
             
-            self.imageScrollVIew.frame = CGRect(x: 0, y: 52, width: 375, height: 562)
-            self.imageScrollVIew.frame = CGRect(x: 0, y: 0, width: 375, height: 562)
-            
+            lightBoxImageView.frame = lightBoxOriginalFrame
             dismissButton.isHidden = false
             trayView.isHidden = false
             moreBUtton.isHidden = false
+                        imageScrollVIew.frame = CGRect(x: 0, y: 50, width: 375, height: 575)
+            lightBoxImageView.center = imageScrollVIew.center
             
             
         }else if imageScrollVIew.zoomScale > 1.5 {
@@ -249,9 +257,10 @@ class LightBoxViewController: UIViewController, LightBoxTransitionDismissDelegat
             
             imageScrollVIew.isScrollEnabled = true
             
-            
-            imageScrollVIew.contentSize.applying(CGAffineTransform.init(scaleX: 2, y: 2))
             imageScrollVIew.frame = CGRect(x: 0, y: 0, width: 375, height: 667)
+            
+//            imageScrollVIew.contentSize.applying(CGAffineTransform.init(scaleX: 2, y: 2))
+//            imageScrollVIew.frame = CGRect(x: 0, y: 0, width: 375, height: 667)
             
         }
         
@@ -260,8 +269,10 @@ class LightBoxViewController: UIViewController, LightBoxTransitionDismissDelegat
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
         print("is zooming")
         
-        imageScrollVIew.contentSize.applying(CGAffineTransform.init(scaleX: 2, y: 2))
         lightBoxBG.alpha = 1
+
+        
+//        imageScrollVIew.contentSize.applying(CGAffineTransform.init(scaleX: 2, y: 2))
         UIView.animate(withDuration: 0.4, animations: {
             
             self.imageScrollVIew.frame = CGRect(x: 0, y: 0, width: 375, height: 667)
